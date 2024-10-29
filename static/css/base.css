@@ -1,0 +1,101 @@
+/* Asterisk wildcard selector to override default styles added by the browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.home-image {
+    background: url('/media/home-banner.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh; /* Make the section fill the viewport height */
+    position: relative; /* Establishes a positioning context for children */
+}
+
+#topnav {
+    color: whitesmoke;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.dj-courses-btn {
+    background: white;
+    color: black;
+    min-width: 260px;
+}
+
+.btn-white {
+    background: white;
+    color: black;
+}
+
+.dj-courses-btn:hover,
+.dj-courses-btn:active,
+.dj-courses-btn:focus,
+.btn-white:hover,
+.btn-white:active,
+.btn-white:focus {
+    background: black;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 100px;
+    }
+}
