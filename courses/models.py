@@ -3,10 +3,6 @@ from django.db import models
 
 class CourseTier(models.Model):
     tier_name = models.CharField(max_length=100, unique=True)
-    difficulty = models.IntegerField(
-        validators=[MinValueValidator(1), MaxValueValidator(10)],
-        help_text="Difficulty level from 1 (easiest) to 10 (most difficult)"
-    )
     description = models.TextField(blank=True, null=True)
 
     def __str__(self):
@@ -20,12 +16,14 @@ class Course(models.Model):
         ('CRE', 'Creative'),
     ]
 
+    DIFFICULTY_CHOICES = [(i, str(i)) for i in range(1, 11)]  # Dropdown choices for difficulty
+
     tier = models.ForeignKey('CourseTier', null=True, blank=True, on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=254, null=True, blank=True)
+    sku = models.CharField(max_length=20, unique=True, editable=False)
     name = models.CharField(max_length=254)
     description = models.TextField()
     difficulty = models.IntegerField(
-        validators=[MinValueValidator(1), MaxValueValidator(10)],
+        choices=DIFFICULTY_CHOICES,
         help_text="Difficulty level from 1 (easiest) to 10 (most difficult)"
     )
     price = models.DecimalField(max_digits=6, decimal_places=2)
