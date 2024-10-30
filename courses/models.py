@@ -8,6 +8,10 @@ class CourseTier(models.Model):
     def __str__(self):
         return self.tier_name
 
+    # Returns if a description exists or not for the admin panel
+    def has_description(self):
+        return bool(self.description)  
+
 class Course(models.Model):
     # Tier choices for SKU
     TIER_CHOICES = [
