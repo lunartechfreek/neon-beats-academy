@@ -14,6 +14,7 @@ class Course(models.Model):
         ('BEG', 'Beginner'),
         ('ADV', 'Advanced'),
         ('CRE', 'Creative'),
+        ('COM', 'Complete'),
     ]
 
     DIFFICULTY_CHOICES = [(i, str(i)) for i in range(1, 11)]  # Dropdown choices for difficulty
