@@ -124,6 +124,11 @@ a.tier-badge > span.badge:hover {
     color: #fff !important;
 }
 
+/************************************** All Courses Page */
+.remove-item {
+    cursor: pointer;
+}
+
 /**************************************  Media Queries */
 
 /* Slightly larger container on xl screens */
