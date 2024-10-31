@@ -6,17 +6,17 @@
                 DJ Courses
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-courses-link">
-                <a href="" class="dropdown-item">Beginner</a>
-                <a href="" class="dropdown-item">Advanced</a>
-                <a href="" class="dropdown-item">Creative</a>
-                <a href="" class="dropdown-item">Complete Package</a>
+                <a href="{% url 'courses' %}?tier=Beginner" class="dropdown-item">Beginner</a>
+                <a href="{% url 'courses' %}?tier=Advanced" class="dropdown-item">Advanced</a>
+                <a href="{% url 'courses' %}?tier=Creative" class="dropdown-item">Creative</a>
+                <a href="{% url 'courses' %}?tier=Complete" class="dropdown-item">Complete Package</a>
                 <a href="{% url 'courses' %}" class="dropdown-item">All Courses</a>
             </div>
         </li>
 
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#">
-                Clothing
+                About Us
             </a>
         </li>
 
