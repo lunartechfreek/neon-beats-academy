@@ -14,6 +14,7 @@ body {
     height: calc(100vh - 164px);
     color: white;
     font-family: 'Roboto Mono', sans-serif;
+    background-color: slategray;
 }
 
 .no-scroll {
@@ -96,8 +97,8 @@ h1, h2, h3, h4, h5, h6 {
 .home-image {
     background: url('/media/home-banner.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 100vh; /* Make the section fill the viewport height */
-    position: relative; /* Establishes a positioning context for children */
+    height: calc(100vh - 156px);
+    position: relative;
 }
 
 /**************************************  Media Queries */
@@ -120,6 +121,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .header-container {
-        padding-top: 100px;
+        padding-top: 156px;
     }
 }
