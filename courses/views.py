@@ -5,18 +5,19 @@ def all_courses(request):
     """ A view to show all courses, including sorting and search queries """
 
     courses = Course.objects.all()
+    tiers = CourseTier.objects.all()
 
-    tiers = None
-
-    if request.GET:
-        if 'tier' in request.GET:
-            tiers = request.GET['tier'].split(',')
-            courses = courses.filter(tier__tier_name__in=tiers)
-            tiers = CourseTier.objects.filter(tier_name__in=tiers)
+    # To allow tier filtering and to render tier buttons
+    if request.GET.get('tier'):
+        selected_tier = request.GET['tier']
+        courses = courses.filter(tier__tier_name=selected_tier)
+    else:
+        selected_tier = None
 
     context = {
         'courses': courses,
         'current_tiers': tiers,
+        'selected_tier': selected_tier,
     }
 
     return render(request, 'courses/courses.html', context)
