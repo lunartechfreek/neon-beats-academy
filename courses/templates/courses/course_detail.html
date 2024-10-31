@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="image-container my-5">
+                {% if course.image %}
+                <a href="{{ course.image.url }}" target="_blank">
+                    <img class="card-img-top img-fluid" src="{{ course.image.url }}" alt="{{ course.name }}">
+                </a>
+                {% else %}
+                <a href="{{ course.image.url }}">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ course.name }}">
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="course-details-container mb-5 mt-md-5">
+                <p class="mb-0">{{ course.name }}</p>
+                <p class="lead mb-0 text-left font-weight-bold">${{ course.price }}</p>
+                {% if course.difficulty %}
+                <small class="text-muted"><i class="fa-solid fa-skull"></i> {{ course.difficulty }}/10</small>
+                {% else %}
+                <small class="text-muted">Difficulty N/A</small>
+                {% endif %}
+                <p class="mt-3">{{ course.description }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
