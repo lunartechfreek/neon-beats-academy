@@ -40,8 +40,15 @@
                                     <div class="row">
                                         <div class="col">
                                             <p class="lead mb-0 text-left font-weight-bold text-black">${{ course.price }}</p>
+                                            {% if course.tier %}
+                                            <p class="small mt-1 mb-0">
+                                                <a class="text-muted" href="{% url 'courses' %}?tier={{ course.tier.tier_name }}">
+                                                    <i class="fa-solid fa-layer-group mr-1"></i>{{ course.tier.tier_name }}
+                                                </a>
+                                            </p>
+                                            {% endif %}
                                             {% if course.difficulty %}
-                                                <small class="text-muted"><i class="fa-solid fa-skull"></i> {{ course.difficulty }}/10</small>
+                                                <small class="text-muted"><i class="fa-solid fa-skull mr-1"></i>{{ course.difficulty }}/10</small>
                                             {% else %}
                                                 <small class="text-muted">Difficulty N/A</small>
                                             {% endif %}
