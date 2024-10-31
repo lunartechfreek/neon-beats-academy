@@ -19,8 +19,8 @@
                     <img class="card-img-top img-fluid" src="{{ course.image.url }}" alt="{{ course.name }}">
                 </a>
                 {% else %}
-                <a href="{{ course.image.url }}">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ course.name }}">
+                <a href="#">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}/media/noimage.png" alt="{{ course.name }}">
                 </a>
                 {% endif %}
             </div>
