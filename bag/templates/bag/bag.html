@@ -36,7 +36,11 @@
                     {% for item in bag_items %}
                     <tr>
                         <td class="p-3 w-25">
-                            <img class="img-fluid rounded" src="{{ item.course.image.url }}">
+                            {% if item.course.image %}
+                            <img class="img-fluid rounded" src="{{ item.course.image.url }}" alt="{{ item.course.name }}">
+                            {% else %}
+                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}/media/noimage.png" alt="{{ item.course.name }}">
+                            {% endif %}
                         </td>
                         <td class="py-3">
                             <p class="my-0"><strong>{{ item.course.name }}</strong></p>
@@ -46,8 +50,7 @@
                             <p class="my-0">${{ item.course.price }}</p>
                         </td>
                         <td class="py-3">
-                            <a class="remove-item text-danger"
-                                id="remove_{{ item.item_id }}">Remove Item</a>
+                            <a class="remove-item text-danger" id="remove_{{ item.item_id }}">Remove Item</a>
                         </td>
                     </tr>
                     {% endfor %}
@@ -94,17 +97,19 @@
 
 <script type="text/javascript">
     // Remove item and reload on click
-    $('.remove-item').click(function(e) {
+    $('.remove-item').click(function (e) {
         // e.preventDefault(); // Prevent default anchor behavior
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
         var url = `/bag/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken}; // Removed size from data
+        var data = {
+            'csrfmiddlewaretoken': csrfToken
+        }; // Removed size from data
 
         $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
+            .done(function () {
+                location.reload();
+            });
     });
 </script>
 
