@@ -64,6 +64,19 @@ h1, h2, h3, h4, h5, h6 {
     color: black;
 }
 
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
+
 .dj-courses-btn:hover,
 .dj-courses-btn:active,
 .dj-courses-btn:focus,
