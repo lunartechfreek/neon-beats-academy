@@ -39,8 +39,19 @@ def course_detail(request, course_id):
 
 
 def add_course(request):
-    """ Add a Course to the store """
-    form = CourseForm()
+    """ Add a course to the store """
+    if request.method == 'POST':
+        form = CourseForm(request.POST, request.FILES)
+        course_name = request.POST.get('name', 'course')
+        if form.is_valid():
+            course = form.save()
+            messages.success(request, f'Successfully added course: {course.name}!')
+            return redirect(reverse('course_detail', args=[course.id]))
+        else:
+            messages.error(request, f'Failed to add course: "{course_name}". Please ensure the form is valid.')
+    else:
+        form = CourseForm()
+        
     template = 'courses/add_course.html'
     context = {
         'form': form,
