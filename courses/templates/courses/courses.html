@@ -16,8 +16,7 @@
             <h2 class="logo-font">All Courses</h2>
             {% for t in current_tiers %}
             <a class="tier-badge text-decoration-none" href="{% url 'courses' %}?tier={{ t.tier_name|urlencode }}">
-                <span
-                    class="p-2 mt-2 badge text-black rounded-0 border border-dark">{{ t.tier_name }}</span>
+                <span class="p-2 mt-2 badge text-black rounded-0 border border-dark">{{ t.tier_name }}</span>
             </a>
             {% endfor %}
 
@@ -61,6 +60,12 @@
                                             class="fa-solid fa-skull mr-1"></i>{{ course.difficulty }}/10</small>
                                     {% else %}
                                     <small class="text-muted">Difficulty N/A</small>
+                                    {% endif %}
+                                    {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a href="{% url 'edit_course' course.id %}">Edit</a> |
+                                        <a class="text-danger" href="{% url 'delete_course' course.id %}">Delete</a>
+                                    </small>
                                     {% endif %}
                                 </div>
                             </div>
