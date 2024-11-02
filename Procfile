@@ -1,0 +1,1 @@
+web: gunicorn neon_beats.wsgi:application

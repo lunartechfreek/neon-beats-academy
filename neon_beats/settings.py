@@ -29,7 +29,11 @@ SECRET_KEY = 'django-insecure-5-$bt384)8h)m&y)oq1co8h4(it=ps#oesd*0ue-_^1n4=1(j*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-lunartechfr-neonbeatsac-xc7j3gj3tpc.ws.codeinstitute-ide.net']
+# ALLOWED_HOSTS = ['8000-lunartechfr-neonbeatsac-xc7j3gj3tpc.ws.codeinstitute-ide.net']
+
+# ALLOWED_HOSTS = ['https://neon-beats-academy-74fa20163bce.herokuapp.com/', 'localhost']
+
+ALLOWED_HOSTS = ['https://neon-beats-academy-74fa20163bce.herokuapp.com/', '8000-lunartechfr-neonbeatsac-xc7j3gj3tpc.ws.codeinstitute-ide.net']
 
 
 # Application definition
@@ -128,9 +132,17 @@ WSGI_APPLICATION = 'neon_beats.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-}
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
 # Password validation
