@@ -59,9 +59,9 @@ h1, h2, h3, h4, h5, h6 {
     min-width: 260px;
 }
 
-.btn-white {
-    background: white;
-    color: black;
+.btn-black {
+    background: black;
+    color: white;
 }
 
 .btn-outline-black {
@@ -80,11 +80,11 @@ h1, h2, h3, h4, h5, h6 {
 .dj-courses-btn:hover,
 .dj-courses-btn:active,
 .dj-courses-btn:focus,
-.btn-white:hover,
-.btn-white:active,
-.btn-white:focus {
-    background: black;
-    color: white;
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: white;
+    color: black;
 }
 
 /************************************* Bootstrap Toasts */
@@ -194,6 +194,34 @@ a.tier-badge > span.badge:hover {
 /************************************** All Courses Page */
 .remove-item {
     cursor: pointer;
+}
+
+
+/************************************** Product Form */
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
 }
 
 /**************************************  Media Queries */
