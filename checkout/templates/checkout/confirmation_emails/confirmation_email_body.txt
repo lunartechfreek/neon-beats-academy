@@ -1,0 +1,21 @@
+Hey {{ order.full_name }}!
+
+Welcome to NeonBeats Academy!
+
+Now your part of the crew, you're now officially on your way to mastering the decks!
+
+Here’s your order confirmation to kick off the journey:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+Total: ${{ order.grand_total }}
+
+Billing Address: {{ order.street_address1 }}, {{ order.town_or_city }}, {{ order.country }}
+Phone Number: {{ order.phone_number }}
+
+It's now time to turn the volume up on your path to becoming a DJ superstar!
+
+Need help or got questions? Drop us a beat at {{ contact_email }} - we’re here to support your DJ dreams!
+
+Keep it spinning,
+NeonBeats Academy
