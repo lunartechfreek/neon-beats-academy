@@ -36,11 +36,18 @@
                     {% for item in bag_items %}
                     <tr>
                         <td class="p-3 w-25">
-                            {% if item.course.image %}
+                            <!-- {% if item.course.image %}
                             <img class="img-fluid rounded" src="{{ item.course.image.url }}" alt="{{ item.course.name }}">
                             {% else %}
                             <img class="img-fluid rounded" src="{{ MEDIA_URL }}/media/noimage.png" alt="{{ item.course.name }}">
+                            {% endif %} -->
+                            {% if "placeholder" in item.course.image.url %}
+                            <img class="img-fluid rounded" src="{% static 'images/noimage.png' %}"
+                                alt="placeholder image">
+                            {% else %}
+                            <img class="img-fluid rounded" src=" {{ item.course.image.url }}" alt="{{ course.name }}">
                             {% endif %}
+
                         </td>
                         <td class="py-3">
                             <p class="my-0"><strong>{{ item.course.name }}</strong></p>
