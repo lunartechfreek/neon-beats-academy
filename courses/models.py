@@ -1,4 +1,5 @@
 from django.core.validators import MinValueValidator, MaxValueValidator
+from cloudinary.models import CloudinaryField
 from django.db import models
 
 class CourseTier(models.Model):
@@ -32,8 +33,7 @@ class Course(models.Model):
         help_text="Difficulty level from 1 (easiest) to 10 (most difficult)"
     )
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+    image = CloudinaryField('image', default='placeholder')
 
     # Generate sku code dynamically
     def save(self, *args, **kwargs):
