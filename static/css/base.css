@@ -158,6 +158,23 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+/************************************** Images */
+
+.edit-image {
+    width: 96px;          
+    height: 96px; 
+    object-fit: cover; 
+    object-position: center;
+}
+
+.home-image {
+    background: url('../images/home-banner.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 156px);
+    position: relative;
+}
+
+
 /************************************** Navbar */
 #topnav {
     color: white;
@@ -182,12 +199,7 @@ input[name='q']::placeholder {
 }
 
 /************************************** Home Page */
-.home-image {
-    background: url('/media/home-banner.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 156px);
-    position: relative;
-}
+
 
 /************************************** All Courses Page */
 a.tier-badge > span.badge:hover {
