@@ -24,12 +24,14 @@
             <p><strong>Last updated:</strong> {{ about_info.updated_on }}</p>
         </div>
         <div class="col-12 col-lg-6">
-            {% if about_info.about_image %}
+            {% if "placeholder" in about_info.about_image.url %}
             <div class="about-image-container">
-                <img src="{{ about_info.about_image.url }}" alt="About Image">
+                <img class="img-fluid" src="{% static 'images/noimage.png' %}" alt="placeholder image">
             </div>
             {% else %}
-            <p>No image available</p>
+            <div class="about-image-container">
+                <img class="img-fluid" src="{{ about_info.about_image.url }}" alt="About Image">
+            </div>
             {% endif %}
         </div>
     </div>
