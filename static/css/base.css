@@ -240,6 +240,23 @@ a.tier-badge > span.badge:hover {
     border-radius: 0;
 }
 
+/************************************** About Page */
+
+.about-image-container {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.about-image-container img {
+    object-fit: cover; 
+    width: 100%;
+    height: 100%;
+    display: block; 
+}
+
 /**************************************  Media Queries */
 
 /* Slightly larger container on xl screens */

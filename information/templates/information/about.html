@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-4">About Us</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <p>{{ about_info.about_text }}</p>
+            <p><strong>Last updated:</strong> {{ about_info.updated_on }}</p>
+        </div>
+        <div class="col-12 col-lg-6">
+            {% if about_info.about_image %}
+            <div class="about-image-container">
+                <img src="{{ about_info.about_image.url }}" alt="About Image">
+            </div>
+            {% else %}
+            <p>No image available</p>
+            {% endif %}
+        </div>
+    </div>
+    {% endblock %}
