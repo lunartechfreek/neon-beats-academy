@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .models import About
+from .models import About, FAQ
 from .forms import ContactUsForm
 
 def about_us(request):
@@ -38,3 +38,16 @@ def contact_us(request):
         form = ContactUsForm()
 
     return render(request, 'information/contact_us.html', {'form': form})
+
+
+def faq_view(request):
+    """
+    Display the FAQs ordered by importance first of all,
+    and then order by creation date for questions with 
+    duplicate importance values.
+    """
+    faqs = FAQ.objects.order_by('importance', 'created_on')
+    context = {
+        'faqs': faqs
+    }
+    return render(request, 'information/faq.html', context)

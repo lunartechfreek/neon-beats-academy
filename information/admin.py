@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import About, ContactUs
+from .models import About, ContactUs, FAQ
 
 @admin.register(About)
 class AboutAdmin(admin.ModelAdmin):
@@ -22,3 +22,14 @@ class ContactUsAdmin(admin.ModelAdmin):
     def mark_as_read(self, request, queryset):
         queryset.update(read=True)
     mark_as_read.short_description = "Mark selected messages as read"
+
+
+@admin.register(FAQ)
+class FAQAdmin(admin.ModelAdmin):
+    """
+    Admin interface configuration for Frequently Asked Questions (FAQ).
+    """
+    list_display = ('question', 'importance', 'created_on', 'updated_on')
+    list_filter = ('importance', 'created_on', 'updated_on')
+    search_fields = ('question',)
+    ordering = ['importance', 'created_on']
