@@ -31,3 +31,25 @@ class ContactUs(models.Model):
 
     class Meta:
         verbose_name_plural = "Contact Us"
+
+
+class FAQ(models.Model):
+    """
+    A model for Frequently Asked Questions.
+    """
+    question = models.CharField(max_length=500, blank=False, null=False)
+    answer = models.TextField(blank=False, null=False)
+    importance = models.PositiveIntegerField(
+        default=1,
+        help_text="Lower values indicate higher importance."
+    )
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.question
+
+    class Meta:
+        verbose_name = "FAQ"
+        verbose_name_plural = "FAQs"
+        ordering = ['importance', 'created_on']
