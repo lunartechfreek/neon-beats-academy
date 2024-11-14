@@ -24,12 +24,12 @@
                 </a>
                 {% endif %} -->
                 {% if "placeholder" in course.image.url %}
-                <a href="{% url 'course_detail' course.id %}">
+                <a href="{{ course.image.url }}" target="_blank">
                     <img class="card-img-top img-fluid" src="{% static 'images/noimage.png' %}" alt="placeholder image">
                 </a>
                 {% else %}
-                <a href="{% url 'course_detail' course.id %}">
-                    <img class="card-img-top img-fluid" src=" {{ course.image.url }}" alt="{{ course.name }}">
+                <a href="{{ course.image.url }}" target="_blank">
+                    <img class="card-img-top img-fluid" src="{{ course.image.url }}" alt="{{ course.name }}">
                 </a>
                 {% endif %}
             </div>
