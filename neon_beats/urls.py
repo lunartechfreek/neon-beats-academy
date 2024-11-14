@@ -31,5 +31,5 @@ urlpatterns = [
 # ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 ]
 
-handler404 = "ravehub.views.handler404"
-handler500 = "ravehub.views.handler500"
+handler404 = "neon_beats.views.handler404"
+handler500 = "neon_beats.views.handler500"
