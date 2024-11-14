@@ -34,6 +34,12 @@ h1, h2, h3, h4, h5, h6 {
     width: 1.5rem;
 }
 
+.page-title {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
 /************************************* Colours */
 .text-white {
     color: white !important;
@@ -91,74 +97,12 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-/************************************* Bootstrap Toasts */
-.message-container {
-    position: fixed;
-    top: 72px;
-    right: 15px;
-    z-index: 99999999999;
-}
-
-.custom-toast {
-    overflow: visible;
-}
-
-.toast-capper {
-    height: 2px;
-}
-
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
-.arrow-up {
-    width: 0; 
-    height: 0; 
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
-    position: absolute;
-    top: -10px;
-    right: 36px;
-}
-
-/* Convenience classes - colors copied from Bootstrap */
-.arrow-primary {
-    border-bottom-color: #007bff !important;
-}
-
-.arrow-secondary {
-    border-bottom-color: #6c757d !important;
-}
-
-.arrow-success {
-    border-bottom-color: #28a745 !important;
-}
-
-.arrow-danger {
-    border-bottom-color: #dc3545 !important;
-}
-
-.arrow-warning {
-    border-bottom-color: #ffc107 !important;
-}
-
-.arrow-info {
-    border-bottom-color: #17a2b8 !important;
-}
-
-.arrow-light {
-    border-bottom-color: #f8f9fa !important;
-}
-
-.arrow-dark {
-    border-bottom-color: #343a40 !important;
-}
-
-.bag-notification-wrapper {
-    height: 100px;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
 /************************************** Images */
+.page-banner {
+    /* background-size: cover; */
+    height: 70vh;
+    position: relative;
+}
 
 .edit-image {
     width: 96px;          
@@ -170,15 +114,20 @@ input[name='q']::placeholder {
 .home-image {
     background: url('../images/home-banner.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 156px);
+    height: calc(100vh - 115px);
     position: relative;
+}
+
+.profile-image {
+    background: url('../images/profile-banner.webp') no-repeat center center fixed;
+    background-size: cover;
 }
 
 
 /************************************** Navbar */
 #topnav {
     color: white;
-    height: 100px;
+    height: 75px;
 }
 
 .main-logo-link {
@@ -257,16 +206,76 @@ a.tier-badge > span.badge:hover {
     display: block; 
 }
 
-/**************************************  Media Queries */
+/************************************* Other */
 
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+/*************** Bootstrap Toasts */
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
 }
 
-/* Allauth form formatting */
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+/* Convenience classes - colors copied from Bootstrap */
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/************* Allauth Form Formatting */
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
@@ -320,8 +329,18 @@ a.tier-badge > span.badge:hover {
 	color: #17a2b8; /* text-info */
 }
 
-/* Fixed top navbar only on medium and up */
+/**************************************  Media Queries */
+
+/* XL Screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* Large screens */
 @media (min-width: 992px) {
+    /* Fixed top navbar only on medium and up */
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
@@ -331,7 +350,11 @@ a.tier-badge > span.badge:hover {
     }
 
     .header-container {
-        padding-top: 156px;
+        padding-top: 115px;
+    }
+
+    .navbar {
+        padding: 0px;
     }
 }
 
