@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="col-7 col-md-6 my-auto">
+            <h1 class="display-2 logo-font text-black">
+                Error 404
+            </h1>
+            <h3 class="display-4 logo-font text-black">
+                Wicka-wicka... Uh oh, you just dropped the wrong beat!
+            </h3>
+            <h4>
+                Looks like that page is missing from the tracklist. Try rewinding and mixing it up with a different
+                link!
+            </h4>
+            <div class="my-5">
+                <h5>
+                    <a href="{% url 'home' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
+                        Return back to the homepage to keep the beats flowing
+                    </a>
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
