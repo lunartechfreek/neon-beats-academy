@@ -1,30 +1,39 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block content %}
+
+{% block page_header %}
 <div class="container header-container">
     <div class="row">
         <div class="col"></div>
     </div>
 </div>
-<div class="container h-100">
-    <div class="row h-100">
-        <div class="col-12 col-lg-10 text-center mx-auto">
-            <h1 class="display-3 text-black mt-4">
-                Error 404
-            </h1>
-            <h3 class="text-black">
-                Wicka-wicka... Uh oh, you just dropped the wrong beat!
-            </h3>
-            <h4>
-                Looks like that page is missing from the tracklist. Try rewinding and mixing it up with a different
-                link!
-            </h4>
-            <div class="my-5">
-                <h5>
-                    <a href="{% url 'home' %}" class="btn btn-lg rounded-0 btn-black text-uppercase py-3">
-                        Return back to the homepage to keep the beats flowing
-                    </a>
-                </h5>
+{% endblock %}
+
+{% block content %}
+<div class="error-404-image full-page-banner">
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-12 col-lg-10 text-center mx-auto">
+                <div class="error-box">
+                    <h1 class="display-3 text-white mt-4">
+                        Error 404
+                    </h1>
+                    <h3 class="text-white">
+                        Wicka-wicka... Uh oh, you just dropped the wrong beat!
+                    </h3>
+                    <h4>
+                        Looks like that page is missing from the tracklist. Try rewinding and mixing it up with a
+                        different
+                        link!
+                    </h4>
+                    <div class="my-5">
+                        <h5>
+                            <a href="{% url 'home' %}" class="btn btn-lg rounded-0 btn-white text-uppercase py-3">
+                                Return back to the homepage to keep the beats flowing
+                            </a>
+                        </h5>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -70,6 +70,11 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
 }
 
+.btn-white {
+    background: white;
+    color: black;
+}
+
 .btn-outline-black {
     background: white;
     color: black !important;
@@ -93,14 +98,30 @@ h1, h2, h3, h4, h5, h6 {
     color: black;
 }
 
+.btn-white:hover,
+.btn-white:active,
+.btn-white:focus {
+    background: black;
+    color: white;
+}
+
 input[name='q']::placeholder {
     color: #aab7c4;
 }
 
 /************************************** Images */
-.page-banner {
-    /* background-size: cover; */
-    height: 70vh;
+.lg-page-banner {
+    height: 65vh;
+    position: relative;
+}
+
+.sm-page-banner {
+    height: 60vh;
+    position: relative;
+}
+
+.full-page-banner {
+    height: calc(100vh - 115px);
     position: relative;
 }
 
@@ -114,12 +135,55 @@ input[name='q']::placeholder {
 .home-image {
     background: url('../images/home-banner.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 115px);
-    position: relative;
 }
 
 .profile-image {
     background: url('../images/profile-banner.webp') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.about-image {
+    background: url('../images/about-banner.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.courses-image {
+    background: url('../images/courses-banner.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.contact-image {
+    background: url('../images/contact-banner.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.faq-image {
+    background: url('../images/faq-banner.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.bag-image {
+    background: url('../images/bag-banner.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.add-course-image {
+    background: url('../images/add-course-banner.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.edit-course-image {
+    background: url('../images/edit-course-banner.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.error-404-image {
+    background: url('../images/error-404-banner.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.error-500-image {
+    background: url('../images/error-500-banner.jpeg') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -204,6 +268,13 @@ a.tier-badge > span.badge:hover {
     width: 100%;
     height: 100%;
     display: block; 
+}
+
+/************************************* Error Pages */
+.error-box {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    margin: 50px 0;
 }
 
 /************************************* Other */

@@ -1,29 +1,37 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block content %}
+
+{% block page_header %}
 <div class="container header-container">
     <div class="row">
         <div class="col"></div>
     </div>
 </div>
-<div class="container h-100">
-    <div class="row h-100">
-        <div class="col-12 col-lg-10 text-center mx-auto">
-            <h1 class="display-3 text-black mt-4">
-                Error 500
-            </h1>
-            <h3 class="text-black">
-                Too hot to handle! Looks like our server's gone up in flames!
-            </h3>
-            <h4>
-                Our DJs are on it, remixing the backend to get everything back to full volume. Hang tight!
-            </h4>
-            <div class="my-5">
-                <h5>
-                    <a href="{% url 'home' %}" class="btn btn-lg rounded-0 btn-black text-uppercase py-3">
-                        Hit up our homepage while we fix this glitch in the mix
-                    </a>
-                </h5>
+{% endblock %}
+
+{% block content %}
+<div class="error-500-image full-page-banner">
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-12 col-lg-10 text-center mx-auto">
+                <div class="error-box">
+                    <h1 class="display-3 text-white mt-4">
+                        Error 500
+                    </h1>
+                    <h3 class="text-white">
+                        Too hot to handle! Looks like our server's gone up in flames!
+                    </h3>
+                    <h4>
+                        Our DJs are on it, remixing the backend to get everything back to full volume. Hang tight!
+                    </h4>
+                    <div class="my-5">
+                        <h5>
+                            <a href="{% url 'home' %}" class="btn btn-lg rounded-0 btn-white text-uppercase py-3">
+                                Hit up our homepage while we fix this glitch in the mix
+                            </a>
+                        </h5>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

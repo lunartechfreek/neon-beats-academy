@@ -37,7 +37,7 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/c86e88bc23.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
@@ -54,8 +54,8 @@
 
     <title>NeonBeats Academy {% block extra_title %}{% endblock %}</title>
 </head>
-<!-- Make sure there is no scroll on the Y axis -->
 
+<!-- Make sure there is no scroll on the Y axis -->
 <body class="{% if request.path == '/' %}no-scroll{% endif %}">
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-black pt-lg-2 d-none d-lg-flex">
@@ -139,6 +139,12 @@
         {% endfor %}
     </div>
     {% endif %}
+
+    <!-- <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div> -->
 
     {% block page_header %}
     {% endblock %}
