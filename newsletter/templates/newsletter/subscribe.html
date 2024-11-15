@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+<div class="contact-image lg-page-banner">
+    <h2 class="text-black page-title">
+        Newsletter
+    </h2>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-4">Subscribe To Our Newsletter</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+            <div class="contact-container">
+                <form method="POST">
+                    {% csrf_token %}
+                    <!-- Render the form using crispy filter -->
+                    {{ form|crispy }}
+                    <div class="text-center mt-4 mb-4"></div>
+                        <button type="submit" class="btn btn-black rounded-0">Subscribe!</button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    {% endblock %}
