@@ -270,6 +270,13 @@ a.tier-badge > span.badge:hover {
     display: block; 
 }
 
+/************************************** Newsletter */
+.subscribe-container {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 0.75rem;
+}
+
 /************************************* Error Pages */
 .error-box {
     background-color: rgba(0, 0, 0, 0.75);
@@ -400,7 +407,7 @@ a.tier-badge > span.badge:hover {
 	color: #17a2b8; /* text-info */
 }
 
-/**************************************  Media Queries */
+/************************************** Media Queries */
 
 /* XL Screens */
 @media (min-width: 1200px) {
@@ -426,6 +433,10 @@ a.tier-badge > span.badge:hover {
 
     .navbar {
         padding: 0px;
+    }
+
+    .subscribe-container {
+        margin-top: 1.5rem;
     }
 }
 

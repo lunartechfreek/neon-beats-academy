@@ -24,19 +24,26 @@
             <hr>
         </div>
     </div>
-    <div class="row justify-content-center">
-        <div class="col-12 col-lg-8">
-            <div class="contact-container">
-                <form method="POST">
-                    {% csrf_token %}
-                    <!-- Render the form using crispy filter -->
-                    {{ form|crispy }}
-                    <div class="text-center mt-4 mb-4"></div>
-                        <button type="submit" class="btn btn-black rounded-0">Subscribe!</button>
-                    </div>
-                </form>
-                
+    <div class="row">
+        <div class="col-12 col-lg-6 mb-5">
+            <p class="lead">{{ newsletter_info.newsletter_info }}</p>
+            <p class="text-muted">Last updated: {{ newsletter_info.updated_on|date:"F j, Y, g:i a" }}</p>
+        </div>
+        <div class="col-12 col-lg-6">
+            <h4 class="text-center">Don't Miss Out and Sign Up Today!</h4>
+            <div class="d-flex justify-content-center">
+                <div class="subscribe-container">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <!-- Render the form using crispy filter -->
+                        {{ form|crispy }}
+                        <div class="text-center mt-4 mb-4">
+                            <button type="submit" class="btn btn-black rounded-0">Subscribe!</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-    {% endblock %}
+</div>
+{% endblock %}
