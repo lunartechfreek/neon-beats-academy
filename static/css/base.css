@@ -113,16 +113,28 @@ input[name='q']::placeholder {
 .lg-page-banner {
     height: 65vh;
     position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .sm-page-banner {
     height: 60vh;
     position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .full-page-banner {
     height: calc(100vh - 115px);
     position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .edit-image {
@@ -133,58 +145,47 @@ input[name='q']::placeholder {
 }
 
 .home-image {
-    background: url('../images/home-banner.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background-image: url('../images/home-banner.jpg');
 }
 
 .profile-image {
-    background: url('../images/profile-banner.webp') no-repeat center center fixed;
-    background-size: cover;
+    background-image: url('../images/profile-banner.webp');
 }
 
 .about-image {
-    background: url('../images/about-banner.jpeg') no-repeat center center fixed;
-    background-size: cover;
+    background-image: url('../images/about-banner.jpeg');
 }
 
 .courses-image {
-    background: url('../images/courses-banner.jpeg') no-repeat center center fixed;
-    background-size: cover;
+    background-image: url('../images/courses-banner.jpeg');
 }
 
 .contact-image {
-    background: url('../images/contact-banner.jpeg') no-repeat center center fixed;
-    background-size: cover;
+    background-image: url('../images/contact-banner.jpeg');
 }
 
 .faq-image {
-    background: url('../images/faq-banner.jpeg') no-repeat center center fixed;
-    background-size: cover;
+    background-image: url('../images/faq-banner.jpeg');
 }
 
 .bag-image {
-    background: url('../images/bag-banner.jpeg') no-repeat center center fixed;
-    background-size: cover;
+    background-image: url('../images/bag-banner.jpeg');
 }
 
 .add-course-image {
-    background: url('../images/add-course-banner.jpeg') no-repeat center center fixed;
-    background-size: cover;
+    background-image: url('../images/add-course-banner.jpeg');
 }
 
 .edit-course-image {
-    background: url('../images/edit-course-banner.jpeg') no-repeat center center fixed;
-    background-size: cover;
+    background-image: url('../images/edit-course-banner.jpeg');
 }
 
 .error-404-image {
-    background: url('../images/error-404-banner.jpeg') no-repeat center center fixed;
-    background-size: cover;
+    background-image: url('../images/error-404-banner.jpeg');
 }
 
 .error-500-image {
-    background: url('../images/error-500-banner.jpeg') no-repeat center center fixed;
-    background-size: cover;
+    background-image: url('../images/error-500-banner.jpeg');
 }
 
 
@@ -197,6 +198,12 @@ input[name='q']::placeholder {
 .main-logo-link {
     width: fit-content;
     color: white;
+}
+
+.main-logo-link:hover,
+.main-logo-link:active,
+.main-logo-link:focus {
+    color: yellow;
 }
 
 .logo-container {
