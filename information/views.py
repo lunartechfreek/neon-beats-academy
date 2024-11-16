@@ -3,11 +3,12 @@ from django.contrib import messages
 from .models import About, FAQ
 from .forms import ContactUsForm
 
+
 def about_us(request):
     """
     Display the 'About' information with text, image, and updated date.
     """
-    about_info = About.objects.first()  # Fetch the first (or only) About entry
+    about_info = About.objects.order_by('-updated_on').first()
 
     # Fallback for if no About entry exists
     if not about_info:
@@ -18,6 +19,7 @@ def about_us(request):
     }
 
     return render(request, 'information/about.html', context)
+
 
 
 def contact_us(request):
