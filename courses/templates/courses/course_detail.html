@@ -9,9 +9,9 @@
 </div>
 <div class="lg-page-banner" 
     {% if "placeholder" in course.image.url %}
-        style="background-image: url('{% static 'images/noimage.png' %}'); background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover;"
+        style="background-image: url('{% static 'images/noimage.png' %}');"
     {% else %}
-        style="background-image: url('{{ course.image.url }}'); background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover;"
+        style="background-image: url('{{ course.image.url }}');"
     {% endif %}>
     <h2 class="text-black page-title">
         {{ course.name }}
