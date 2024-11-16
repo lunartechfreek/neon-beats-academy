@@ -97,14 +97,18 @@ def edit_course(request, course_id):
 
 @login_required
 def delete_course(request, course_id):
-    """ Delete a course from the store """
+    """ Delete a course from the store after confirmation """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only site admin can do that.')
-        return redirect(reverse('home'))
+        return redirect(reverse('courses'))
 
     course = get_object_or_404(Course, pk=course_id)
-    course_name = course.name 
-    course.delete()
-    messages.success(request, f'Course "{course_name}" deleted!')
+    
+    if request.method == "POST":  # Ensure deletion only happens on POST
+        course_name = course.name 
+        course.delete()
+        messages.success(request, f'Course "{course_name}" deleted!')
+        return redirect(reverse('courses'))
+    
     return redirect(reverse('courses'))
 
