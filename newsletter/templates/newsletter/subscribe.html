@@ -26,7 +26,7 @@
     </div>
     <div class="row">
         <div class="col-12 col-lg-6 mb-5">
-            <p class="lead">{{ newsletter_info.newsletter_info }}</p>
+            <div class="summernote-text">{{ newsletter_info.newsletter_info|safe }}</div>
             <p class="text-muted">Last updated: {{ newsletter_info.updated_on|date:"F j, Y, g:i a" }}</p>
         </div>
         <div class="col-12 col-lg-6">

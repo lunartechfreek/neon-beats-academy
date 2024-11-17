@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django_summernote.admin import SummernoteModelAdmin
 from .models import Newsletter, NewsletterInfo
 
 @admin.register(Newsletter)
@@ -11,6 +12,7 @@ class NewsletterAdmin(admin.ModelAdmin):
 
 
 @admin.register(NewsletterInfo)
-class NewsletterInfoAdmin(admin.ModelAdmin):
+class NewsletterInfoAdmin(SummernoteModelAdmin):
+    summernote_fields = ('newsletter_info',)
     list_display = ('newsletter_info', 'updated_on')
     readonly_fields = ('updated_on',)
