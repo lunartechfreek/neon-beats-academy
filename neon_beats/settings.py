@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     # Other
     'crispy_forms',
     'cloudinary',
+    'django_summernote',
 ]
 
 MIDDLEWARE = [
