@@ -26,8 +26,8 @@ class Course(models.Model):
 
     tier = models.ForeignKey('CourseTier', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=20, unique=True, editable=False)
-    name = models.CharField(max_length=254)
-    description = models.TextField()
+    name = models.CharField(max_length=254, unique=True, blank=False)
+    description = models.TextField(blank=False)
     difficulty = models.IntegerField(
         choices=DIFFICULTY_CHOICES,
         help_text="Difficulty level from 1 (easiest) to 10 (most difficult)"
