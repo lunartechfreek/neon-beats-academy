@@ -38,6 +38,15 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     right: 20px;
     bottom: 20px;
+    text-align: right;
+}
+
+/* Override Summernote Styles */
+.summernote-text p {
+    font-family: 'Roboto Mono', sans-serif !important;
+    font-size: 1rem !important;
+    color: white !important;
+    line-height: 1.5rem !important;
 }
 
 /************************************* Colours */
