@@ -27,16 +27,33 @@ def all_courses(request):
     return render(request, 'courses/courses.html', context)
 
 
+# def course_detail(request, course_id):
+#     """ A view to show individual course details """
+
+#     course = get_object_or_404(Course, pk=course_id)
+
+#     context = {
+#         'course': course,
+#     }
+
+#     return render(request, 'courses/course_detail.html', context)
+
 def course_detail(request, course_id):
     """ A view to show individual course details """
-
+    
     course = get_object_or_404(Course, pk=course_id)
+    
+    # Get the bag from the session, if exists
+    bag = request.session.get('bag', {})
 
+    # Add the course to the context so it can be used in the template
     context = {
         'course': course,
+        'bag': bag,  # Pass the bag to the template
     }
 
     return render(request, 'courses/course_detail.html', context)
+
 
 
 @login_required

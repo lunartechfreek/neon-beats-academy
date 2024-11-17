@@ -8,21 +8,47 @@ def view_bag(request):
 
     return render(request, 'bag/bag.html')
 
+####### View with error message #######
+
+# def add_to_bag(request, item_id):
+#     """ Add the specified course to the shopping bag """
+
+#     course = get_object_or_404(Course, pk=item_id)
+#     redirect_url = request.POST.get('redirect_url')
+#     bag = request.session.get('bag', {})
+
+#     # Check if the course is already in the bag
+#     if item_id in bag:
+#         messages.error(request, f'{course.name} is already in your bag.')
+#         return redirect(redirect_url)
+
+#     # Add course to the bag
+#     bag[item_id] = 1  # Only add one instance of each course
+#     request.session['bag'] = bag
+#     messages.success(request, f'Added {course.name} to your bag')
+
+#     return redirect(redirect_url)
 
 def add_to_bag(request, item_id):
     """ Add the specified course to the shopping bag """
 
     course = get_object_or_404(Course, pk=item_id)
-    redirect_url = request.POST.get('redirect_url')
+    redirect_url = request.POST.get('redirect_url', '/')  # default to home if redirect_url is missing
     bag = request.session.get('bag', {})
 
-    # Add course to the bag without quantity
-    bag[item_id] = 1  # Only add one instance of each course
+    # Check if the course is already in the bag
+    if str(item_id) in bag:
+        messages.error(request, f'{course.name} is already in your bag.')
+        return redirect(redirect_url)
 
+    # Add course to the bag
+    bag[str(item_id)] = 1  # Only add one instance of each course
     request.session['bag'] = bag
     messages.success(request, f'Added {course.name} to your bag')
 
     return redirect(redirect_url)
+
+
 
 
 def remove_from_bag(request, item_id):
