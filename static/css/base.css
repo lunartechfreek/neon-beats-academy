@@ -118,6 +118,19 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+.disabled-btn {
+    background-color: #6c757d;
+    color: #000;
+}
+
+.disabled-btn:hover,
+.disabled-btn:focus,
+.disabled-btn:active {
+    background-color: #6c757d;
+    color: #000;
+    cursor: not-allowed;
+}
+
 /************************************** Images */
 .lg-page-banner {
     height: 65vh;
