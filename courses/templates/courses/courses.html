@@ -18,7 +18,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">All Courses</h2>
+            <h2 class="logo-font">DJ Courses</h2>
             {% for t in current_tiers %}
             <a class="tier-badge text-decoration-none" href="{% url 'courses' %}?tier={{ t.tier_name|urlencode }}">
                 <span class="p-2 mt-2 badge text-black rounded-0 border border-dark">{{ t.tier_name }}</span>
