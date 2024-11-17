@@ -1,11 +1,13 @@
 from django.contrib import admin
+from django_summernote.admin import SummernoteModelAdmin
 from .models import About, ContactUs, FAQ
 
 @admin.register(About)
-class AboutAdmin(admin.ModelAdmin):
+class AboutAdmin(SummernoteModelAdmin):
     """
     Admin interface configuration for the about model.
     """
+    summernote_fields = ('about_text',)
     list_display = ('about_text', 'about_image', 'updated_on')
 
 

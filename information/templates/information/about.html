@@ -25,7 +25,7 @@
     </div>
     <div class="row">
         <div class="col-12 col-lg-6">
-            <p>{{ about_info.about_text }}</p>
+            <div class="summernote-text">{{ about_info.about_text|safe }}</div>
             <p><strong>Last updated:</strong> {{ about_info.updated_on|date:"F j, Y, g:i a" }}</p>
         </div>
         <div class="col-12 col-lg-6">
