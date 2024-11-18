@@ -50,51 +50,66 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /************************************* Colours */
+:root {
+    --white: #fafafa;
+    --black: #020202;
+    --pink: #FF02FF;
+    --blue: #0AEAF1;
+    --green: #8DFF0A;
+    --yellow: #FFE91A;
+    --purple: #28003D;
+  }
+
+.bg-pink {
+    background-color: var(--pink);
+}
+  
+
 .text-white {
-    color: white !important;
+    color: var(--white) !important;
 }
 
 .text-black {
-    color: black !important;
+    color: var(--black) !important;
 }
 
 .border-black {
-    border: 1px solid black !important;
+    border: 1px solid var(--black) !important;
 }
 
 .bg-black {
-    background-color: black;
-    color: white;
+    background-color: var(--black);
+    color: var(--white);
 }
 
 /************************************* Buttons */
 .dj-courses-btn {
-    background: white;
-    color: black;
+    background: var(--white);
+    color: var(--black);
     min-width: 260px;
 }
 
 .btn-black {
-    background: black;
-    color: white;
+    background: var(--black);
+    color: var(--white);
 }
 
 .btn-white {
-    background: white;
-    color: black;
+    background: var(--white);
+    color: var(--black);
 }
 
 .btn-outline-black {
-    background: white;
-    color: black !important;
-    border: 1px solid black;
+    background: var(--white);
+    color: var(--black) !important;
+    border: 1px solid var(--black);
 }
 
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
-    color: white !important;
+    background: var(--black);
+    color: var(--white) !important;
 }
 
 .dj-courses-btn:hover,
@@ -103,27 +118,27 @@ h1, h2, h3, h4, h5, h6 {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: white;
-    color: black;
+    background: var(--white);
+    color: var(--black);
 }
 
 .btn-white:hover,
 .btn-white:active,
 .btn-white:focus {
-    background: black;
-    color: white;
+    background: var(--black);
+    color: var(--white);
 }
 
 .disabled-btn {
     background-color: #6c757d;
-    color: #000;
+    color: var(--black);
 }
 
 .disabled-btn:hover,
 .disabled-btn:focus,
 .disabled-btn:active {
     background-color: #6c757d;
-    color: #000;
+    color: var(--black);
     cursor: not-allowed;
 }
 
@@ -208,6 +223,14 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /************************************** Navbar */
+#main-nav {
+    margin-left: -15px;
+}
+
+.nav-link:hover {
+    color: var(--white) !important;
+}
+
 #topnav {
     color: white;
     height: 75px;
