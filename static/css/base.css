@@ -209,6 +209,10 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url('../images/faq-banner.jpeg');
 }
 
+.newsletter-image {
+    background-image: url('../images/newsletter-banner.jpeg');
+}
+
 .bag-image {
     background-image: url('../images/bag-banner.jpeg');
 }
