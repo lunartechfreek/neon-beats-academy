@@ -1,13 +1,15 @@
 from django import forms
+from django_summernote.widgets import SummernoteWidget
 from .widgets import CustomClearableFileInput
 from .models import Course, CourseTier
 
-
 class CourseForm(forms.ModelForm):
-
     class Meta:
         model = Course
         fields = '__all__'
+        widgets = {
+            'description': SummernoteWidget(),  # Use Summernote for the description field
+        }
 
     image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
 
