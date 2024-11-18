@@ -41,6 +41,7 @@
         <div class="col-12 col-lg-6">
             <p class="text-muted">Order History</p>
             <div class="order-history table-responsive">
+                {% if orders %}
                 <table class="table table-sm table-borderless">
                     <thead>
                         <tr>
@@ -73,6 +74,9 @@
                         {% endfor %}
                     </tbody>
                 </table>
+                {% else %}
+                <p>You have no previous orders!</p>
+                {% endif %}
             </div>
         </div>
     </div>
