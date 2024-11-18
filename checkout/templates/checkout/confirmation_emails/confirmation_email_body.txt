@@ -9,23 +9,22 @@ Here’s your order confirmation details to kick off the journey:
 
 Order Number: {{ order.order_number }}
 Order Date: {{ order.date }}
-Total: ${{ order.grand_total }}
-
+Email Address {{ order.email }}
 Billing Address: {{ order.street_address1 }}, {{ order.town_or_city }}, {{ order.country }}
-Phone Number: {{ order.phone_number }}
+Total: ${{ order.grand_total }}
 
 
 How to Access Your Course!
 
-    1. Navigate to the Contact Us page: https://neon-beats-academy-74fa20163bce.herokuapp.com/information/contact_us/.
+1. Navigate to the Contact Us page: https://neon-beats-academy-74fa20163bce.herokuapp.com/information/contact_us/.
 
-    2. Enter your name and email.
+2. Enter your name and email.
 
-    3. In the message box copy and paste your order number as shown above.
+3. In the message box copy and paste your order number as shown above.
 
-    4. Then one of our team will in touch to book your welcome session and introduce you to the world of DJing! **
+4. Then one of our team will in touch to book your welcome session and introduce you to the world of DJing! **
 
-** Our team aim to respond within 24 hours
+** Our team aim to respond within 24 hours.
 
 
 It's now time to turn the volume up on your path to becoming a DJ superstar!
