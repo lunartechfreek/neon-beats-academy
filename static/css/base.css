@@ -281,9 +281,49 @@ h1, h2, h3, h4, h5, h6 {
     height: 68px;
 }
 
-.mobile-logo-container {
-
+.header-text {
+    color: var(--white) !important;
 }
+
+.header-text:hover,
+.header-text:focus,
+.header-text:active {
+    color: var(--black) !important;
+}
+
+.bg-header {
+    background-color: var(--black);
+}
+
+.navbar-light .navbar-toggler {
+    border-color: rgba(254, 255, 255, 0.75);
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.mobile-nav-link {
+    padding: 0.5rem 0;
+}
+
+.mobile-logo {
+    padding: 1px 0;
+}
+
+.mobile-logo-link {
+    height: 100%;
+}
+
+.mobile-links-container {
+    height: 100%;
+}
+
+.navbar-nav {
+    padding-left: 15px;
+}
+
+
 
 /************************************** Home Page */
 
@@ -373,7 +413,7 @@ a.tier-badge > span.badge:hover {
 }
 
 .toast-capper {
-    height: 2px;
+    height: 8px;
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
@@ -492,6 +532,10 @@ a.tier-badge > span.badge:hover {
 
 /* Large screens */
 @media (min-width: 992px) {
+    body {
+        height: calc(100vh - 115px);
+    }
+
     /* Fixed top navbar only on medium and up */
     .fixed-top-desktop-only {
         position: fixed;
@@ -514,14 +558,24 @@ a.tier-badge > span.badge:hover {
         margin-top: 1.5rem;
     }
 
-    body {
-        height: calc(100vh - 115px);
+    .header-text {
+        color: var(--black) !important;
+    }
+
+    .header-text:hover,
+    .header-text:focus,
+    .header-text:active {
+        color: var(--white) !important;
+    }
+
+    .bg-header {
+        background-color: var(--pink);
     }
 
 }
 
 /* Padding for when navbar is collapsed on mobile */
-@media (max-width: 991px) {
+@media (max-width: 353px) {
     /* .navbar {
         padding: 2px 1rem;
         height: 68px;
@@ -534,4 +588,14 @@ a.tier-badge > span.badge:hover {
     /* body {
         height: calc(100vh - 68px);
     } */
+    .message-container {
+        right: 1px;
+        left: 1px;
+    }
+}
+
+@media (max-width: 353px) {
+    .message-container {
+        right: 4px;
+    }
 }

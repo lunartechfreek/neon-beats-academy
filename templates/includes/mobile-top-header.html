@@ -1,9 +1,7 @@
 {% load static %}
-
-<img src="{% static 'images/logo.webp' %}" alt="NeonBeats Academy Logo" class="logo d-block d-lg-none">
 <li class="list-inline-item dropdown">
-    <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
+    <a class="text-white nav-link mobile-nav-link d-block d-lg-none" href="#" id="user-options"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-user fa-lg"></i></div>
             <p class="my-0">Account</p>
@@ -11,9 +9,9 @@
     </a>
     <div class="dropdown-menu border-0" aria-labelledby="user-options">
         {% if request.user.is_authenticated %}
-            {% if request.user.is_superuser %}
-            <a href="{% url 'add_course' %}" class="dropdown-item">Course Management</a>
-            {% endif %}
+        {% if request.user.is_superuser %}
+        <a href="{% url 'add_course' %}" class="dropdown-item">Course Management</a>
+        {% endif %}
         <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
         <a href="{% url 'account_change_password' %}" class="dropdown-item">Change Password</a>
         <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
@@ -24,7 +22,7 @@
     </div>
 </li>
 <li class="list-inline-item">
-    <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"
+    <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-white{% endif %} nav-link mobile-nav-link d-lg-none"
         href="{% url 'view_bag' %}">
         <div class="text-center">
             <div><i class="fas fa-shopping-bag fa-lg"></i></div>
@@ -36,5 +34,11 @@
                 {% endif %}
             </p>
         </div>
+    </a>
+</li>
+<li class="list-inline-item h-100">
+    <a href="{% url 'home' %}" class="mobile-logo-link"></a>
+    <img src="{% static 'images/logo.webp' %}" alt="NeonBeats Academy Logo"
+        class="logo mobile-logo d-block d-lg-none">
     </a>
 </li>
