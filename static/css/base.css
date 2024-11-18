@@ -73,6 +73,14 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--black) !important;
 }
 
+.text-blue {
+    color: var(--blue);
+}
+
+.text-green {
+    color: var(--green);
+}
+
 .border-black {
     border: 1px solid var(--black) !important;
 }
@@ -236,21 +244,26 @@ h1, h2, h3, h4, h5, h6 {
     height: 75px;
 }
 
-.main-logo-link {
-    width: fit-content;
-    color: white;
+.nav-link {
+    color: var(--white);
 }
 
-.main-logo-link:hover,
-.main-logo-link:active,
-.main-logo-link:focus {
-    color: yellow;
+.main-logo-link {
+    width: fit-content;
+    padding-left: 0.5rem;
+    color: var(--white);
+}
+
+.main-logo-link:hover *,
+.main-logo-link:active *,
+.main-logo-link:focus * {
+    color: var(--yellow) !important;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     height: 100%;
 }
 

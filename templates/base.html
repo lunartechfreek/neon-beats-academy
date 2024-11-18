@@ -58,16 +58,18 @@
 <!-- Make sure there is no scroll on the Y axis -->
 <body class="{% if request.path == '/' %}no-scroll{% endif %}">
     <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-black pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+        <div id="topnav" class="row bg-black pt-lg-1 d-none d-lg-flex">
+            <div class="col-12 col-lg-6 my-auto py-1 py-lg-0 text-center text-lg-left logo-container">
+                <img src="{% static 'images/logo.webp' %}" alt="NeonBeats Academy Logo" class="logo">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="my-0"><strong>Neon</strong>Beats Academy</h2>
+                    
+                    <h2 class="my-0"><strong class="text-blue">Neon</strong><span class="text-green">Beats</span> Academy</h2>
                 </a>
             </div>
-            <div class="col-12 col-lg-4 logo-container">
+            <!-- <div class="col-12 col-lg-4">
                 <img src="{% static 'images/logo.webp' %}" alt="NeonBeats Academy Logo" class="logo">
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            </div> -->
+            <div class="col-12 col-lg-6 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
                         <a class="text-white nav-link" href="#" id="user-options" data-toggle="dropdown"
