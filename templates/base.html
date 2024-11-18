@@ -151,6 +151,22 @@
     {% block content %}
     {% endblock %}
 
+    <!-- Footer -->
+    <footer class="footer py-1 text-center d-flex justify-content-evenly">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+            aria-label="Visit our Facebook page (Opens in new tab)">
+            <i class="fab fa-facebook-square footer-icon"></i>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+            aria-label="Visit our instagram page (Opens in new tab)">
+            <i class="fab fa-instagram-square footer-icon"></i>
+        </a>
+        <a href="https://www.tiktok.com/explore" target="_blank" rel="noopener"
+            aria-label="Visit our Tiktok page (Opens in new tab)">
+            <i class="fab fa-tiktok footer-icon"></i>
+        </a>
+    </footer>
+
     {% block postloadjs %}
     <script type="text/javascript">
         $('.toast').toast('show');
