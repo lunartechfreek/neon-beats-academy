@@ -50,13 +50,10 @@
     <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
 
-    {% block extrahead %}
+    {% block extra_js %}
+        <!-- Summernote widget -->
         {{ block.super }}
         {{ form.media }}
-    {% endblock %}
-
-
-    {% block extra_js %}
     {% endblock %}
 
     <title>{% block title %}{% endblock %}</title>
