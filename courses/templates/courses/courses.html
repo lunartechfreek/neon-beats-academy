@@ -1,6 +1,20 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block title %}
+{% if selected_tier == 'Beginner' %}
+    Beginner DJ Courses
+{% elif selected_tier == 'Advanced' %}
+    Advanced DJ Courses
+{% elif selected_tier == 'Creative' %}
+    Creative DJ Courses
+{% elif selected_tier == 'Complete' %}
+    Complete DJ Courses
+{% else %}
+    DJ Courses
+{% endif %}
+{% endblock title %}
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">

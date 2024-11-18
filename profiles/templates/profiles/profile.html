@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block title %}My Profile - {{ user.username }}{% endblock title %}
+
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
@@ -13,7 +15,7 @@
 </div>
 <div class="profile-image lg-page-banner">
     <h2 class="text-black page-title">
-        My Profile
+        My Profile - {{ user.username }}
     </h2>
 </div>
 {% endblock %}

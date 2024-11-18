@@ -114,10 +114,6 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
 }
 
-input[name='q']::placeholder {
-    color: #aab7c4;
-}
-
 .disabled-btn {
     background-color: #6c757d;
     color: #000;
