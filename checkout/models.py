@@ -27,6 +27,10 @@ class Order(models.Model):
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
 
+    class Meta:
+        # Automatically sort the orders by date in descending order
+        ordering = ['-date']
+
     def _generate_order_number(self):
         """
         Generate a random, unique order number using UUID
