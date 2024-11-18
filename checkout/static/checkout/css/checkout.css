@@ -67,6 +67,6 @@ select option[value=""] {
     height: 100%;
 }
 
-.icon i {
+.spinner-icon {
     color: #0AEAF1;
 }
