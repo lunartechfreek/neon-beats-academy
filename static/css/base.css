@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    height: calc(100vh - 164px);
+    /* height: calc(100vh - 164px); */
     color: white;
     font-family: 'Roboto Mono', sans-serif;
     background-color: slategray;
@@ -272,6 +272,19 @@ h1, h2, h3, h4, h5, h6 {
     width: auto; 
 }
 
+.header-container {
+    padding-top: 68px;
+}
+
+.navbar {
+    padding: 2px 1rem;
+    height: 68px;
+}
+
+.mobile-logo-container {
+
+}
+
 /************************************** Home Page */
 
 
@@ -494,20 +507,31 @@ a.tier-badge > span.badge:hover {
 
     .navbar {
         padding: 0px;
+        height: 40px;
     }
 
     .subscribe-container {
         margin-top: 1.5rem;
     }
+
+    body {
+        height: calc(100vh - 115px);
+    }
+
 }
 
 /* Padding for when navbar is collapsed on mobile */
 @media (max-width: 991px) {
-    .header-container {
-        padding-top: 80px;
-    }
+    /* .navbar {
+        padding: 2px 1rem;
+        height: 68px;
+    } */
 
-    body {
-        height: calc(100vh - 80px);
-    }
+    /* .header-container {
+        padding-top: 68px;
+    } */
+
+    /* body {
+        height: calc(100vh - 68px);
+    } */
 }

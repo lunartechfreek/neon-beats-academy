@@ -56,14 +56,16 @@
 </head>
 
 <!-- Make sure there is no scroll on the Y axis -->
+
 <body class="{% if request.path == '/' %}no-scroll{% endif %}">
     <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-black pt-lg-1 d-none d-lg-flex">
+        <div id="topnav" class="row bg-black pt-lg-1 pb-lg-1 d-none d-lg-flex">
             <div class="col-12 col-lg-6 my-auto py-1 py-lg-0 text-center text-lg-left logo-container">
                 <img src="{% static 'images/logo.webp' %}" alt="NeonBeats Academy Logo" class="logo">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    
-                    <h2 class="my-0"><strong class="text-blue">Neon</strong><span class="text-green">Beats</span> Academy</h2>
+
+                    <h2 class="my-0"><strong class="text-blue">Neon</strong><span class="text-green">Beats</span>
+                        Academy</h2>
                 </a>
             </div>
             <!-- <div class="col-12 col-lg-4">
@@ -81,9 +83,9 @@
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                <a href="{% url 'add_course' %}" class="dropdown-item">Product Management</a>
-                                {% endif %}
+                            {% if request.user.is_superuser %}
+                            <a href="{% url 'add_course' %}" class="dropdown-item">Product Management</a>
+                            {% endif %}
                             <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                             <a href="{% url 'account_change_password' %}" class="dropdown-item">Change Password</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
@@ -111,6 +113,7 @@
                 </ul>
             </div>
         </div>
+
         <div class="row bg-pink">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 {% include 'includes/mobile-top-header.html' %}
@@ -127,26 +130,20 @@
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
-            {% with message.level as level %}
-                {% if level == 40 %}
-                    {% include 'includes/toasts/toast_error.html' %}
-                {% elif level == 30 %}
-                    {% include 'includes/toasts/toast_warning.html' %}
-                {% elif level == 25 %}
-                    {% include 'includes/toasts/toast_success.html' %}
-                {% else %}
-                    {% include 'includes/toasts/toast_info.html' %}
-                {% endif %}
-            {% endwith %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
         {% endfor %}
     </div>
     {% endif %}
-
-    <!-- <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div> -->
 
     {% block page_header %}
     {% endblock %}
