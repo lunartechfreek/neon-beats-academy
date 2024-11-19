@@ -19,7 +19,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid margin-bottom">
+<div class="container margin-bottom">
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container mt-5 mb-4">
@@ -43,7 +43,7 @@
             {% endif %}
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <div class="course-details-container mb-5 mt-md-5">
+            <div class="course-details-container mb-3 mt-md-5">
                 <p class="mb-0">{{ course.name }}</p>
                 <p class="lead mb-0 text-left font-weight-bold">${{ course.price }}</p>
                 {% if course.tier %}
@@ -59,7 +59,7 @@
                 <p>Difficulty N/A</p>
                 {% endif %}
 
-                <div class="mt-3 summernote-text">{{ course.description|safe }}</div>
+                
                 <!-- <form class="form" action="{% url 'add_to_bag' course.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
@@ -86,11 +86,17 @@
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form> -->
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="mt-3 summernote-text mb-5">{{ course.description|safe }}</div>
                 <form class="form" action="{% url 'add_to_bag' course.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
-                        <div class="col-12">
-                            <a href="{% url 'courses' %}" class="btn btn-blue btn-lg rounded-0 mt-5">
+                        <div class="col-12 text-right">
+                            <a href="{% url 'courses' %}" class="btn btn-blue btn-lg rounded-0 mt-2">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
@@ -100,7 +106,7 @@
                                    class="btn btn-black rounded-0 text-uppercase mt-5"
                                    value="{% if course.id|stringformat:'s' in bag %}Already in Bag{% else %}Add to Bag{% endif %}"
                                    {% if course.id|stringformat:'s' in bag %}disabled{% endif %}> -->
-                            <input type="submit" class="btn btn-pink btn-lg rounded-0 text-uppercase mt-5 {% if course.id|stringformat:'s' in bag %}
+                            <input type="submit" class="btn btn-pink btn-lg rounded-0 text-uppercase mt-2 {% if course.id|stringformat:'s' in bag %}
                                 disabled-btn{% endif %}"
                                 value="{% if course.id|stringformat:'s' in bag %}Already in Bag{% else %}Add to Bag{% endif %}"
                                 {% if course.id|stringformat:'s' in bag %}disabled{% endif %}>
