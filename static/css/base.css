@@ -99,10 +99,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /************************************* Buttons */
-.dj-courses-btn {
-    background: var(--white);
-    color: var(--black);
-    min-width: 260px;
+.btn:focus {
+    box-shadow: 0 0 0 .2rem var(--pink);
 }
 
 .btn-black {
@@ -110,9 +108,91 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--white);
 }
 
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: var(--white);
+    color: var(--black);
+}
+
 .btn-white {
     background: var(--white);
     color: var(--black);
+}
+
+.btn-white:hover,
+.btn-white:active,
+.btn-white:focus {
+    background: var(--black);
+    color: var(--white);
+}
+
+.btn-blue {
+    background: var(--blue);
+    color: var(--black);
+}
+
+.btn-blue:hover,
+.btn-blue:active,
+.btn-blue:focus {
+    background: var(--black);
+    color: var(--blue);
+}
+
+.btn-green {
+    background: var(--green);
+    color: var(--black);
+}
+
+.btn-green:hover,
+.btn-green:active,
+.btn-green:focus {
+    background: var(--black);
+    color: var(--green);
+}
+
+.btn-pink {
+    background: var(--pink);
+    color: var(--black);
+}
+
+.btn-pink:hover,
+.btn-pink:active,
+.btn-pink:focus {
+    background: var(--black);
+    color: var(--pink);
+}
+
+.btn-yellow {
+    background: var(--yellow);
+    color: var(--black);
+}
+
+.btn-yellow:hover,
+.btn-yellow:active,
+.btn-yellow:focus {
+    background: var(--black);
+    color: var(--yellow);
+}
+
+.btn-blue:focus, 
+.btn-green:focus, 
+.btn-pink:focus, 
+.btn-yellow:focus {
+    box-shadow: 0 0 0 .2rem var(--black);
+}
+
+.dj-courses-btn {
+    background: var(--white);
+    color: var(--black);
+    min-width: 260px;
+}
+
+.dj-courses-btn:hover,
+.dj-courses-btn:active,
+.dj-courses-btn:focus {
+    background: var(--black);
+    color: var(--white);
 }
 
 .btn-outline-black {
@@ -128,23 +208,6 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--white) !important;
 }
 
-.dj-courses-btn:hover,
-.dj-courses-btn:active,
-.dj-courses-btn:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: var(--white);
-    color: var(--black);
-}
-
-.btn-white:hover,
-.btn-white:active,
-.btn-white:focus {
-    background: var(--black);
-    color: var(--white);
-}
-
 .disabled-btn {
     background-color: #6c757d;
     color: var(--black);
@@ -156,6 +219,12 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #6c757d;
     color: var(--black);
     cursor: not-allowed;
+}
+
+.edit-btn, 
+.delete-btn {
+    padding: 0.2rem;
+    width: 67px;
 }
 
 /************************************** Images */
@@ -349,6 +418,20 @@ a.tier-badge > span.badge:hover {
 /************************************** All Courses Page */
 .remove-item {
     cursor: pointer;
+}
+
+/************************************** Course Detail Page */
+.ctrl-btn-box {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-footer .edit-btn,
+.card-footer .delete-btn {
+    font-size: 0.85rem;
+    padding: 0.1rem;
+    width: 64px;
+    margin-top: 7px;
 }
 
 
