@@ -491,6 +491,10 @@ a.tier-badge > span.badge:hover {
     border-radius: 0;
 }
 
+#hint_id_difficulty {
+    color: var(--green) !important;
+}
+
 /************************************** About Page */
 
 .about-image-container {
