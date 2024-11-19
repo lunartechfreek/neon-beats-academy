@@ -10,7 +10,7 @@
     </div>
 </div>
 <div class="edit-course-image lg-page-banner">
-    <h2 class="text-black page-title">
+    <h2 class="page-title">
         Edit {{ course.name }}
     </h2>
 </div>
@@ -19,30 +19,21 @@
 {% block content %}
 <div class="container margin-bottom">
     <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
             <hr>
             <h2 class="logo-font mb-4">Course Management</h2>
-            <h5 class="text-muted">Edit a Course</h5>
+            <h4>Edit a Course</h4>
             <hr>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
             <form method="POST" action="{% url 'edit_course' course.id %}" class="form mb-2"
                 enctype="multipart/form-data">
-                <!-- {% csrf_token %}
-                    {% for field in form %}
-                        {% if field.name != 'image' %}
-                            {{ field | as_crispy_field }}
-                        {% else %}
-                            {{ field }}
-                        {% endif %}
-                    {% endfor %} -->
                 {% csrf_token %}
                 {{ form.media }}
                 <!-- Load Summernote assets -->
-
                 {% for field in form %}
                 {% if field.name == 'description' %}
                 <!-- Use Summernote widget for the description field -->
@@ -59,8 +50,8 @@
                 {% endif %}
                 {% endfor %}
                 <div class="text-right">
-                    <a class="btn btn-outline-black rounded-0" href="{% url 'courses' %}">Cancel</a>
-                    <button class="btn btn-black rounded-0" type="submit">Update Course</button>
+                    <a class="btn btn-pink text-uppercase rounded-0" href="{% url 'courses' %}">Cancel</a>
+                    <button class="btn btn-green text-uppercase rounded-0" type="submit">Update Course</button>
                 </div>
             </form>
         </div>
