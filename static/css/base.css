@@ -459,8 +459,12 @@ a.tier-badge > span.badge:hover {
 
 /************************************** Course Detail Page */
 
+/************************************** Checkout */
+#id_country {
+    padding: 0px 12px;
+}
 
-/************************************** Product Form */
+/************************************** Course Form */
 .btn-file {
     position: relative;
     overflow: hidden;
