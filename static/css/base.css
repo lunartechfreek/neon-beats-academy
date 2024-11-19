@@ -17,10 +17,6 @@ body {
     background-color: var(--purple);
 }
 
-.container-fluid {
-    overflow: hidden;
-}
-
 .no-scroll {
     overflow: hidden;
 }
