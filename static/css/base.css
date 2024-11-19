@@ -99,6 +99,10 @@ th {
     color: var(--green);
 }
 
+.text-pink {
+    color: var(--pink)
+}
+
 .text-yellow {
     color: var(--yellow);
 }
