@@ -350,6 +350,16 @@ th {
     color: var(--purple) !important;
 }
 
+.account-btn,
+.bag-btn {
+    color: var(--white);
+}
+
+.account-btn:hover,
+.bag-btn:hover {
+    color: var(--green) !important;
+}
+
 /* .logo-blue {
     color: var(--blue);
 }
