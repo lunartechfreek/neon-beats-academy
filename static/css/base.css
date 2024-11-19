@@ -247,7 +247,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .full-page-banner {
-    height: calc(100vh - 173px);
+    height: calc(100vh - 115px);
     position: relative;
     background-repeat: no-repeat;
     background-position: center center;
@@ -404,9 +404,14 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 15px;
 }
 
-
-
 /************************************** Home Page */
+.home-statement {
+    font-size: 2.4rem;
+}
+
+.home-content-box {
+    margin-left: 15px;
+}
 
 
 /************************************** All Courses Page */
@@ -420,7 +425,6 @@ a.tier-badge > span.badge:hover {
     cursor: pointer;
 }
 
-/************************************** Course Detail Page */
 .ctrl-btn-box {
     display: flex;
     justify-content: space-evenly;
@@ -433,6 +437,8 @@ a.tier-badge > span.badge:hover {
     width: 64px;
     margin-top: 7px;
 }
+
+/************************************** Course Detail Page */
 
 
 /************************************** Product Form */
@@ -643,9 +649,17 @@ footer {
 
 /******************* Medium Screens */
 @media (min-width: 768px) {
+    .full-page-banner {
+        height: calc(100vh - 125px);
+    }
+
     /* Footer */
     .footer-icon {
         font-size: 40px;
+    }
+
+    .home-statement {
+        font-size: 3.5rem;
     }
 }
 
@@ -653,6 +667,10 @@ footer {
 @media (min-width: 992px) {
     body {
         height: calc(100vh - 115px);
+    }
+
+    .full-page-banner {
+        height: calc(100vh - 173px);
     }
 
     /* Header */
@@ -701,9 +719,22 @@ footer {
 }
 
 /******************* X-Small Screens */
+@media (max-width: 400px) {
+    .dj-courses-btn {
+        min-width: 200px;
+    }
+}
+
+/******************* XX-Small Screens */
 @media (max-width: 353px) {
     .message-container {
         right: 1px;
         left: 1px;
     }
+}
+
+.dj-courses-btn {
+    background: var(--white);
+    color: var(--black);
+    min-width: 200px;
 }
