@@ -40,9 +40,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-title {
     position: absolute;
-    right: 20px;
-    bottom: 20px;
+    right: 10px;
+    bottom: 6px;
+    margin-bottom: 0;
     text-align: right;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1px 5px 6px 5px;
+    color: var(--yellow);
+    text-shadow: 4px 3px 1px var(--pink);
 }
 
 /* Override Summernote Styles */
