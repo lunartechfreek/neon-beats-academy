@@ -202,16 +202,17 @@ th {
 }
 
 .dj-courses-btn {
-    background: var(--white);
+    background: linear-gradient(45deg, var(--blue), var(--pink));
     color: var(--black);
     min-width: 260px;
+    border: 0 !important;
 }
 
 .dj-courses-btn:hover,
 .dj-courses-btn:active,
 .dj-courses-btn:focus {
-    background: var(--black);
-    color: var(--white);
+    background: linear-gradient(45deg, var(--green), var(--yellow));
+    color: var(--black);
 }
 
 .btn-outline-black {
@@ -335,10 +336,6 @@ th {
     margin-left: -15px;
 }
 
-.nav-link:hover {
-    color: var(--white) !important;
-}
-
 #topnav {
     color: var(--white);
     height: 75px;
@@ -349,10 +346,42 @@ th {
     font-family: 'Orbitron', sans-serif;
 }
 
+.nav-link:hover {
+    color: var(--purple) !important;
+}
+
+/* .logo-blue {
+    color: var(--blue);
+}
+
+.logo-green {
+    color: var(--green);
+}
+
 .main-logo-link {
     width: fit-content;
     padding-left: 0.5rem;
     color: var(--white);
+    color: transparent;
+    background-image: linear-gradient(45deg, var(--green), var(--blue), var(--pink));
+    background-clip: text;
+    -webkit-background-clip: text;
+} */
+
+.main-logo-link {
+    width: fit-content;
+    padding-left: 0.5rem;
+
+    /* Set a fallback color for browsers that don't support background-clip */
+    color: var(--blue); 
+
+    /* Apply the gradient background for supported browsers */
+    background-image: linear-gradient(45deg, var(--green), var(--blue), var(--pink)); 
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    /* Make the text itself transparent so that the gradient is visible */
+    color: transparent;
 }
 
 .main-logo-link:hover *,
@@ -767,10 +796,4 @@ footer {
         right: 1px;
         left: 1px;
     }
-}
-
-.dj-courses-btn {
-    background: var(--white);
-    color: var(--black);
-    min-width: 200px;
 }
