@@ -10,7 +10,7 @@
     </div>
 </div>
 <div class="bag-image lg-page-banner">
-    <h2 class="text-black page-title">
+    <h2 class="page-title">
         Shopping Bag
     </h2>
 </div>
@@ -21,17 +21,16 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="logo-font mb-4">Shopping Bag</h2>
+            <h2 class="logo-font mb-4">Your Items</h2>
             <hr>
         </div>
     </div>
-
     <div class="row">
         <div class="col">
             {% if bag_items %}
             <div class="table-responsive rounded">
                 <table class="table table-sm table-borderless">
-                    <thead class="text-black">
+                    <thead class="text-white">
                         <tr>
                             <th scope="col"></th>
                             <th scope="col">Course</th>
@@ -39,50 +38,42 @@
                             <th scope="col"></th>
                         </tr>
                     </thead>
-
                     {% for item in bag_items %}
                     <tr>
                         <td class="p-3 w-25">
-                            <!-- {% if item.course.image %}
-                            <img class="img-fluid rounded" src="{{ item.course.image.url }}" alt="{{ item.course.name }}">
-                            {% else %}
-                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}/media/noimage.png" alt="{{ item.course.name }}">
-                            {% endif %} -->
                             {% if "placeholder" in item.course.image.url %}
                             <img class="img-fluid rounded" src="{% static 'images/noimage.png' %}"
                                 alt="placeholder image">
                             {% else %}
                             <img class="img-fluid rounded" src=" {{ item.course.image.url }}" alt="{{ course.name }}">
                             {% endif %}
-
                         </td>
                         <td class="py-3">
                             <p class="my-0"><strong>{{ item.course.name }}</strong></p>
-                            <p class="my-0 small text-muted">SKU: {{ item.course.sku|upper }}</p>
+                            <p class="my-0 small text-green">SKU: {{ item.course.sku|upper }}</p>
                         </td>
                         <td class="py-3">
                             <p class="my-0">${{ item.course.price }}</p>
                         </td>
                         <td class="py-3">
-                            <a class="remove-item text-danger" id="remove_{{ item.item_id }}">Remove Item</a>
+                            <a class="remove-item text-danger" id="remove_{{ item.item_id }}">Remove</a>
                         </td>
                     </tr>
                     {% endfor %}
                     <tr>
-                        <td colspan="5" class="pt-5 text-right">
-                            <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                            <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                        <td colspan="5" class="pt-4 pb-2 text-right">
+                            <h4 class="mt-4"><strong>Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="5" class="text-right">
-                            <a href="{% url 'courses' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                            <a href="{% url 'courses' %}" class="btn btn-blue rounded-0 btn-lg mb-2">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
-                            <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
+                            <a href="{% url 'checkout' %}" class="btn btn-green rounded-0 btn-lg mb-2">
                                 <span class="text-uppercase">Secure Checkout</span>
                                 <span class="icon">
                                     <i class="fas fa-lock"></i>
@@ -108,7 +99,6 @@
 
 {% block postloadjs %}
 {{ block.super }}
-
 <script type="text/javascript">
     // Remove item and reload on click
     $('.remove-item').click(function (e) {
@@ -126,5 +116,4 @@
             });
     });
 </script>
-
 {% endblock %}

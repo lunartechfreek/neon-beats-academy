@@ -29,6 +29,15 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 80px;
 }
 
+/* Tables */
+.table {
+    color: var(--white);
+}
+
+th {
+    font-size: 21px;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -671,12 +680,18 @@ footer {
 
 /******************* Large screens */
 @media (min-width: 992px) {
+    /* General */
     body {
         height: calc(100vh - 115px);
     }
 
     .full-page-banner {
         height: calc(100vh - 173px);
+    }
+
+    .page-title {
+        right: 20px;
+        bottom: 20px;
     }
 
     /* Header */
