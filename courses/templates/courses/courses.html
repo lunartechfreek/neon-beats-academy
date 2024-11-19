@@ -83,12 +83,12 @@
                                     <small class="text-muted">Difficulty N/A</small>
                                     {% endif %}
                                     {% if request.user.is_superuser %}
-                                    <small class="ml-3">
-                                        <a href="{% url 'edit_course' course.id %}">Edit</a> |
+                                    <div class="ctrl-btn-box">
+                                        <a href="{% url 'edit_course' course.id %}" class="btn btn-blue rounded-0 edit-btn">Edit</a> |
                                         <!-- Trigger the modal for delete -->
-                                        <a class="text-danger" href="#" data-toggle="modal"
+                                        <a class="btn btn-danger rounded-0 delete-btn" href="#" data-toggle="modal"
                                             data-target="#deleteModal{{ course.id }}">Delete</a>
-                                    </small>
+                                    </div>
                                     {% endif %}
                                 </div>
                             </div>
