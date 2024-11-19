@@ -34,7 +34,7 @@
                 {% endif %}
             </div>
             {% if request.user.is_superuser %}
-            <div class="mb-4 detail-ctrl-btn-box">
+            <div class="mb-4 ctrl-btn-box">
                 <a href="{% url 'edit_course' course.id %}" class="btn btn-blue rounded-0 edit-btn">Edit</a>
                 <!-- Trigger the modal for delete -->
                 <a href="#" class="btn btn-danger rounded-0 delete-btn" data-toggle="modal"
