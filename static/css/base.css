@@ -175,14 +175,14 @@ th {
 
 .btn-blue {
     background: var(--blue);
-    color: var(--black);
+    color: var(--black) !important;
 }
 
 .btn-blue:hover,
 .btn-blue:active,
 .btn-blue:focus {
     background: var(--black);
-    color: var(--blue);
+    color: var(--blue) !important;
 }
 
 .btn-green {
@@ -762,13 +762,36 @@ footer {
 
 /************* Allauth Form Formatting */
 
+/* Override text colour of class applied
+by allauth */
+.text-muted {
+    color: var(--white) !important;
+}
+
+.allauth-container {
+    height: calc(100vh - 115px);
+}
+
+.allauth-container {
+    height: 100vh;
+}
+
+.allauth-container ul {
+    list-style-type: none;
+}
+
+.allauth-form-inner-content {
+    margin-top: -16px;
+}
+
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    color: var(--white); /* text-secondary */
+    font-size: 18px;
 }
 
 .allauth-form-inner-content input {
-    border-color: #000;
+    border-color: var(--black);
     border-radius: 0;
 }
 
@@ -785,15 +808,15 @@ footer {
 	/* btn */
 	display: inline-block;
     font-weight: 400;
-    color: var(--white);
+    color: var(--black);
     text-align: center;
     vertical-align: middle;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: var(--black);
-    border: 1px solid var(--black);
+    background-color: var(--green);
+    border: 1px solid var(--green);
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -804,14 +827,18 @@ footer {
 }
 
 .allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-	color: var(--white);
-    background-color: #222;
-    border-color: #222;
+.allauth-form-inner-content input[type='submit']:hover,
+.allauth-form-inner-content button:focus,
+.allauth-form-inner-content input[type='submit']:focus,
+.allauth-form-inner-content button:active,
+.allauth-form-inner-content input[type='submit']:active {	
+	color: var(--green);
+    background-color: var(--black);
+    border-color: var(--black);
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: var(--blue); /* text-info */
 }
 
 /************************************** Media Queries */
@@ -825,7 +852,8 @@ footer {
 
 /******************* Medium Screens */
 @media (min-width: 768px) {
-    .full-page-banner {
+    .full-page-banner,
+    .allauth-container {
         height: calc(100vh - 125px);
     }
 
@@ -846,7 +874,8 @@ footer {
         height: calc(100vh - 115px);
     }
 
-    .full-page-banner {
+    .full-page-banner,
+    .allauth-container {
         height: calc(100vh - 173px);
     }
 
