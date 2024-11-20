@@ -1,6 +1,6 @@
 {% load static %}
 <li class="list-inline-item dropdown">
-    <a class="text-white nav-link mobile-nav-link d-block d-lg-none" href="#" id="user-options"
+    <a class="text-white account-btn d-block d-lg-none" href="#" id="user-options"
         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-user fa-lg"></i></div>
@@ -22,7 +22,7 @@
     </div>
 </li>
 <li class="list-inline-item">
-    <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-white{% endif %} nav-link mobile-nav-link d-lg-none"
+    <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-white{% endif %} bag-btn d-lg-none"
         href="{% url 'view_bag' %}">
         <div class="text-center">
             <div><i class="fas fa-shopping-bag fa-lg"></i></div>

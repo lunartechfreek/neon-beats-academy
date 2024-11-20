@@ -396,10 +396,15 @@ th {
 .account-btn,
 .bag-btn {
     color: var(--white);
+    font-family: 'Orbitron', sans-serif;
 }
 
 .account-btn:hover,
-.bag-btn:hover {
+.bag-btn:hover,
+.account-btn:active,
+.bag-btn:active,
+.account-btn:focus,
+.bag-btn:focus {
     color: var(--green) !important;
     transform: none;
     transition: none;
@@ -488,6 +493,11 @@ th {
 
 .navbar-light .navbar-toggler {
     border-color: rgba(254, 255, 255, 0.75);
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    border-color: var(--green);
 }
 
 .navbar-light .navbar-toggler-icon {
