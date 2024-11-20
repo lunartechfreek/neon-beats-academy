@@ -642,6 +642,17 @@ th {
     font-size: 20px;
 }
 
+/************************************** Profile */
+.order-history-link {
+    color: var(--blue);
+}
+
+.order-history-link:hover,
+.order-history-link:active,
+.order-history-link:focus {
+    color: var(--pink);
+}
+
 /************************************** Newsletter */
 .subscribe-container {
     width: 100%;

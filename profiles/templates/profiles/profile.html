@@ -14,7 +14,7 @@
     </div>
 </div>
 <div class="profile-image lg-page-banner">
-    <h2 class="text-black page-title">
+    <h2 class="page-title">
         My Profile - {{ user.username }}
     </h2>
 </div>
@@ -29,17 +29,17 @@
             <hr>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12 col-lg-6">
-            <p class="text-muted">My Information</p>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <h5 class="text-green">My Information</h5>
             <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="btn btn-black rounded-0 text-uppercase float-right">Update Information</button>
+                <button class="btn btn-yellow rounded-0 text-uppercase mt-3 mb-5 mb-md-0 float-right">Update Information</button>
             </form>
         </div>
         <div class="col-12 col-lg-6">
-            <p class="text-muted">Order History</p>
+            <h5 class="text-yellow fs-5">Order History</h5>
             <div class="order-history table-responsive">
                 {% if orders %}
                 <table class="table table-sm table-borderless">
@@ -55,7 +55,8 @@
                         {% for order in orders %}
                         <tr>
                             <td>
-                                <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
+                                <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}"
+                                    class="order-history-link">
                                     {{ order.order_number|truncatechars:6 }}
                                 </a>
                             </td>
