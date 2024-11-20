@@ -690,6 +690,14 @@ th {
     margin: 50px 0;
 }
 
+.error-box h3 {
+    font-size: 1.3rem;
+}
+
+.error-box h4 {
+    font-size: 1.1rem;
+}
+
 /************************************* Footer */
 footer {
     background-color: var(--blue);
