@@ -27,11 +27,11 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-lg-6 mb-5">
+        <section id="newsletter-info" class="col-12 col-lg-6 mb-5">
             <div class="summernote-text">{{ newsletter_info.newsletter_info|safe }}</div>
             <p class="text-blue text-right mt-3">Last updated: {{ newsletter_info.updated_on|date:"F j, Y, g:i a" }}</p>
-        </div>
-        <div class="col-12 col-lg-6">
+        </section>
+        <section id="newsletter-subscribe" class="col-12 col-lg-6">
             <h4 class="text-center">Don't Miss Out and Sign Up Today!</h4>
             <div class="d-flex justify-content-center">
                 <div class="subscribe-container">
@@ -45,7 +45,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 </div>
 {% endblock %}

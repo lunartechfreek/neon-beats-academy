@@ -17,84 +17,87 @@
 {% endblock %}
 
 {% block content %}
-<div class="container margin-bottom">
-    <div class="row">
-        <div class="col">
-            <hr>
-            <h2 class="logo-font mb-4">Your Items</h2>
-            <hr>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            {% if bag_items %}
-            <div class="table-responsive rounded">
-                <table class="table table-sm table-borderless">
-                    <thead class="text-white">
-                        <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Course</th>
-                            <th scope="col">Price</th>
-                            <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    {% for item in bag_items %}
-                    <tr>
-                        <td class="p-3 w-25">
-                            {% if "placeholder" in item.course.image.url %}
-                            <img class="img-fluid rounded" src="{% static 'images/noimage.png' %}"
-                                alt="placeholder image">
-                            {% else %}
-                            <img class="img-fluid rounded" src=" {{ item.course.image.url }}" alt="{{ course.name }}">
-                            {% endif %}
-                        </td>
-                        <td class="py-3">
-                            <p class="my-0"><strong>{{ item.course.name }}</strong></p>
-                            <p class="my-0 small text-green">SKU: {{ item.course.sku|upper }}</p>
-                        </td>
-                        <td class="py-3">
-                            <p class="my-0">£{{ item.course.price }}</p>
-                        </td>
-                        <td class="py-3">
-                            <a class="remove-item text-danger" id="remove_{{ item.item_id }}">Remove</a>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                    <tr>
-                        <td colspan="5" class="pt-4 pb-2 text-right">
-                            <h4 class="mt-4"><strong>Total: £{{ grand_total|floatformat:2 }}</strong></h4>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="5" class="text-right">
-                            <a href="{% url 'courses' %}" class="btn btn-blue rounded-0 btn-lg mb-2">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="text-uppercase">Keep Shopping</span>
-                            </a>
-                            <a href="{% url 'checkout' %}" class="btn btn-green rounded-0 btn-lg mb-2">
-                                <span class="text-uppercase">Secure Checkout</span>
-                                <span class="icon">
-                                    <i class="fas fa-lock"></i>
-                                </span>
-                            </a>
-                        </td>
-                    </tr>
-                </table>
+<section id="bag">
+    <div class="container margin-bottom">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="logo-font mb-4">Your Items</h2>
+                <hr>
             </div>
-            {% else %}
-            <p class="lead mb-5">Your bag is empty.</p>
-            <a href="{% url 'courses' %}" class="btn btn btn-yellow rounded-0 btn-lg">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="text-uppercase">Keep Shopping</span>
-            </a>
-            {% endif %}
+        </div>
+        <div class="row">
+            <div class="col">
+                {% if bag_items %}
+                <div class="table-responsive rounded">
+                    <table class="table table-sm table-borderless">
+                        <thead class="text-white">
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Course</th>
+                                <th scope="col">Price</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        {% for item in bag_items %}
+                        <tr>
+                            <td class="p-3 w-25">
+                                {% if "placeholder" in item.course.image.url %}
+                                <img class="img-fluid rounded" src="{% static 'images/noimage.png' %}"
+                                    alt="placeholder image">
+                                {% else %}
+                                <img class="img-fluid rounded" src=" {{ item.course.image.url }}"
+                                    alt="{{ course.name }}">
+                                {% endif %}
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0"><strong>{{ item.course.name }}</strong></p>
+                                <p class="my-0 small text-green">SKU: {{ item.course.sku|upper }}</p>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">£{{ item.course.price }}</p>
+                            </td>
+                            <td class="py-3">
+                                <a class="remove-item text-danger" id="remove_{{ item.item_id }}">Remove</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        <tr>
+                            <td colspan="5" class="pt-4 pb-2 text-right">
+                                <h4 class="mt-4"><strong>Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="text-right">
+                                <a href="{% url 'courses' %}" class="btn btn-blue rounded-0 btn-lg mb-2">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-uppercase">Keep Shopping</span>
+                                </a>
+                                <a href="{% url 'checkout' %}" class="btn btn-green rounded-0 btn-lg mb-2">
+                                    <span class="text-uppercase">Secure Checkout</span>
+                                    <span class="icon">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                {% else %}
+                <p class="lead mb-5">Your bag is empty.</p>
+                <a href="{% url 'courses' %}" class="btn btn btn-yellow rounded-0 btn-lg">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Keep Shopping</span>
+                </a>
+                {% endif %}
+            </div>
         </div>
     </div>
-</div>
+</section>
 {% endblock %}
 
 {% block postloadjs %}

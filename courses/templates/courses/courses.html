@@ -30,12 +30,13 @@ DJ Courses
 
 {% block content %}
 <div class="container-fluid margin-bottom">
-    <div class="row">
-        <div class="col text-center mt-3">
-            <h2 class="logo-font">DJ Courses</h2>
-            {% for t in current_tiers %}
-            <a href="{% url 'courses' %}?tier={{ t.tier_name|urlencode }}" class="tier-badge text-decoration-none">
-                <span class="p-2 mt-2 badge rounded-0 border border-dark
+    <section id="course-tier-buttons">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">DJ Courses</h2>
+                {% for t in current_tiers %}
+                <a href="{% url 'courses' %}?tier={{ t.tier_name|urlencode }}" class="tier-badge text-decoration-none">
+                    <span class="p-2 mt-2 badge rounded-0 border border-dark
                         {% if t.tier_name == 'Beginner' %}
                             btn-green
                         {% elif t.tier_name == 'Advanced' %}
@@ -48,48 +49,34 @@ DJ Courses
                             bg-white
                         {% endif %}">
                         {{ t.tier_name }}
-                        </span>
-            </a>
-            {% endfor %}
+                    </span>
+                </a>
+                {% endfor %}
 
-            <hr class="w-50 mb-1">
+                <hr class="w-50 mb-1">
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="course-container col-10 offset-1">
-            <div class="row mt-1 mb-2"></div>
-            <div class="row">
-                {% for course in courses %}
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card h-100 border-0">
-                        {% if "placeholder" in course.image.url %}
-                        <a href="{% url 'course_detail' course.id %}" class="course-card-image">
-                            <img class="card-img-top img-fluid card-image" src="{% static 'images/noimage.png' %}"
-                                alt="placeholder image">
-                        </a>
-                        {% else %}
-                        <a href="{% url 'course_detail' course.id %}" class="course-card-image">
-                            <img class="card-img-top img-fluid card-image" src="{{ course.image.url }}"
-                                alt="{{ course.name }}">
-                        </a>
-                        {% endif %}
-                        <div class="card-body pb-0
-                                {% if course.tier.tier_name == 'Beginner' %}
-                                    bg-green
-                                {% elif course.tier.tier_name == 'Advanced' %}
-                                    bg-blue
-                                {% elif course.tier.tier_name == 'Creative' %}
-                                    bg-pink
-                                {% elif course.tier.tier_name == 'Complete' %}
-                                    bg-yellow
-                                {% else %}
-                                    bg-white
-                                {% endif %}">
-                            <a href="{% url 'course_detail' course.id %}">
-                                <h5 class="mb-0 text-black">{{ course.name }}</h5>
+    </section>
+    <section id="course-cards">
+        <div class="row">
+            <div class="course-container col-10 offset-1">
+                <div class="row mt-1 mb-2"></div>
+                <div class="row">
+                    {% for course in courses %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card h-100 border-0">
+                            {% if "placeholder" in course.image.url %}
+                            <a href="{% url 'course_detail' course.id %}" class="course-card-image">
+                                <img class="card-img-top img-fluid card-image" src="{% static 'images/noimage.png' %}"
+                                    alt="placeholder image">
                             </a>
-                        </div>
-                        <div class="card-footer pt-0 border-0 text-left
+                            {% else %}
+                            <a href="{% url 'course_detail' course.id %}" class="course-card-image">
+                                <img class="card-img-top img-fluid card-image" src="{{ course.image.url }}"
+                                    alt="{{ course.name }}">
+                            </a>
+                            {% endif %}
+                            <div class="card-body pb-0
                                 {% if course.tier.tier_name == 'Beginner' %}
                                     bg-green
                                 {% elif course.tier.tier_name == 'Advanced' %}
@@ -101,89 +88,110 @@ DJ Courses
                                 {% else %}
                                     bg-white
                                 {% endif %}">
-                            <div class="row mt-1">
-                                <div class="col">
-                                    <p class="lead mb-1 text-left font-weight-bold text-black">£{{ course.price }}</p>
-                                    {% if course.tier %}
-                                    <p class="mb-0 courses-tier-link">
-                                        <a href="{% url 'courses' %}?tier={{ course.tier.tier_name }}"
-                                            class="text-black">
-                                            <i class="fas fa-layer-group mr-1"></i>{{ course.tier.tier_name }}
-                                        </a>
-                                    </p>
-                                    {% endif %}
-                                    {% if course.difficulty %}
-                                    <p class="text-black difficulty-text"><i class="fas fa-skull mr-1"></i>{{ course.difficulty }}/10
-                                    </p>
-                                    {% else %}
-                                    <p class="text-black">Difficulty N/A</p>
-                                    {% endif %}
-                                    {% if request.user.is_superuser %}
-                                    <div class="ctrl-btn-box">
-                                        <a href="{% url 'edit_course' course.id %}"
-                                            class="btn btn-blue rounded-0 edit-btn">Edit</a>
-                                        <!-- Trigger the modal for delete -->
-                                        <a class="btn btn-danger rounded-0 delete-btn" href="#" data-toggle="modal"
-                                            data-target="#deleteModal{{ course.id }}">Delete</a>
+                                <a href="{% url 'course_detail' course.id %}">
+                                    <h5 class="mb-0 text-black">{{ course.name }}</h5>
+                                </a>
+                            </div>
+                            <div class="card-footer pt-0 border-0 text-left
+                                {% if course.tier.tier_name == 'Beginner' %}
+                                    bg-green
+                                {% elif course.tier.tier_name == 'Advanced' %}
+                                    bg-blue
+                                {% elif course.tier.tier_name == 'Creative' %}
+                                    bg-pink
+                                {% elif course.tier.tier_name == 'Complete' %}
+                                    bg-yellow
+                                {% else %}
+                                    bg-white
+                                {% endif %}">
+                                <div class="row mt-1">
+                                    <div class="col">
+                                        <p class="lead mb-1 text-left font-weight-bold text-black">£{{ course.price }}
+                                        </p>
+                                        {% if course.tier %}
+                                        <p class="mb-0 courses-tier-link">
+                                            <a href="{% url 'courses' %}?tier={{ course.tier.tier_name }}"
+                                                class="text-black">
+                                                <i class="fas fa-layer-group mr-1"></i>{{ course.tier.tier_name }}
+                                            </a>
+                                        </p>
+                                        {% endif %}
+                                        {% if course.difficulty %}
+                                        <p class="text-black difficulty-text"><i
+                                                class="fas fa-skull mr-1"></i>{{ course.difficulty }}/10
+                                        </p>
+                                        {% else %}
+                                        <p class="text-black">Difficulty N/A</p>
+                                        {% endif %}
+                                        {% if request.user.is_superuser %}
+                                        <div class="ctrl-btn-box">
+                                            <a href="{% url 'edit_course' course.id %}"
+                                                class="btn btn-blue rounded-0 edit-btn">Edit</a>
+                                            <!-- Trigger the modal for delete -->
+                                            <a class="btn btn-danger rounded-0 delete-btn" href="#" data-toggle="modal"
+                                                data-target="#deleteModal{{ course.id }}">Delete</a>
+                                        </div>
+                                        {% endif %}
                                     </div>
-                                    {% endif %}
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                {% if forloop.counter|divisibleby:1 %}
-                <div class="col-12 d-sm-none mb-5">
-                    <hr>
+                    {% if forloop.counter|divisibleby:1 %}
+                    <div class="col-12 d-sm-none mb-5">
+                        <hr>
+                    </div>
+                    {% endif %}
+                    {% if forloop.counter|divisibleby:2 %}
+                    <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                        <hr>
+                    </div>
+                    {% endif %}
+                    {% if forloop.counter|divisibleby:3 %}
+                    <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                        <hr>
+                    </div>
+                    {% endif %}
+                    {% if forloop.counter|divisibleby:4 %}
+                    <div class="col-12 d-none d-xl-block mb-5">
+                        <hr>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
                 </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:2 %}
-                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:3 %}
-                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:4 %}
-                <div class="col-12 d-none d-xl-block mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-                {% endfor %}
             </div>
         </div>
-    </div>
+    </section>
 </div>
 
 <!-- Delete Confirmation Modal -->
 {% for course in courses %}
-<div class="modal fade" id="deleteModal{{ course.id }}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-black" id="deleteModalLabel">Confirm Deletion</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body text-black">
-                Are you sure you want to delete the course "{{ course.name }}"? This action cannot be undone.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                <form action="{% url 'delete_course' course.id %}" method="POST" class="d-inline">
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
+<section id="courses-delete-modal">
+    <div class="modal fade" id="deleteModal{{ course.id }}" tabindex="-1" role="dialog"
+        aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-black" id="deleteModalLabel">Confirm Deletion</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-black">
+                    Are you sure you want to delete the course "{{ course.name }}"? This action cannot be undone.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <form action="{% url 'delete_course' course.id %}" method="POST" class="d-inline">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 {% endfor %}
 
 {% endblock %}

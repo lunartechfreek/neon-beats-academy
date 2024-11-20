@@ -23,69 +23,71 @@
 
 {% block content %}
 <div class="container margin-bottom">
-    <div class="row">
-        <div class="col-12 col-md-6">
-            <div class="image-container mt-5 mb-4">
-                {% if "placeholder" in course.image.url %}
-                <a href="{{ course.image.url }}" target="_blank">
-                    <img class="card-img-top img-fluid" src="{% static 'images/noimage.png' %}" alt="placeholder image">
-                </a>
-                {% else %}
-                <a href="{{ course.image.url }}" target="_blank">
-                    <img class="card-img-top img-fluid" src="{{ course.image.url }}" alt="{{ course.name }}">
-                </a>
-                {% endif %}
-            </div>
-            {% if request.user.is_superuser %}
-            <div class="mb-4 ctrl-btn-box">
-                <a href="{% url 'edit_course' course.id %}" class="btn btn-blue rounded-0 edit-btn">Edit</a>
-                <!-- Trigger the modal for delete -->
-                <a href="#" class="btn btn-danger rounded-0 delete-btn" data-toggle="modal"
-                    data-target="#deleteModal">Delete</a>
-            </div>
-            {% endif %}
-        </div>
-        <div class="col-12 col-md-6">
-            <div class="course-details-container mb-3 mt-md-5">
-                <h4 class="mb-0">{{ course.name }}</h4>
-                <p class="lead mb-0 text-left font-weight-bold">£{{ course.price }}</p>
-                {% if course.tier %}
-                <p class="mt-1 mb-0 courses-tier-link">
-                    <a href="{% url 'courses' %}?tier={{ course.tier.tier_name }}" class="text-white tier-link">
-                        <i class="fas fa-layer-group mr-1"></i>{{ course.tier.tier_name }}
+    <section id="course-details">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="image-container mt-5 mb-4">
+                    {% if "placeholder" in course.image.url %}
+                    <a href="{{ course.image.url }}" target="_blank">
+                        <img class="card-img-top img-fluid" src="{% static 'images/noimage.png' %}"
+                            alt="placeholder image">
                     </a>
-                </p>
+                    {% else %}
+                    <a href="{{ course.image.url }}" target="_blank">
+                        <img class="card-img-top img-fluid" src="{{ course.image.url }}" alt="{{ course.name }}">
+                    </a>
+                    {% endif %}
+                </div>
+                {% if request.user.is_superuser %}
+                <div class="mb-4 ctrl-btn-box">
+                    <a href="{% url 'edit_course' course.id %}" class="btn btn-blue rounded-0 edit-btn">Edit</a>
+                    <!-- Trigger the modal for delete -->
+                    <a href="#" class="btn btn-danger rounded-0 delete-btn" data-toggle="modal"
+                        data-target="#deleteModal">Delete</a>
+                </div>
                 {% endif %}
-                {% if course.difficulty %}
-                <p class="difficulty-text"><i class="fas fa-skull mr-1"></i>{{ course.difficulty }}/10</p>
-                {% else %}
-                <p>Difficulty N/A</p>
-                {% endif %}
-                <form class="form" action="{% url 'add_to_bag' course.id %}" method="POST">
-                    {% csrf_token %}
-                    <div class="form-row">
-                        <div class="col-12 d-flex shopping-btns-box">
-                            <a href="{% url 'courses' %}" class="btn btn-blue rounded-0 mt-2 mr-lg-5">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="text-uppercase">Keep Shopping</span>
-                            </a>
-                            <!-- <input type="submit" 
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="course-details-container mb-3 mt-md-5">
+                    <h4 class="mb-0">{{ course.name }}</h4>
+                    <p class="lead mb-0 text-left font-weight-bold">£{{ course.price }}</p>
+                    {% if course.tier %}
+                    <p class="mt-1 mb-0 courses-tier-link">
+                        <a href="{% url 'courses' %}?tier={{ course.tier.tier_name }}" class="text-white tier-link">
+                            <i class="fas fa-layer-group mr-1"></i>{{ course.tier.tier_name }}
+                        </a>
+                    </p>
+                    {% endif %}
+                    {% if course.difficulty %}
+                    <p class="difficulty-text"><i class="fas fa-skull mr-1"></i>{{ course.difficulty }}/10</p>
+                    {% else %}
+                    <p>Difficulty N/A</p>
+                    {% endif %}
+                    <form class="form" action="{% url 'add_to_bag' course.id %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="col-12 d-flex shopping-btns-box">
+                                <a href="{% url 'courses' %}" class="btn btn-blue rounded-0 mt-2 mr-lg-5">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-uppercase">Keep Shopping</span>
+                                </a>
+                                <!-- <input type="submit" 
                                    class="btn btn-black rounded-0 text-uppercase mt-5"
                                    value="{% if course.id|stringformat:'s' in bag %}Already in Bag{% else %}Add to Bag{% endif %}"
                                    {% if course.id|stringformat:'s' in bag %}disabled{% endif %}> -->
-                            <input type="submit" class="btn btn-pink rounded-0 text-uppercase mt-2 mr-lg-auto {% if course.id|stringformat:'s' in bag %}
+                                <input type="submit" class="btn btn-pink rounded-0 text-uppercase mt-2 mr-lg-auto {% if course.id|stringformat:'s' in bag %}
                                 disabled-btn{% endif %}"
-                                value="{% if course.id|stringformat:'s' in bag %}Already in Bag{% else %}Add to Bag{% endif %}"
-                                {% if course.id|stringformat:'s' in bag %}disabled{% endif %}>
+                                    value="{% if course.id|stringformat:'s' in bag %}Already in Bag{% else %}Add to Bag{% endif %}"
+                                    {% if course.id|stringformat:'s' in bag %}disabled{% endif %}>
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                    </div>
-                </form>
+                    </form>
 
-                
-                <!-- <form class="form" action="{% url 'add_to_bag' course.id %}" method="POST">
+
+                    <!-- <form class="form" action="{% url 'add_to_bag' course.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
                         <div class="col-12">
@@ -97,13 +99,13 @@
                             </a>
                             <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag"> -->
 
-                <!-- {% if course.id in request.session.bag %}
+                    <!-- {% if course.id in request.session.bag %}
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Already in Bag" disabled>
                             {% else %}
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
                             {% endif %} -->
 
-                <!-- <input type="submit" 
+                    <!-- <input type="submit" 
                                 class="btn btn-black rounded-0 text-uppercase mt-5"
                                 value="{% if course.id in bag %}Added to Bag{% else %}Add to Bag{% endif %}"
                                 {% if course.id in bag %}disabled{% endif %}>
@@ -111,42 +113,44 @@
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form> -->
-                
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="mt-3 summernote-text mb-5">{{ course.description|safe }}</div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="mt-3 summernote-text mb-5">{{ course.description|safe }}</div>
-                
-            </div>
-        </div>
-    </div>
+    </section>
 </div>
 
 <!-- Delete Confirmation Modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-black" id="deleteModalLabel">Confirm Deletion</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body text-black">
-                Are you sure you want to delete this course? This action cannot be undone.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                <form action="{% url 'delete_course' course.id %}" method="POST" class="d-inline">
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
+<section id="delete-modal">
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-black" id="deleteModalLabel">Confirm Deletion</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-black">
+                    Are you sure you want to delete this course? This action cannot be undone.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <form action="{% url 'delete_course' course.id %}" method="POST" class="d-inline">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 {% endblock %}
 
 {% block postloadjs %}
