@@ -852,11 +852,26 @@ by allauth */
 
 /************************************** Media Queries */
 
-/******************* XL Screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+/******************* XX-Small Screens */
+@media (max-width: 353px) {
+    .message-container {
+        right: 1px;
+        left: 1px;
+    }
+}
+
+/******************* X-Small Screens */
+@media (max-width: 400px) {
+    .dj-courses-btn {
+        min-width: 200px;
+    }
+}
+
+/******************* Small Screens */
+@media (max-width: 500px) {
+    .message-container {
+        right: 4px;
+    }
 }
 
 /******************* Medium Screens */
@@ -876,7 +891,7 @@ by allauth */
     }
 }
 
-/******************* Large screens */
+/******************* Large Screens */
 @media (min-width: 992px) {
     /* General */
     body {
@@ -889,6 +904,7 @@ by allauth */
     }
 
     .page-title {
+        font-size: 40px;
         right: 20px;
         bottom: 20px;
         padding: 1px 5px 6px 5px;
@@ -917,40 +933,22 @@ by allauth */
         margin-top: 1.5rem;
     }
 
-    /* .header-text {
-        color: var(--black) !important;
-    } */
-
-    /* .header-text:hover,
-    .header-text:focus,
-    .header-text:active {
-        color: var(--white) !important;
-    } */
-
     .bg-header {
         background-color: var(--pink);
     }
-
 }
 
-/****************** Small Screens */
-@media (max-width: 500px) {
-    .message-container {
-        right: 4px;
+/******************* XL Screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
     }
 }
 
-/******************* X-Small Screens */
-@media (max-width: 400px) {
-    .dj-courses-btn {
-        min-width: 200px;
-    }
-}
-
-/******************* XX-Small Screens */
-@media (max-width: 353px) {
-    .message-container {
-        right: 1px;
-        left: 1px;
+/******************* Custom Breakpoint */
+/* Page title font-size */
+@media (min-width: 1107px) {
+    .page-title {
+        font-size: 45px;
     }
 }
