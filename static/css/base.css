@@ -497,7 +497,7 @@ th {
 
 .navbar-toggler:focus,
 .navbar-toggler:active {
-    border-color: var(--green);
+    border-color: var(--green) !important;
 }
 
 .navbar-light .navbar-toggler-icon {
