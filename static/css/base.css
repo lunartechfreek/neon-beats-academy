@@ -29,6 +29,12 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 80px;
 }
 
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+}
+
 /* Tables */
 .table {
     color: var(--white);
@@ -383,6 +389,8 @@ th {
 
 .nav-link:hover {
     color: var(--purple) !important;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 .account-btn,
@@ -393,6 +401,8 @@ th {
 .account-btn:hover,
 .bag-btn:hover {
     color: var(--green) !important;
+    transform: none;
+    transition: none;
 }
 
 /* .logo-blue {
@@ -414,6 +424,7 @@ th {
 } */
 
 .main-logo-link {
+    font-family: 'Orbitron', sans-serif;
     width: fit-content;
     padding-left: 0.5rem;
 
@@ -456,15 +467,15 @@ th {
     height: 68px;
 }
 
-.header-text {
+/* .header-text {
     color: var(--white) !important;
-}
+} */
 
-.header-text:hover,
+/* .header-text:hover,
 .header-text:focus,
 .header-text:active {
     color: var(--black) !important;
-}
+} */
 
 .bg-header {
     background-color: var(--black);
@@ -533,11 +544,14 @@ th {
 
 .courses-tier-link {
     font-size: 18px;
+    display: inline-block;
 }
 
-.courses-tier-link:hover {
-    text-decoration: none;
-    color: var(--white) !important;
+.courses-tier-link:hover,
+.courses-tier-link:active,
+.courses-tier-link:focus {
+    transform: scale(1.08) !important;
+    transition: transform 0.3s ease !important;
 }
 
 .difficulty-text {
@@ -549,9 +563,12 @@ th {
     font-size: 18px;
 }
 
-.tier-link:hover {
-    text-decoration: none;
+.tier-link:hover,
+.tier-link:focus,
+.tier-link:active {
     color: var(--green) !important;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 /************************************** Checkout */
@@ -607,6 +624,24 @@ th {
     display: block; 
 }
 
+/************************************** FAQ */
+.faq-link {
+    font-size: 22px;
+}
+
+.faq-link:hover,
+.faq-link:focus,
+.faq-link:active {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    border: none;
+}
+
+.faq-text {
+    font-size: 20px;
+}
+
 /************************************** Newsletter */
 .subscribe-container {
     width: 100%;
@@ -633,8 +668,12 @@ footer {
     margin: 5px 30px;
 }
 
-.footer-icon:hover {
+.footer-icon:hover,
+.footer-icon:active,
+.footer-icon:focus {
     color: var(--pink);
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 /************************************* Other */
@@ -825,15 +864,15 @@ footer {
         margin-top: 1.5rem;
     }
 
-    .header-text {
+    /* .header-text {
         color: var(--black) !important;
-    }
+    } */
 
-    .header-text:hover,
+    /* .header-text:hover,
     .header-text:focus,
     .header-text:active {
         color: var(--white) !important;
-    }
+    } */
 
     .bg-header {
         background-color: var(--pink);
