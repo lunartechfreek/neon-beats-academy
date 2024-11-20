@@ -9,9 +9,12 @@
         <div class="col"></div>
     </div>
 </div>
-<div class="lg-page-banner" {% if "placeholder" in course.image.url %}
-    style="background-image: url('{% static 'images/noimage.png' %}');" {% else %}
-    style="background-image: url('{{ course.image.url }}');" {% endif %}>
+<div class="lg-page-banner" 
+    {% if "placeholder" in course.image.url %}
+        style="background-image: url('{% static 'images/no-image-banner.jpeg' %}');" 
+    {% else %}
+        style="background-image: url('{{ course.image.url }}');" 
+    {% endif %}>
     <h2 class="page-title">
         {{ course.name }}
     </h2>
