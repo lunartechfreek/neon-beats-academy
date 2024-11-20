@@ -38,7 +38,7 @@ class Course(models.Model):
     # Generate sku code dynamically
     def save(self, *args, **kwargs):
         if not self.sku:
-            tier_code = self.tier.tier_name[:3].upper() if self.tier else 'GEN'  # Corrected field name
+            tier_code = self.tier.tier_name[:3].upper() if self.tier else 'GEN'
             number = Course.objects.filter(sku__startswith=f'DJ-{tier_code}-').count() + 1  # Count existing SKUs
             self.sku = f'DJ-{tier_code}-{str(number).zfill(3)}'  # Format the number with leading zeros
         super().save(*args, **kwargs)
@@ -47,5 +47,5 @@ class Course(models.Model):
         return self.name
 
     class Meta:
-        ordering = ['difficulty']  # Ascending order by difficulty
+        ordering = ['difficulty']
 

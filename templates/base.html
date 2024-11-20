@@ -37,8 +37,6 @@
     {% endblock %}
 
     {% block corejs %}
-    <!-- Font Awesome -->
-    <!-- <script src="https://kit.fontawesome.com/c86e88bc23.js" crossorigin="anonymous"></script> -->
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
@@ -63,7 +61,6 @@
 </head>
 
 <!-- Make sure there is no scroll on the Y axis -->
-
 <body class="{% if request.path == '/' %}no-scroll{% endif %}">
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-black pt-lg-1 pb-lg-1 d-none d-lg-flex">
@@ -75,9 +72,6 @@
                         Academy</h1>
                 </a>
             </div>
-            <!-- <div class="col-12 col-lg-4">
-                <img src="{% static 'images/logo.webp' %}" alt="NeonBeats Academy Logo" class="logo">
-            </div> -->
             <div class="col-12 col-lg-6 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">

@@ -21,12 +21,6 @@
             {% for item in bag_items %}
             <div class="row">
                 <div class="col-3 my-1">
-                    
-                    <!-- {% if item.course.image %}
-                    <img class="w-100" src="{{ item.course.image.url }}" alt="{{ item.course.name }}">
-                    {% else %}
-                    <img class="w-100" src="{{ MEDIA_URL }}/media/noimage.png" alt="{{ item.course.name }}">
-                    {% endif %} -->
                     {% if "placeholder" in item.course.image.url %}
                     <img class="img-fluid rounded" src="{% static 'images/noimage.png' %}" alt="placeholder image">
                     {% else %}
