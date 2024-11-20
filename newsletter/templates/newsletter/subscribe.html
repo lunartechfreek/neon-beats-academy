@@ -11,7 +11,7 @@
     </div>
 </div>
 <div class="newsletter-image lg-page-banner">
-    <h2 class="text-black page-title">
+    <h2 class="page-title">
         Newsletter
     </h2>
 </div>
@@ -29,7 +29,7 @@
     <div class="row">
         <div class="col-12 col-lg-6 mb-5">
             <div class="summernote-text">{{ newsletter_info.newsletter_info|safe }}</div>
-            <p class="text-muted">Last updated: {{ newsletter_info.updated_on|date:"F j, Y, g:i a" }}</p>
+            <p class="text-blue text-right mt-3">Last updated: {{ newsletter_info.updated_on|date:"F j, Y, g:i a" }}</p>
         </div>
         <div class="col-12 col-lg-6">
             <h4 class="text-center">Don't Miss Out and Sign Up Today!</h4>
@@ -40,7 +40,7 @@
                         <!-- Render the form using crispy filter -->
                         {{ form|crispy }}
                         <div class="text-center mt-4 mb-4">
-                            <button type="submit" class="btn btn-black rounded-0">Subscribe!</button>
+                            <button type="submit" class="btn btn-green btn-lg text-uppercase rounded-0">Subscribe!</button>
                         </div>
                     </form>
                 </div>
