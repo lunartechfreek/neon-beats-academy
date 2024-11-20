@@ -62,7 +62,7 @@
                     {% csrf_token %}
                     <div class="form-row">
                         <div class="col-12 d-flex shopping-btns-box">
-                            <a href="{% url 'courses' %}" class="btn btn-blue rounded-0 mt-2">
+                            <a href="{% url 'courses' %}" class="btn btn-blue rounded-0 mt-2 mr-lg-5">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
@@ -72,7 +72,7 @@
                                    class="btn btn-black rounded-0 text-uppercase mt-5"
                                    value="{% if course.id|stringformat:'s' in bag %}Already in Bag{% else %}Add to Bag{% endif %}"
                                    {% if course.id|stringformat:'s' in bag %}disabled{% endif %}> -->
-                            <input type="submit" class="btn btn-pink rounded-0 text-uppercase mt-2 {% if course.id|stringformat:'s' in bag %}
+                            <input type="submit" class="btn btn-pink rounded-0 text-uppercase mt-2 mr-lg-auto {% if course.id|stringformat:'s' in bag %}
                                 disabled-btn{% endif %}"
                                 value="{% if course.id|stringformat:'s' in bag %}Already in Bag{% else %}Add to Bag{% endif %}"
                                 {% if course.id|stringformat:'s' in bag %}disabled{% endif %}>
