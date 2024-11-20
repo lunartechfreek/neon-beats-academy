@@ -11,7 +11,6 @@ html {
 }
 
 body {
-    /* height: calc(100vh - 164px); */
     color: var(--white);
     font-family: 'Roboto Mono', sans-serif;
     background-color: var(--purple);
@@ -409,24 +408,6 @@ th {
     transition: none;
 }
 
-/* .logo-blue {
-    color: var(--blue);
-}
-
-.logo-green {
-    color: var(--green);
-}
-
-.main-logo-link {
-    width: fit-content;
-    padding-left: 0.5rem;
-    color: var(--white);
-    color: transparent;
-    background-image: linear-gradient(45deg, var(--green), var(--blue), var(--pink));
-    background-clip: text;
-    -webkit-background-clip: text;
-} */
-
 .main-logo-link h1 {
     font-size: 2.25rem;
 }
@@ -444,7 +425,6 @@ th {
     background-clip: text;
     -webkit-background-clip: text;
 
-    /* Make the text itself transparent so that the gradient is visible */
     color: transparent;
 }
 
@@ -462,12 +442,11 @@ th {
 .logo-container {
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     height: 100%;
 }
 
 .logo {
-    max-height: 100%; /* Makes sure the logo fits within the container height */
+    max-height: 100%;
     width: auto; 
 }
 
@@ -479,16 +458,6 @@ th {
     padding: 2px 1rem;
     height: 68px;
 }
-
-/* .header-text {
-    color: var(--white) !important;
-} */
-
-/* .header-text:hover,
-.header-text:focus,
-.header-text:active {
-    color: var(--black) !important;
-} */
 
 .bg-header {
     background-color: var(--black);
@@ -542,7 +511,6 @@ th {
     font-size: 1.2rem;
 }
 
-/************************************** All Courses Page */
 .remove-item {
     cursor: pointer;
 }
@@ -747,39 +715,6 @@ footer {
     right: 36px;
 }
 
-/* Convenience classes - colors copied from Bootstrap */
-/* .arrow-primary {
-    border-bottom-color: #007bff !important;
-}
-
-.arrow-secondary {
-    border-bottom-color: #6c757d !important;
-}
-
-.arrow-success {
-    border-bottom-color: #28a745 !important;
-}
-
-.arrow-danger {
-    border-bottom-color: #dc3545 !important;
-}
-
-.arrow-warning {
-    border-bottom-color: #ffc107 !important;
-}
-
-.arrow-info {
-    border-bottom-color: #17a2b8 !important;
-}
-
-.arrow-light {
-    border-bottom-color: #f8f9fa !important;
-}
-
-.arrow-dark {
-    border-bottom-color: #343a40 !important;
-} */
-
 .bag-notification-wrapper {
     height: 100px;
     overflow-x: hidden;
@@ -815,8 +750,8 @@ by allauth */
 }
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: var(--white); /* text-secondary */
+    margin-top: 1.5rem;
+    color: var(--white);
     font-size: 18px;
 }
 
