@@ -446,6 +446,11 @@ th {
     color: var(--yellow) !important;
 }
 
+.dropdown-item:active {
+    background-color: var(--blue);
+    color: var(--black);
+}
+
 .logo-container {
     display: flex;
     align-items: center;
