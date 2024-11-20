@@ -48,7 +48,7 @@
         <div class="col-12 col-md-6">
             <div class="course-details-container mb-3 mt-md-5">
                 <h4 class="mb-0">{{ course.name }}</h4>
-                <p class="lead mb-0 text-left font-weight-bold">${{ course.price }}</p>
+                <p class="lead mb-0 text-left font-weight-bold">£{{ course.price }}</p>
                 {% if course.tier %}
                 <p class="mt-1 mb-0 courses-tier-link">
                     <a href="{% url 'courses' %}?tier={{ course.tier.tier_name }}" class="text-white tier-link">

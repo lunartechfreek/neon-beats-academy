@@ -103,7 +103,7 @@ DJ Courses
                                 {% endif %}">
                             <div class="row mt-1">
                                 <div class="col">
-                                    <p class="lead mb-1 text-left font-weight-bold text-black">${{ course.price }}</p>
+                                    <p class="lead mb-1 text-left font-weight-bold text-black">£{{ course.price }}</p>
                                     {% if course.tier %}
                                     <p class="mb-0 courses-tier-link">
                                         <a href="{% url 'courses' %}?tier={{ course.tier.tier_name }}"
