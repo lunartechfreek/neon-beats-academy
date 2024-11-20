@@ -307,6 +307,16 @@ th {
     aspect-ratio: 16/10;
 }
 
+.card {
+    overflow: hidden;
+}
+
+.course-card-image:hover {
+    aspect-ratio: 16/10;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
 .home-image {
     background-image: url('../images/home-banner.jpg');
 }
