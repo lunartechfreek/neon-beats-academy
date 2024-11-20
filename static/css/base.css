@@ -497,6 +497,10 @@ a.tier-badge > span.badge:hover {
     width: 64px;
     margin-top: 7px;
 }
+/************************************** Course Detail Page */
+.tier-link {
+    font-size: 18px;
+}
 
 .tier-link:hover {
     text-decoration: none;

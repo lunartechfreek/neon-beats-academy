@@ -21,7 +21,7 @@
 {% block content %}
 <div class="container margin-bottom">
     <div class="row">
-        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+        <div class="col-12 col-md-6 col-lg-6">
             <div class="image-container mt-5 mb-4">
                 {% if "placeholder" in course.image.url %}
                 <a href="{{ course.image.url }}" target="_blank">
@@ -42,9 +42,9 @@
             </div>
             {% endif %}
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-6">
             <div class="course-details-container mb-3 mt-md-5">
-                <p class="mb-0">{{ course.name }}</p>
+                <h4 class="mb-0">{{ course.name }}</h4>
                 <p class="lead mb-0 text-left font-weight-bold">${{ course.price }}</p>
                 {% if course.tier %}
                 <p class="mt-1 mb-0">
@@ -54,7 +54,7 @@
                 </p>
                 {% endif %}
                 {% if course.difficulty %}
-                <p><i class="fas fa-skull mr-1"></i>{{ course.difficulty }}/10</p>
+                <p class="difficulty-text"><i class="fas fa-skull mr-1"></i>{{ course.difficulty }}/10</p>
                 {% else %}
                 <p>Difficulty N/A</p>
                 {% endif %}
