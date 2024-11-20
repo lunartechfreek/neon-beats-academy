@@ -21,7 +21,7 @@
 {% block content %}
 <div class="container margin-bottom">
     <div class="row">
-        <div class="col-12 col-md-6 col-lg-6">
+        <div class="col-12 col-md-6">
             <div class="image-container mt-5 mb-4">
                 {% if "placeholder" in course.image.url %}
                 <a href="{{ course.image.url }}" target="_blank">
@@ -42,7 +42,7 @@
             </div>
             {% endif %}
         </div>
-        <div class="col-12 col-md-6 col-lg-6">
+        <div class="col-12 col-md-6">
             <div class="course-details-container mb-3 mt-md-5">
                 <h4 class="mb-0">{{ course.name }}</h4>
                 <p class="lead mb-0 text-left font-weight-bold">${{ course.price }}</p>
@@ -58,6 +58,28 @@
                 {% else %}
                 <p>Difficulty N/A</p>
                 {% endif %}
+                <form class="form" action="{% url 'add_to_bag' course.id %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="col-12 d-flex shopping-btns-box">
+                            <a href="{% url 'courses' %}" class="btn btn-blue rounded-0 mt-2">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Keep Shopping</span>
+                            </a>
+                            <!-- <input type="submit" 
+                                   class="btn btn-black rounded-0 text-uppercase mt-5"
+                                   value="{% if course.id|stringformat:'s' in bag %}Already in Bag{% else %}Add to Bag{% endif %}"
+                                   {% if course.id|stringformat:'s' in bag %}disabled{% endif %}> -->
+                            <input type="submit" class="btn btn-pink rounded-0 text-uppercase mt-2 {% if course.id|stringformat:'s' in bag %}
+                                disabled-btn{% endif %}"
+                                value="{% if course.id|stringformat:'s' in bag %}Already in Bag{% else %}Add to Bag{% endif %}"
+                                {% if course.id|stringformat:'s' in bag %}disabled{% endif %}>
+                        </div>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </div>
+                </form>
 
                 
                 <!-- <form class="form" action="{% url 'add_to_bag' course.id %}" method="POST">
@@ -92,28 +114,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="mt-3 summernote-text mb-5">{{ course.description|safe }}</div>
-                <form class="form" action="{% url 'add_to_bag' course.id %}" method="POST">
-                    {% csrf_token %}
-                    <div class="form-row">
-                        <div class="col-12 text-right">
-                            <a href="{% url 'courses' %}" class="btn btn-blue btn-lg rounded-0 mt-2">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="text-uppercase">Keep Shopping</span>
-                            </a>
-                            <!-- <input type="submit" 
-                                   class="btn btn-black rounded-0 text-uppercase mt-5"
-                                   value="{% if course.id|stringformat:'s' in bag %}Already in Bag{% else %}Add to Bag{% endif %}"
-                                   {% if course.id|stringformat:'s' in bag %}disabled{% endif %}> -->
-                            <input type="submit" class="btn btn-pink btn-lg rounded-0 text-uppercase mt-2 {% if course.id|stringformat:'s' in bag %}
-                                disabled-btn{% endif %}"
-                                value="{% if course.id|stringformat:'s' in bag %}Already in Bag{% else %}Add to Bag{% endif %}"
-                                {% if course.id|stringformat:'s' in bag %}disabled{% endif %}>
-                        </div>
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                    </div>
-                </form>
+                
             </div>
         </div>
     </div>
