@@ -80,10 +80,30 @@ th {
     --purple: #28003D;
   }
 
+.bg-black {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.bg-white {
+    background-color: var(--white);
+}
+
 .bg-pink {
     background-color: var(--pink);
 }
-  
+
+.bg-blue {
+    background-color: var(--blue);
+}
+
+.bg-green {
+    background-color: var(--green);
+}
+
+.bg-yellow {
+    background-color: var(--yellow);
+}
 
 .text-white {
     color: var(--white) !important;
@@ -283,6 +303,10 @@ th {
     object-position: center;
 }
 
+.card-image {
+    aspect-ratio: 16/10;
+}
+
 .home-image {
     background-image: url('../images/home-banner.jpg');
 }
@@ -475,9 +499,8 @@ th {
 
 
 /************************************** All Courses Page */
-a.tier-badge > span.badge:hover {
-    background: #212529 !important;
-    color: var(--white) !important;
+.badge {
+    font-size: 1.2rem;
 }
 
 /************************************** All Courses Page */
@@ -497,6 +520,20 @@ a.tier-badge > span.badge:hover {
     width: 64px;
     margin-top: 7px;
 }
+
+.courses-tier-link {
+    font-size: 18px;
+}
+
+.courses-tier-link:hover {
+    text-decoration: none;
+    color: var(--white) !important;
+}
+
+.difficulty-text {
+    font-size: 18px;
+}
+
 /************************************** Course Detail Page */
 .tier-link {
     font-size: 18px;
@@ -506,8 +543,6 @@ a.tier-badge > span.badge:hover {
     text-decoration: none;
     color: var(--green) !important;
 }
-
-/************************************** Course Detail Page */
 
 /************************************** Checkout */
 #id_country {

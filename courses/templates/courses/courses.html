@@ -3,15 +3,15 @@
 
 {% block title %}
 {% if selected_tier == 'Beginner' %}
-    Beginner DJ Courses
+Beginner DJ Courses
 {% elif selected_tier == 'Advanced' %}
-    Advanced DJ Courses
+Advanced DJ Courses
 {% elif selected_tier == 'Creative' %}
-    Creative DJ Courses
+Creative DJ Courses
 {% elif selected_tier == 'Complete' %}
-    Complete DJ Courses
+Complete DJ Courses
 {% else %}
-    DJ Courses
+DJ Courses
 {% endif %}
 {% endblock title %}
 
@@ -22,7 +22,7 @@
     </div>
 </div>
 <div class="courses-image lg-page-banner">
-    <h2 class="text-black page-title">
+    <h2 class="page-title">
         DJ Courses
     </h2>
 </div>
@@ -34,8 +34,21 @@
         <div class="col text-center mt-3">
             <h2 class="logo-font">DJ Courses</h2>
             {% for t in current_tiers %}
-            <a class="tier-badge text-decoration-none" href="{% url 'courses' %}?tier={{ t.tier_name|urlencode }}">
-                <span class="p-2 mt-2 badge text-black rounded-0 border border-dark">{{ t.tier_name }}</span>
+            <a href="{% url 'courses' %}?tier={{ t.tier_name|urlencode }}" class="tier-badge text-decoration-none">
+                <span class="p-2 mt-2 badge rounded-0 border border-dark
+                        {% if t.tier_name == 'Beginner' %}
+                            btn-green
+                        {% elif t.tier_name == 'Advanced' %}
+                            btn-blue
+                        {% elif t.tier_name == 'Creative' %}
+                            btn-pink
+                        {% elif t.tier_name == 'Complete' %}
+                            btn-yellow
+                        {% else %}
+                            bg-white
+                        {% endif %}">
+                        {{ t.tier_name }}
+                        </span>
             </a>
             {% endfor %}
 
@@ -51,40 +64,64 @@
                     <div class="card h-100 border-0">
                         {% if "placeholder" in course.image.url %}
                         <a href="{% url 'course_detail' course.id %}">
-                            <img class="card-img-top img-fluid" src="{% static 'images/noimage.png' %}"
+                            <img class="card-img-top img-fluid card-image" src="{% static 'images/noimage.png' %}"
                                 alt="placeholder image">
                         </a>
                         {% else %}
                         <a href="{% url 'course_detail' course.id %}">
-                            <img class="card-img-top img-fluid" src="{{ course.image.url }}" alt="{{ course.name }}">
+                            <img class="card-img-top img-fluid card-image" src="{{ course.image.url }}"
+                                alt="{{ course.name }}">
                         </a>
                         {% endif %}
-                        <div class="card-body pb-0">
+                        <div class="card-body pb-0
+                                {% if course.tier.tier_name == 'Beginner' %}
+                                    bg-green
+                                {% elif course.tier.tier_name == 'Advanced' %}
+                                    bg-blue
+                                {% elif course.tier.tier_name == 'Creative' %}
+                                    bg-pink
+                                {% elif course.tier.tier_name == 'Complete' %}
+                                    bg-yellow
+                                {% else %}
+                                    bg-white
+                                {% endif %}">
                             <a href="{% url 'course_detail' course.id %}">
-                                <p class="mb-0 text-black">{{ course.name }}</p>
+                                <h5 class="mb-0 text-black">{{ course.name }}</h5>
                             </a>
                         </div>
-                        <div class="card-footer bg-white pt-0 border-0 text-left">
-                            <div class="row">
+                        <div class="card-footer pt-0 border-0 text-left
+                                {% if course.tier.tier_name == 'Beginner' %}
+                                    bg-green
+                                {% elif course.tier.tier_name == 'Advanced' %}
+                                    bg-blue
+                                {% elif course.tier.tier_name == 'Creative' %}
+                                    bg-pink
+                                {% elif course.tier.tier_name == 'Complete' %}
+                                    bg-yellow
+                                {% else %}
+                                    bg-white
+                                {% endif %}">
+                            <div class="row mt-1">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold text-black">${{ course.price }}</p>
+                                    <p class="lead mb-1 text-left font-weight-bold text-black">${{ course.price }}</p>
                                     {% if course.tier %}
-                                    <p class="small mt-1 mb-0">
-                                        <a class="text-muted"
-                                            href="{% url 'courses' %}?tier={{ course.tier.tier_name }}">
-                                            <i class="fa-solid fa-layer-group mr-1"></i>{{ course.tier.tier_name }}
+                                    <p class="mb-0">
+                                        <a href="{% url 'courses' %}?tier={{ course.tier.tier_name }}"
+                                            class="text-black courses-tier-link">
+                                            <i class="fas fa-layer-group mr-1"></i>{{ course.tier.tier_name }}
                                         </a>
                                     </p>
                                     {% endif %}
                                     {% if course.difficulty %}
-                                    <small class="text-muted"><i
-                                            class="fa-solid fa-skull mr-1"></i>{{ course.difficulty }}/10</small>
+                                    <p class="text-black difficulty-text"><i class="fas fa-skull mr-1"></i>{{ course.difficulty }}/10
+                                    </p>
                                     {% else %}
-                                    <small class="text-muted">Difficulty N/A</small>
+                                    <p class="text-black">Difficulty N/A</p>
                                     {% endif %}
                                     {% if request.user.is_superuser %}
                                     <div class="ctrl-btn-box">
-                                        <a href="{% url 'edit_course' course.id %}" class="btn btn-blue rounded-0 edit-btn">Edit</a> |
+                                        <a href="{% url 'edit_course' course.id %}"
+                                            class="btn btn-blue rounded-0 edit-btn">Edit</a>
                                         <!-- Trigger the modal for delete -->
                                         <a class="btn btn-danger rounded-0 delete-btn" href="#" data-toggle="modal"
                                             data-target="#deleteModal{{ course.id }}">Delete</a>
