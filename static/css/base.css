@@ -772,11 +772,15 @@ by allauth */
     height: calc(100vh - 115px);
 }
 
-.allauth-container {
-    height: 100vh;
+.allauth-container-lg-content {
+    min-height: 100vh;
 }
 
 .allauth-container ul {
+    list-style-type: none;
+}
+
+.allauth-container-lg-content ul {
     list-style-type: none;
 }
 
