@@ -428,6 +428,10 @@ th {
     -webkit-background-clip: text;
 } */
 
+.main-logo-link h1 {
+    font-size: 2.25rem;
+}
+
 .main-logo-link {
     font-family: 'Orbitron', sans-serif;
     width: fit-content;
