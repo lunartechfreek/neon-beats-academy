@@ -571,6 +571,10 @@ th {
     transition: transform 0.3s ease;
 }
 
+.shopping-btns-box {
+    justify-content: space-evenly;
+}
+
 /************************************** Checkout */
 #id_country {
     padding: 0px 12px;
