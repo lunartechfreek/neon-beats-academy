@@ -24,16 +24,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-5-$bt384)8h)m&y)oq1co8h4(it=ps#oesd*0ue-_^1n4=1(j*'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-# ALLOWED_HOSTS = ['8000-lunartechfr-neonbeatsac-xc7j3gj3tpc.ws.codeinstitute-ide.net']
-
-# ALLOWED_HOSTS = ['https://neon-beats-academy-74fa20163bce.herokuapp.com/', 'localhost']
-
-ALLOWED_HOSTS = ['neon-beats-academy-74fa20163bce.herokuapp.com', '8000-lunartechfr-neonbeatsac-xc7j3gj3tpc.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = [
+    'neon-beats-academy-74fa20163bce.herokuapp.com',
+    '8000-lunartechfr-neonbeatsac-xc7j3gj3tpc.ws.codeinstitute-ide.net'
+]
 
 
 # Application definition
@@ -148,16 +147,16 @@ else:
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',  # noqa: E501
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',  # noqa: E501
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',  # noqa: E501
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',  # noqa: E501
     },
 ]
 
@@ -180,7 +179,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
@@ -205,7 +204,7 @@ else:
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
-#Summernote
+# Summernote
 SUMMERNOTE_CONFIG = {
     'summernote': {
         # Change editor size
