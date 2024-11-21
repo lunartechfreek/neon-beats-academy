@@ -20,4 +20,4 @@ class CourseForm(forms.ModelForm):
 
         self.fields['tier'].choices = tier_names
         for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-black rounded-0'
+            field.widget.attrs['class'] = 'border-black new-image rounded-0'
