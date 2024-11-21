@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Newsletter(models.Model):
     email = models.EmailField(unique=True, blank=False)
     date_subscribed = models.DateTimeField(auto_now_add=True)

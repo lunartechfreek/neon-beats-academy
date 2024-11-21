@@ -2,6 +2,7 @@ from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 from .models import Newsletter, NewsletterInfo
 
+
 @admin.register(Newsletter)
 class NewsletterAdmin(admin.ModelAdmin):
     list_display = ('email', 'date_subscribed')
