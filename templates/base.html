@@ -11,10 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="static/favicon/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'favicon/favicon-96x96.png' %}">
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
+
     {% endblock %}
 
     {% block extra_meta %}
@@ -58,15 +59,16 @@
     {% endblock %}
 
     {% block extra_js %}
-        <!-- Summernote widget -->
-        {{ block.super }}
-        {{ form.media }}
+    <!-- Summernote widget -->
+    {{ block.super }}
+    {{ form.media }}
     {% endblock %}
 
     <title>{% block title %}{% endblock %}</title>
 </head>
 
 <!-- Make sure there is no scroll on the Y axis -->
+
 <body class="{% if request.path == '/' %}no-scroll{% endif %}">
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-black pt-lg-1 pb-lg-1 d-none d-lg-flex">
@@ -123,7 +125,7 @@
 
         <div class="row bg-header">
             <nav class="navbar mobile-navbar navbar-expand-lg navbar-light w-100">
-                
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -156,8 +158,8 @@
     {% endblock %}
 
     <main>
-    {% block content %}
-    {% endblock %}
+        {% block content %}
+        {% endblock %}
     </main>
 
     <!-- Footer -->
