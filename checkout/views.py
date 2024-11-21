@@ -45,14 +45,16 @@ def checkout(request):
                     order_line_item.save()
                 except Course.DoesNotExist:
                     messages.error(request, (
-                        "One of the courses in your bag wasn't found in our database. "
+                        "One of the courses in your bag wasn't \
+                        found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse(
+                'checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
@@ -60,7 +62,8 @@ def checkout(request):
         bag = request.session.get('bag', {})
         # Stops users from accessing checkout with an empty bag
         if not bag:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(
+                request, "There's nothing in your bag at the moment")
             return redirect(reverse('courses'))
 
         current_bag = bag_contents(request)
@@ -114,13 +117,14 @@ def _send_confirmation_email(order):
     body = render_to_string(
         'checkout/confirmation_emails/confirmation_email_body.txt',
         {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-    
+
     send_mail(
         subject,
         body,
         settings.DEFAULT_FROM_EMAIL,
         [cust_email]
-    )        
+    )
+
 
 def checkout_success(request, order_number):
     """
