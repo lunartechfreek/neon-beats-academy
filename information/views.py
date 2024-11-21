@@ -12,14 +12,14 @@ def about_us(request):
 
     # Fallback for if no About entry exists
     if not about_info:
-        about_info = About(about_text="No information available.", updated_on="Unknown")
+        about_info = About(
+            about_text="No information available.", updated_on="Unknown")
 
     context = {
         'about_info': about_info
     }
 
     return render(request, 'information/about.html', context)
-
 
 
 def contact_us(request):
@@ -35,7 +35,8 @@ def contact_us(request):
                 )
             return redirect('contact_us')
         else:
-            messages.error(request, 'There was an error with your enquiry. Please check the form and try again.')
+            messages.error(request, 'There was an error with your enquiry. \
+            Please check the form and try again.')
     else:
         form = ContactUsForm()
 
@@ -45,7 +46,7 @@ def contact_us(request):
 def faq_view(request):
     """
     Display the FAQs ordered by importance first of all,
-    and then order by creation date for questions with 
+    and then order by creation date for questions with
     duplicate importance values.
     """
     faqs = FAQ.objects.order_by('importance', 'created_on')
