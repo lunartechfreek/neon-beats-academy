@@ -482,6 +482,8 @@ th {
 
 .mobile-logo {
     padding: 1px 0;
+    margin-left: 0.15rem;
+    margin-top: 2px;
 }
 
 .mobile-logo-link {
@@ -494,6 +496,16 @@ th {
 
 .navbar-nav {
     padding-left: 15px;
+}
+
+.mobile-navbar {
+    display: flex;
+}
+
+.mobile-logo-box {
+    display: flex;
+    flex-grow: 1;
+    justify-content: end;
 }
 
 /************************************** Home Page */
@@ -808,11 +820,27 @@ by allauth */
 
 /************************************** Media Queries */
 
-/******************* XX-Small Screens */
+/******************* XXX-Small Screens */
 @media (max-width: 353px) {
     .message-container {
         right: 1px;
         left: 1px;
+    }
+}
+
+/******************* XX-Small Screens */
+@media (max-width: 370px) {
+    /* .nav-link {
+        padding: 0.7rem;
+    } */
+
+    /* .nav-link i.fa-lg {
+        font-size: 1rem;
+    } */
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
     }
 }
 
@@ -827,6 +855,17 @@ by allauth */
 @media (max-width: 500px) {
     .message-container {
         right: 4px;
+    }
+}
+
+/******************* Small Screens */
+@media (max-width: 767px) {
+    .list-inline-item:not(:last-child) {
+        margin-right: 0rem;
+    }
+
+    .nav-link {
+        padding: 0.7rem 0.4rem;
     }
 }
 

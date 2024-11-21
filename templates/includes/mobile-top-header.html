@@ -1,44 +1,46 @@
 {% load static %}
-<li class="list-inline-item dropdown">
-    <a class="text-white account-btn d-block d-lg-none" href="#" id="user-options"
-        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <div class="text-center">
-            <div><i class="fas fa-user fa-lg"></i></div>
-            <p class="my-0">Account</p>
+<ul class="h-100 mobile-logo-box mb-0">
+    <li class="list-inline-item dropdown">
+        <a class="text-white nav-link account-btn d-block d-lg-none" href="#" id="user-options-mobile" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <div class="text-center">
+                <div><i class="fas fa-user fa-lg"></i></div>
+                <p class="my-0">Account</p>
+            </div>
+        </a>
+        <div class="dropdown-menu border-0" aria-labelledby="user-options-mobile">
+            {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
+            <a href="{% url 'add_course' %}" class="dropdown-item">Course Management</a>
+            {% endif %}
+            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+            <a href="{% url 'account_change_password' %}" class="dropdown-item">Change Password</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+            {% else %}
+            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+            {% endif %}
         </div>
-    </a>
-    <div class="dropdown-menu border-0" aria-labelledby="user-options">
-        {% if request.user.is_authenticated %}
-        {% if request.user.is_superuser %}
-        <a href="{% url 'add_course' %}" class="dropdown-item">Course Management</a>
-        {% endif %}
-        <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-        <a href="{% url 'account_change_password' %}" class="dropdown-item">Change Password</a>
-        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-        {% else %}
-        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-        {% endif %}
-    </div>
-</li>
-<li class="list-inline-item">
-    <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-white{% endif %} bag-btn d-lg-none"
-        href="{% url 'view_bag' %}">
-        <div class="text-center">
-            <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-            <p class="my-0">
-                {% if grand_total %}
-                £{{ grand_total|floatformat:2 }}
-                {% else %}
-                £0.00
-                {% endif %}
-            </p>
-        </div>
-    </a>
-</li>
-<li class="list-inline-item h-100">
-    <a href="{% url 'home' %}" class="mobile-logo-link"></a>
-    <img src="{% static 'images/logo.webp' %}" alt="NeonBeats Academy Logo"
-        class="logo mobile-logo d-block d-lg-none">
-    </a>
-</li>
+    </li>
+    <li class="list-inline-item">
+        <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-white{% endif %} nav-link bag-btn d-lg-none"
+            href="{% url 'view_bag' %}">
+            <div class="text-center">
+                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                <p class="my-0">
+                    {% if grand_total %}
+                    £{{ grand_total|floatformat:2 }}
+                    {% else %}
+                    £0.00
+                    {% endif %}
+                </p>
+            </div>
+        </a>
+    </li>
+    <li class="list-inline-item h-100">
+        <a href="{% url 'home' %}" class="mobile-logo-link">
+            <img src="{% static 'images/logo.webp' %}" alt="NeonBeats Academy Logo"
+                class="logo mobile-logo d-block d-lg-none">
+        </a>
+    </li>
+</ul>
