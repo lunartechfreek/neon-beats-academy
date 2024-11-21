@@ -825,13 +825,6 @@ by allauth */
 
 /******************* XX-Small Screens */
 @media (max-width: 370px) {
-    /* .nav-link {
-        padding: 0.7rem;
-    } */
-
-    /* .nav-link i.fa-lg {
-        font-size: 1rem;
-    } */
 
     .navbar-toggler {
         padding: .6rem .6rem;
