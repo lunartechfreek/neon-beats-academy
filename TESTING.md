@@ -108,7 +108,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
-| Browser | Home | About | Contact | courses | Notes |
+| Browser | Home | About | Contact | Courses | Notes |
 | --- | --- | --- | --- | --- | --- |
 | Chrome | ![screenshot](documentation/browsers/browser-chrome-home.png) | ![screenshot](documentation/browsers/browser-chrome-about.png) | ![screenshot](documentation/browsers/browser-chrome-contact.png) | ![screenshot](documentation/browsers/browser-chrome-courses.png) | Works as expected |
 | Firefox | ![screenshot](documentation/browsers/browser-firefox-home.png) | ![screenshot](documentation/browsers/browser-firefox-about.png) | ![screenshot](documentation/browsers/browser-firefox-contact.png) | ![screenshot](documentation/browsers/browser-firefox-courses.png) | Works as expected |
@@ -117,3 +117,19 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Opera | ![screenshot](documentation/browsers/browser-opera-home.png) | ![screenshot](documentation/browsers/browser-opera-about.png) | ![screenshot](documentation/browsers/browser-opera-contact.png) | ![screenshot](documentation/browsers/browser-opera-courses.png) | Works as expected |
 
 ## Responsiveness
+
+I've tested my deployed project on multiple devices to check for responsiveness issues.
+
+| Device | Home | About | Contact | Courses | Notes | 
+| --- | --- | --- | --- | --- | --- | 
+| MacBook Pro (Real Device Test) | ![screenshot](documentation/responsiveness/responsive-macbook-pro-home.png) | ![screenshot](documentation/responsiveness/responsive-macbook-pro-about.png) | ![screenshot](documentation/responsiveness/responsive-macbook-pro-contact.png) | ![screenshot](documentation/responsiveness/responsive-macbook-pro-courses.png) | Works as expected |
+| Desktop XL | ![screenshot](documentation/responsiveness/responsive-desktop-xl-home.png) | ![screenshot](documentation/responsiveness/responsive-desktop-xl-about.png) | ![screenshot](documentation/responsiveness/responsive-desktop-xl-contact.png) | ![screenshot](documentation/responsiveness/responsive-desktop-xl-courses.png) |  Works as expected |
+| iPhone 15 Pro Max (Real Device Test) | ![screenshot](documentation/responsiveness/responsive-iphone-15-pro-max-home.png) | ![screenshot](documentation/responsiveness/responsive-iphone-15-pro-max-about.png) | ![screenshot](documentation/responsiveness/responsive-iphone-15-pro-max-contact.png) | ![screenshot](documentation/responsiveness/responsive-iphone-15-pro-max-courses.png) | Works as expected |
+| iPhone SE | ![screenshot](documentation/responsiveness/responsive-iphone-se-home.png) | ![screenshot](documentation/responsiveness/responsive-iphone-se-about.png) | ![screenshot](documentation/responsiveness/responsive-iphone-se-contact.png) | ![screenshot](documentation/responsiveness/responsive-iphone-se-courses.png) | Works as expected | 
+| iPhone 16 | ![screenshot](documentation/responsiveness/responsive-iphone-16-home.png) | ![screenshot](documentation/responsiveness/responsive-iphone-16-about.png) | ![screenshot](documentation/responsiveness/responsive-iphone-16-contact.png) | ![screenshot](documentation/responsiveness/responsive-iphone-16-courses.png) | Works as expected |    
+| iPad Mini | ![screenshot](documentation/responsiveness/responsive-ipad-mini-home.png) | ![screenshot](documentation/responsiveness/responsive-ipad-mini-about.png) | ![screenshot](documentation/responsiveness/responsive-ipad-mini-contact.png) | ![screenshot](documentation/responsiveness/responsive-ipad-mini-courses.png) | Works as expected |  
+| iPad Air | ![screenshot](documentation/responsiveness/responsive-ipad-air-home.png) | ![screenshot](documentation/responsiveness/responsive-ipad-air-about.png) | ![screenshot](documentation/responsiveness/responsive-ipad-air-contact.png) | ![screenshot](documentation/responsiveness/responsive-ipad-air-courses.png) | Works as expected |  
+| Galaxy Tab | ![screenshot](documentation/responsiveness/responsive-galaxy-tab-home.png) | ![screenshot](documentation/responsiveness/responsive-galaxy-tab-about.png) | ![screenshot](documentation/responsiveness/responsive-galaxy-tab-contact.png) | ![screenshot](documentation/responsiveness/responsive-galaxy-tab-courses.png) | Works as expected |
+| Galaxy S24 Ultra | ![screenshot](documentation/responsiveness/responsive-galaxy-s24-ultra-home.png) | ![screenshot](documentation/responsiveness/responsive-galaxy-s24-ultra-about.png) | ![screenshot](documentation/responsiveness/responsive-galaxy-s24-ultra-contact.png) | ![screenshot](documentation/responsiveness/responsive-galaxy-s24-ultra-courses.png) | Works as expected | 
+
+
