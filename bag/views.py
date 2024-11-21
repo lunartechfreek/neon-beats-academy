@@ -3,12 +3,13 @@ from django.contrib import messages
 
 from courses.models import Course
 
+
 def view_bag(request):
     """ A view that renders the bag contents page """
 
     return render(request, 'bag/bag.html')
 
-####### View with error message #######
+# View with error message #######
 
 # def add_to_bag(request, item_id):
 #     """ Add the specified course to the shopping bag """
@@ -29,11 +30,13 @@ def view_bag(request):
 
 #     return redirect(redirect_url)
 
+
 def add_to_bag(request, item_id):
     """ Add the specified course to the shopping bag """
 
     course = get_object_or_404(Course, pk=item_id)
-    redirect_url = request.POST.get('redirect_url', '/')  # default to home if redirect_url is missing
+    # default to home if redirect_url is missing
+    redirect_url = request.POST.get('redirect_url', '/')
     bag = request.session.get('bag', {})
 
     # Check if the course is already in the bag
@@ -49,15 +52,13 @@ def add_to_bag(request, item_id):
     return redirect(redirect_url)
 
 
-
-
 def remove_from_bag(request, item_id):
     """Remove the item from the shopping bag"""
 
     try:
         course = get_object_or_404(Course, pk=item_id)
         bag = request.session.get('bag', {})
-        
+
         # Remove the item directly
         if item_id in bag:
             bag.pop(item_id)
