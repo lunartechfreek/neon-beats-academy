@@ -1,8 +1,17 @@
+{% load static %}
+
 {% if widget.is_initial %}
     <p>{{ widget.initial_text }}:</p>
-    <a href="{{ widget.value.url }}">
-        <img class="rounded shadow-sm edit-image" src="{{ widget.value.url }}" alt="Current course image">
-    </a>
+    {% if "placeholder" in widget.value.url %}
+        <a href="{{ widget.value.url }}" target="_blank">
+            <img class="rounded shadow-sm edit-image" src="{% static 'images/noimage.png' %}"
+                alt="placeholder image">
+        </a>
+    {% else %}
+        <a href="{{ widget.value.url }}" target="_blank">
+            <img class="rounded shadow-sm edit-image" src="{{ widget.value.url }}" alt="Current course image">
+        </a>
+    {% endif %}
     {% if not widget.required %}
         <div class="custom-control custom-checkbox mt-2">
             <input class="custom-control-input" type="checkbox" name="{{ widget.checkbox_name }}" id="{{ widget.checkbox_id }}">
