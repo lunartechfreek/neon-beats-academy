@@ -167,12 +167,12 @@ DJ Courses
 
 <!-- Delete Confirmation Modal -->
 {% for course in courses %}
-<div class="modal fade" id="deleteModal{{ course.id }}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+<div class="modal fade" id="deleteModal{{ course.id }}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel{{ course.id }}"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title text-black" id="deleteModalLabel">Confirm Deletion</h5>
+                <h5 class="modal-title text-black" id="deleteModalLabel{{ course.id }}">Confirm Deletion</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
