@@ -817,6 +817,10 @@ by allauth */
 	color: var(--blue); /* text-info */
 }
 
+.invalid-feedback strong {
+    color: var(--blue);
+}
+
 /************************************** Media Queries */
 
 /******************* XXX-Small Screens */
