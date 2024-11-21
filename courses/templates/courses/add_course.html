@@ -26,26 +26,24 @@
             <hr>
         </div>
     </div>
-    <section id="add-course-form">
-        <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-                <form method="POST" action="{% url 'add_course' %}" class="form mb-2" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {% for field in form %}
-                    {% if field.name != 'image' %}
-                    {{ field | as_crispy_field }}
-                    {% else %}
-                    {{ field }}
-                    {% endif %}
-                    {% endfor %}
-                    <div class="text-right">
-                        <a class="btn btn-pink text-uppercase rounded-0" href="{% url 'courses' %}">Cancel</a>
-                        <button class="btn btn-green text-uppercase rounded-0" type="submit">Add Course</button>
-                    </div>
-                </form>
-            </div>
+    <div class="row">
+        <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+            <form method="POST" action="{% url 'add_course' %}" class="form mb-2" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                {% if field.name != 'image' %}
+                {{ field | as_crispy_field }}
+                {% else %}
+                {{ field }}
+                {% endif %}
+                {% endfor %}
+                <div class="text-right">
+                    <a class="btn btn-pink text-uppercase rounded-0" href="{% url 'courses' %}">Cancel</a>
+                    <button class="btn btn-green text-uppercase rounded-0" type="submit">Add Course</button>
+                </div>
+            </form>
         </div>
-    </section>
+    </div>
 </div>
 {% endblock %}
 

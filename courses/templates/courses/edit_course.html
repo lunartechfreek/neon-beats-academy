@@ -26,37 +26,35 @@
             <hr>
         </div>
     </div>
-    <section id="edit-course-form">
-        <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-                <form method="POST" action="{% url 'edit_course' course.id %}" class="form mb-2"
-                    enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {{ form.media }}
-                    <!-- Load Summernote assets -->
-                    {% for field in form %}
-                    {% if field.name == 'description' %}
-                    <!-- Use Summernote widget for the description field -->
-                    <div class="form-group">
-                        {{ field.label_tag }}
-                        {{ field }}
-                    </div>
-                    {% elif field.name != 'image' %}
-                    <!-- Render other fields using crispy forms -->
-                    {{ field|as_crispy_field }}
-                    {% else %}
-                    <!-- Handle the image field -->
+    <div class="row">
+        <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+            <form method="POST" action="{% url 'edit_course' course.id %}" class="form mb-2"
+                enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.media }}
+                <!-- Load Summernote assets -->
+                {% for field in form %}
+                {% if field.name == 'description' %}
+                <!-- Use Summernote widget for the description field -->
+                <div class="form-group">
+                    {{ field.label_tag }}
                     {{ field }}
-                    {% endif %}
-                    {% endfor %}
-                    <div class="text-right">
-                        <a class="btn btn-pink text-uppercase rounded-0" href="{% url 'courses' %}">Cancel</a>
-                        <button class="btn btn-green text-uppercase rounded-0" type="submit">Update Course</button>
-                    </div>
-                </form>
-            </div>
+                </div>
+                {% elif field.name != 'image' %}
+                <!-- Render other fields using crispy forms -->
+                {{ field|as_crispy_field }}
+                {% else %}
+                <!-- Handle the image field -->
+                {{ field }}
+                {% endif %}
+                {% endfor %}
+                <div class="text-right">
+                    <a class="btn btn-pink text-uppercase rounded-0" href="{% url 'courses' %}">Cancel</a>
+                    <button class="btn btn-green text-uppercase rounded-0" type="submit">Update Course</button>
+                </div>
+            </form>
         </div>
-    </section>
+    </div>
 </div>
 {% endblock %}
 

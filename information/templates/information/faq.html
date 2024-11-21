@@ -25,45 +25,43 @@
             <hr>
         </div>
     </div>
-    <section id="faq-accordian">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
-                <div class="faq-container">
-                    <!-- FAQ Accordion -->
-                    <div id="faqAccordion" class="accordion">
-                        {% for faq in faqs %}
-                        <div class="card border-0 rounded-0">
-                            <div class="card-header {% cycle 'bg-pink' 'bg-green' 'bg-blue' 'bg-yellow' %}"
-                                id="heading{{ forloop.counter }}">
-                                <h3 class="mb-0">
-                                    <button class="btn btn-link faq-link text-black" type="button"
-                                        data-toggle="collapse" data-target="#collapse{{ forloop.counter }}"
-                                        aria-expanded="false" aria-controls="collapse{{ forloop.counter }}">
-                                        <i class="fas fa-chevron-down"></i> {{ faq.question }}
-                                    </button>
-                                </h3>
-                            </div>
-                            <div id="collapse{{ forloop.counter }}" class="collapse"
-                                aria-labelledby="heading{{ forloop.counter }}" data-parent="#faqAccordion">
-                                <div class="card-body bg-black">
-                                    <p>
-                                        {{ faq.answer }}
-                                    </p>
-                                </div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10">
+            <div class="faq-container">
+                <!-- FAQ Accordion -->
+                <div id="faqAccordion" class="accordion">
+                    {% for faq in faqs %}
+                    <div class="card border-0 rounded-0">
+                        <div class="card-header {% cycle 'bg-pink' 'bg-green' 'bg-blue' 'bg-yellow' %}"
+                            id="heading{{ forloop.counter }}">
+                            <h3 class="mb-0">
+                                <button class="btn btn-link faq-link text-black" type="button" data-toggle="collapse"
+                                    data-target="#collapse{{ forloop.counter }}" aria-expanded="false"
+                                    aria-controls="collapse{{ forloop.counter }}">
+                                    <i class="fas fa-chevron-down"></i> {{ faq.question }}
+                                </button>
+                            </h3>
+                        </div>
+                        <div id="collapse{{ forloop.counter }}" class="collapse"
+                            aria-labelledby="heading{{ forloop.counter }}" data-parent="#faqAccordion">
+                            <div class="card-body bg-black">
+                                <p>
+                                    {{ faq.answer }}
+                                </p>
                             </div>
                         </div>
-                        {% endfor %}
                     </div>
+                    {% endfor %}
                 </div>
-                <div class="row justify-content-center mt-5">
-                    <div class="col-12 col-md-8 text-center">
-                        <p class="faq-text">Need help with something else?</p>
-                        <a class="btn btn-blue text-uppercase btn-lg rounded-0" href="{% url 'contact_us' %}">Contact
-                            Us</a>
-                    </div>
+            </div>
+            <div class="row justify-content-center mt-5">
+                <div class="col-12 col-md-8 text-center">
+                    <p class="faq-text">Need help with something else?</p>
+                    <a class="btn btn-blue text-uppercase btn-lg rounded-0" href="{% url 'contact_us' %}">Contact
+                        Us</a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </div>
 {% endblock %}
