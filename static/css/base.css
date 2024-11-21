@@ -386,11 +386,6 @@ th {
     font-family: 'Orbitron', sans-serif;
 }
 
-.nav-link:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
-
 .account-btn,
 .bag-btn {
     color: var(--white);
@@ -924,12 +919,18 @@ by allauth */
         height: 40px;
     }
 
-    .subscribe-container {
-        margin-top: 1.5rem;
+    .nav-link:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
     }
 
     .bg-header {
         background-color: var(--pink);
+    }
+
+    /* Newsletter */
+    .subscribe-container {
+        margin-top: 1.5rem;
     }
 }
 
