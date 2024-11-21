@@ -2,6 +2,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 from cloudinary.models import CloudinaryField
 from django.db import models
 
+
 class CourseTier(models.Model):
     tier_name = models.CharField(max_length=100, unique=True)
     description = models.TextField(blank=True, null=True)
@@ -11,7 +12,8 @@ class CourseTier(models.Model):
 
     # Returns if a description exists or not for the admin panel
     def has_description(self):
-        return bool(self.description)  
+        return bool(self.description)
+
 
 class Course(models.Model):
     # Tier choices for SKU
@@ -22,9 +24,11 @@ class Course(models.Model):
         ('COM', 'Complete'),
     ]
 
-    DIFFICULTY_CHOICES = [(i, str(i)) for i in range(1, 11)]  # Dropdown choices for difficulty
+    # Dropdown choices for difficulty
+    DIFFICULTY_CHOICES = [(i, str(i)) for i in range(1, 11)]
 
-    tier = models.ForeignKey('CourseTier', null=True, blank=True, on_delete=models.SET_NULL)
+    tier = models.ForeignKey(
+        'CourseTier', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=20, unique=True, editable=False)
     name = models.CharField(max_length=254, unique=True, blank=False)
     description = models.TextField(blank=False)
@@ -39,8 +43,11 @@ class Course(models.Model):
     def save(self, *args, **kwargs):
         if not self.sku:
             tier_code = self.tier.tier_name[:3].upper() if self.tier else 'GEN'
-            number = Course.objects.filter(sku__startswith=f'DJ-{tier_code}-').count() + 1  # Count existing SKUs
-            self.sku = f'DJ-{tier_code}-{str(number).zfill(3)}'  # Format the number with leading zeros
+            number = Course.objects.filter(
+                # Count existing SKUs
+                sku__startswith=f'DJ-{tier_code}-').count() + 1
+            # Format the number with leading zeros
+            self.sku = f'DJ-{tier_code}-{str(number).zfill(3)}'
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -48,4 +55,3 @@ class Course(models.Model):
 
     class Meta:
         ordering = ['difficulty']
-
