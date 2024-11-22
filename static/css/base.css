@@ -417,7 +417,7 @@ th {
 }
 
 .main-logo-link h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
 }
 
 .main-logo-link {
@@ -996,6 +996,14 @@ by allauth */
     /* General */
     .container {
         max-width: 80%;
+    }
+}
+
+/******************* Custom Breakpoint */
+@media (min-width: 1060px) {
+    /* Logo */
+    .main-logo-link h1 {
+        font-size: 2.25rem;
     }
 }
 
