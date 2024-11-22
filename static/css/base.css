@@ -985,9 +985,13 @@ by allauth */
         height: 40px;
     }
 
-    .nav-link:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease;
+    .main-nav-link {
+        color: var(--black) !important;
+    }
+
+    .main-nav-link:hover {
+        background-color: var(--blue);
+        color: var(--black) !important;
     }
 
     .bg-header {
@@ -995,7 +999,8 @@ by allauth */
     }
 
     .active {
-        color: var(--black) !important;
+        background-color: var(--black);
+        color: var(--blue) !important;
     }
 
     /* Newsletter */
