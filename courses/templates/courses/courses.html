@@ -167,8 +167,8 @@ DJ Courses
 
 <!-- Delete Confirmation Modal -->
 {% for course in courses %}
-<div class="modal fade" id="deleteModal{{ course.id }}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel{{ course.id }}"
-    aria-hidden="true">
+<div class="modal fade" id="deleteModal{{ course.id }}" tabindex="-1" role="dialog"
+    aria-labelledby="deleteModalLabel{{ course.id }}" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -178,7 +178,8 @@ DJ Courses
                 </button>
             </div>
             <div class="modal-body text-black">
-                Are you sure you want to delete the course "{{ course.name }}"? This action cannot be undone.
+                Are you sure you want to delete the course <strong>{{ course.name }}</strong>? This action cannot be
+                undone.
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
