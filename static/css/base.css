@@ -623,6 +623,16 @@ th {
     color: var(--green) !important;
 }
 
+#add-image-feedback {
+    margin-top: 10px;
+    color: var(--green);
+}
+
+#edit-image-feedback {
+    margin-top: 10px;
+    color: var(--green);
+}
+
 /************************************** About Page */
 
 .about-image-container {
