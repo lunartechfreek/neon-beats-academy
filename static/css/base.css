@@ -271,6 +271,11 @@ th {
 .delete-btn {
     padding: 0.2rem;
     width: 67px;
+    border: 1px solid var(--black);
+}
+
+.btn-danger {
+    border-color: var(--black);
 }
 
 .btn-danger:hover,
@@ -909,6 +914,23 @@ by allauth */
     /* Home */
     .home-statement {
         font-size: 3.5rem;
+    }
+
+    /* Course Detail */
+    .edit-btn,
+    .delete-btn {
+        font-size: 1.15rem;
+        padding: 0.15rem;
+        width: 75px;
+    }
+
+    /* Courses */
+    .card-footer .edit-btn,
+    .card-footer .delete-btn {
+        font-size: 1.15rem;
+        padding: 0.15rem;
+        width: 75px;
+        margin-bottom: 7px;
     }
 }
 
