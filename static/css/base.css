@@ -550,7 +550,10 @@ th {
 
 .courses-tier-link:hover,
 .courses-tier-link:active,
-.courses-tier-link:focus {
+.courses-tier-link:focus,
+.course-link:hover,
+.course-link:active,
+.course-link:focus {
     transform: scale(1.08) !important;
     transition: transform 0.3s ease !important;
 }
