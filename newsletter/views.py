@@ -1,7 +1,32 @@
+from django.conf import settings
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
 from django.shortcuts import render
 from django.contrib import messages
 from .models import Newsletter, NewsletterInfo
 from .forms import NewsletterForm
+
+
+def _send_subscribe_email(email):
+    """Send the user a subscribe email."""
+    try:
+        subject = render_to_string(
+            'newsletter/subscribe_emails/subscribe_email_subject.txt'
+        ).strip()
+
+        body = render_to_string(
+            'newsletter/subscribe_emails/subscribe_email_body.txt',
+        )
+
+        send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [email]
+        )
+    except Exception as e:
+        # Log the error or print for debugging
+        print(f"Error sending subscribe email: {e}")
 
 
 def subscribe(request):
@@ -21,6 +46,7 @@ def subscribe(request):
                 form.save()
                 messages.success(
                     request, "Thank you for subscribing to our newsletter!")
+                _send_subscribe_email(email)  # Pass the email to the function
     else:
         form = NewsletterForm()
 
@@ -30,8 +56,9 @@ def subscribe(request):
     # Fallback if no NewsletterInfo entry exists
     if not newsletter_info:
         newsletter_info = NewsletterInfo(
-                newsletter_info="No newsletter information available.",
-                updated_on="Unknown")
+            newsletter_info="No newsletter information available.",
+            updated_on="Unknown"
+        )
 
     context = {
         'form': form,
