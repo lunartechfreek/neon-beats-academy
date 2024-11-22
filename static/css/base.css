@@ -273,6 +273,14 @@ th {
     width: 67px;
 }
 
+.btn-danger:hover,
+.btn-danger:active,
+.btn-danger:focus {
+    color: #dc3545;
+    background-color: var(--black);
+    border-color: var(--black);
+}
+
 /************************************** Images */
 .lg-page-banner {
     height: 65vh;
