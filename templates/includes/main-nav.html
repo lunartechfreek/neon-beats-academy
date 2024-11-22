@@ -1,8 +1,8 @@
 <div class="collapse navbar-collapse bg-header" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="all-courses-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5 {% if request.path == courses_url %}active{% endif %}"
+                href="#" id="all-courses-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 DJ Courses
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-courses-link">
@@ -15,25 +15,29 @@
         </li>
 
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'about' %}">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5 {% if request.path == about_url %}active{% endif %}"
+                href="{% url 'about' %}">
                 About
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'contact_us' %}">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5 {% if request.path == contact_us_url %}active{% endif %}"
+                href="{% url 'contact_us' %}">
                 Contact Us
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'faq' %}">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5 {% if request.path == faq_url %}active{% endif %}"
+                href="{% url 'faq' %}">
                 FAQ
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'subscribe' %}">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5 {% if request.path == subscribe_url %}active{% endif %}"
+                href="{% url 'subscribe' %}">
                 Newsletter
             </a>
         </li>

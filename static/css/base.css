@@ -507,6 +507,10 @@ th {
     justify-content: end;
 }
 
+.active {
+    color: var(--pink) !important;
+}
+
 /************************************** Home Page */
 .home-statement {
     font-size: 2.4rem;
@@ -825,6 +829,7 @@ by allauth */
 
 /******************* XXX-Small Screens */
 @media (max-width: 353px) {
+    /* Toast box */
     .message-container {
         right: 1px;
         left: 1px;
@@ -833,7 +838,7 @@ by allauth */
 
 /******************* XX-Small Screens */
 @media (max-width: 370px) {
-
+    /* Header */
     .navbar-toggler {
         padding: .6rem .6rem;
         font-size: 1rem;
@@ -842,6 +847,7 @@ by allauth */
 
 /******************* X-Small Screens */
 @media (max-width: 400px) {
+    /* Home */
     .dj-courses-btn {
         min-width: 200px;
     }
@@ -856,6 +862,7 @@ by allauth */
 
 /******************* Small Screens */
 @media (max-width: 767px) {
+    /* Header */
     .list-inline-item:not(:last-child) {
         margin-right: 0rem;
     }
@@ -867,6 +874,7 @@ by allauth */
 
 /******************* Medium Screens */
 @media (min-width: 768px) {
+    /* General */
     .full-page-banner,
     .allauth-container {
         height: calc(100vh - 125px);
@@ -877,6 +885,7 @@ by allauth */
         font-size: 40px;
     }
 
+    /* Home */
     .home-statement {
         font-size: 3.5rem;
     }
@@ -929,6 +938,10 @@ by allauth */
         background-color: var(--pink);
     }
 
+    .active {
+        color: var(--black) !important;
+    }
+
     /* Newsletter */
     .subscribe-container {
         margin-top: 1.5rem;
@@ -937,14 +950,15 @@ by allauth */
 
 /******************* XL Screens */
 @media (min-width: 1200px) {
+    /* General */
     .container {
         max-width: 80%;
     }
 }
 
 /******************* Custom Breakpoint */
-/* Page title font-size */
 @media (min-width: 1107px) {
+    /* General */
     .page-title {
         font-size: 45px;
     }
