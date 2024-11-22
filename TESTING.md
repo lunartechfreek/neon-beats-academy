@@ -133,3 +133,75 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Galaxy S24 Ultra | ![screenshot](documentation/responsiveness/responsive-galaxy-s24-ultra-home.png) | ![screenshot](documentation/responsiveness/responsive-galaxy-s24-ultra-about.png) | ![screenshot](documentation/responsiveness/responsive-galaxy-s24-ultra-contact.png) | ![screenshot](documentation/responsiveness/responsive-galaxy-s24-ultra-courses.png) | Works as expected | 
 
 
+
+## Defensive Programming
+
+Defensive programming was manually tested with the below user acceptance testing:
+
+| Page | User Action | Expected Result | Screenshot | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Bag | | | | |
+| | Add duplicate item to bag | Unable to add | ![screenshot](documentation/defensive/defence-bag-duplicate.png) | Pass |
+| Logged In As Superuser | | | | |
+| | Delete course on detail page | Delete modal appears to check I am sure | ![screenshot](documentation/defensive/defence-logged-in-course-detail-delete.png) | Pass |
+| | Delete course on courses page | Delete modal appears to check I am sure | ![screenshot](documentation/defensive/defence-logged-in-courses-delete.png) | Pass |
+| | Click account button | Superuser options appear | ![screenshot](documentation/defensive/defence-logged-in-account-dropdown.png) | Pass |
+| | Head to course detail page | Edit/delete buttons present | ![screenshot](documentation/defensive/defence-logged-in-course-detail-buttons.png) | Pass |
+| | Head to courses page | Edit/delete buttons present | ![screenshot](documentation/defensive/defence-logged-in-courses-buttons.png) | Pass |
+| | Click product management | Add course page access | ![screenshot](documentation/defensive/defence-logged-in-course-add.png) | Pass |
+| | Click edit course button | Edit course page access | ![screenshot](documentation/defensive/defence-logged-in-course-edit.png) | Pass |
+| Logged In | | | | |
+| | Click account button | Logged in options appear | ![screenshot](documentation/defensive/defence-logged-in-non-super-account-dropdown.png) | Pass |
+| | Head to courses page | Edit/delete buttons not present | ![screenshot](documentation/defensive/defence-logged-in-non-super-courses-buttons.png) | Pass |
+| | Head to course detail page | Edit/delete buttons not present | ![screenshot](documentation/defensive/defence-logged-in-non-super-course-detail-buttons.png) | Pass |
+| | Attepmpt to access add course via url | Not authorised message apears | ![screenshot](documentation/defensive/defence-logged-in-non-super-url-course-add.png) | Pass |
+| | Attempt to access edit course via url | Not authorised message apears | ![screenshot](documentation/defensive/defence-logged-in-non-super-url-course-edit.png) | Pass |
+| Account | | | | |
+| | Click account button | Logged out options appear | ![screenshot](documentation/defensive/defence-logged-out-account-dropdown.png) | Pass |
+| | Try to login without verifying email | Verify page appears | ![screenshot](documentation/defensive/defence-logged-out-login-without-verify.png) | Pass |
+| | Don't provide signup email | Error message appears | ![screenshot](documentation/defensive/defence-account-signup-email.png) | Pass |
+| | Sign in with email that already has an account | Error message appears | ![screenshot](documentation/defensive/defence-account-signup-duplicate-email.png) | Pass |
+| | Enter invalid/blank password | Error message appears | ![screenshot](documentation/defensive/defence-account-password-errors.png) | Pass |
+| | Input different passwords | Error message appears | ![screenshot](documentation/defensive/defence-account-password-mismatch.png) | Pass |
+| | Input password similar to username (or the same) | Error message appears | ![screenshot](documentation/defensive/defence-account-password-similar.png) | Pass |
+| Add | | | | |
+| | Enter invalid/blank name | Error message appears | ![screenshot](documentation/defensive/defence-add-name.png) | Pass |
+| | Enter invalid/blank difficulty | Error message appears | ![screenshot](documentation/defensive/defence-add-difficulty.png) | Pass |
+| | Enter invalid/blank price | Error message appears | ![screenshot](documentation/defensive/defence-add-price.png) | Pass |
+| | Enter invalid/blank letter | Error message appears | ![screenshot](documentation/defensive/defence-add-price-number.png) | Pass |
+| | Enter invalid/blank description | Error message appears | ![screenshot](documentation/defensive/defence-add-description.png) | Pass |
+| Message | | | | |
+| | Try to add invalid course | Error message appears | ![screenshot](documentation/defensive/defence-message-add-invalid.png) | Pass |
+| | Remove course from bag | Success message appears | ![screenshot](documentation/defensive/defence-message-bag-remove.png) | Pass |
+| | Add item to bag | Success message appears and item visibly in bag | ![screenshot](documentation/defensive/defence-message-bag-add.png) | Pass |
+| | Update course details | Success message appears | ![screenshot](documentation/defensive/defence-message-edit-updated.png) | Pass |
+| | Edit a page | Alert message appears to inform you that you are editing | ![screenshot](documentation/defensive/defence-message-editing.png) | Pass |
+| | Delete a course | Success message appears | ![screenshot](documentation/defensive/defence-message-delete-success.png) | Pass |
+| | Add a course | Success message appears | ![screenshot](documentation/defensive/defence-message-add-success.png) | Pass |
+| | Place an order | Success message appears | ![screenshot](documentation/defensive/defence-message-order-success.png) | Pass |
+| Checkout | | | | |
+| | Click checkout | Overlay appears to show my order is being processed | ![screenshot](documentation/defensive/defence-checkout-overlay.png) | Pass |
+| | Place an order | Confirmation page appears | ![screenshot](documentation/defensive/defence-checkout-redirect.png) | Pass |
+| | Enter expiration date in the past | Error message appears | ![screenshot](documentation/defensive/defence-checkout-card-expiration.png) | Pass |
+| | Enter invalid card number | Error message appears | ![screenshot](documentation/defensive/defence-checkout-card-invalid.png) | Pass |
+| | Enter blank card number | Error message appears | ![screenshot](documentation/defensive/defence-checkout-card-blank.png) | Pass |
+| | Enter invalid/blank name | Error message appears | ![screenshot](documentation/defensive/defence-checkout-name.png) | Pass |
+| | Enter invalid/blank email | Enter invalid/blank | ![screenshot](documentation/defensive/defence-checkout-email.png) | Pass |
+| | Enter invalid/blank country | Error message appears | ![screenshot](documentation/defensive/defence-checkout-country.png) | Pass |
+| | Enter invalid/blank town | Error message appears | ![screenshot](documentation/defensive/defence-checkout-town.png) | Pass |
+| | Enter invalid/blank address | Error message appears | ![screenshot](documentation/defensive/defence-checkout-address.png) | Pass |
+| | Enter invalid/blank postcode | Error message appears | ![screenshot](documentation/defensive/defence-checkout-card-post-code.png) | Pass |
+| | Enter invalid/blank phone number | Error message appears | ![screenshot](documentation/defensive/defence-checkout-number.png) | Pass |
+| Newsletter | | | | |
+| | Enter invalid email | Error message appears | ![screenshot](documentation/defensive/defence-newsletter-email-valid.png) | Pass |
+| | Enter blank email | Error message appears | ![screenshot](documentation/defensive/defence-newsletter-email-blank.png) | Pass |
+| | Click subscribe button | Success message appears | ![screenshot](documentation/defensive/defence-newsletter-message-subscribe.png) | Pass |
+| Contact | | | | |
+| | Click send message | Success message appears | ![screenshot](documentation/defensive/defence-contact-message-success.png) | Pass |
+| | Enter invalid/blank message | Error message appears | ![screenshot](documentation/defensive/defence-contact-message.png) | Pass |
+| | Enter invalid/blank email | Error message appears | ![screenshot](documentation/defensive/defence-contact-email.png) | Pass |
+| | Enter invalid/blank name | Error message appears | ![screenshot](documentation/defensive/defence-contact-name.png) | Pass |
+| Profile | | | | |
+| | Click update profiel button | Success message appears | ![screenshot](documentation/defensive/defence-profile-message-updated.png) | Pass |
+
+
