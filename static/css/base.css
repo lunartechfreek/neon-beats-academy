@@ -375,6 +375,10 @@ th {
     background-image: url('../images/edit-course-banner.jpeg');
 }
 
+.success-image {
+    background-image: url('../images/success-banner.jpeg');
+}
+
 .error-404-image {
     background-image: url('../images/error-404-banner.jpeg');
 }
@@ -936,14 +940,6 @@ by allauth */
         padding: 0.15rem;
         width: 75px;
         margin-bottom: 7px;
-    }
-
-    #order-success {
-        height: 100vh;
-    }
-
-    footer {
-        margin-top: 50px;
     }
 }
 
