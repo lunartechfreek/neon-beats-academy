@@ -133,6 +133,30 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Galaxy S24 Ultra | ![screenshot](documentation/responsiveness/responsive-galaxy-s24-ultra-home.png) | ![screenshot](documentation/responsiveness/responsive-galaxy-s24-ultra-about.png) | ![screenshot](documentation/responsiveness/responsive-galaxy-s24-ultra-contact.png) | ![screenshot](documentation/responsiveness/responsive-galaxy-s24-ultra-courses.png) | Works as expected | 
 
 
+## Lighthouse Audit
+
+I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
+
+| Page | Mobile | Desktop | Notes |
+| --- | --- | --- | --- |
+| Home | ![screenshot](documentation/lighthouse/lighthouse-mobile-home.png) | ![screenshot](documentation/lighthouse/lighthouse-desktop-home.png) |  |
+| Courses | ![screenshot](documentation/lighthouse/lighthouse-mobile-courses.png) | ![screenshot](documentation/lighthouse/lighthouse-desktop-courses.png) |  |
+| Course detail | ![screenshot](documentation/lighthouse/lighthouse-mobile-course-detail.png) | ![screenshot](documentation/lighthouse/lighthouse-desktop-course-detail.png) |  |
+| Add course | ![screenshot](documentation/lighthouse/lighthouse-mobile-add-course.png) | ![screenshot](documentation/lighthouse/lighthouse-desktop-add-course.png) |  |
+| Edit course | ![screenshot](documentation/lighthouse/lighthouse-mobile-edit-course.png) | ![screenshot](documentation/lighthouse/lighthouse-desktop-edit-course.png) |  |
+| Bag | ![screenshot](documentation/lighthouse/lighthouse-mobile-bag.png) | ![screenshot](documentation/lighthouse/lighthouse-desktop-bag.png) |  |
+| Checkout | ![screenshot](documentation/lighthouse/lighthouse-mobile-checkout.png) | ![screenshot](documentation/lighthouse/lighthouse-desktop-checkout.png) |  |
+| Checkout Success | ![screenshot](documentation/lighthouse/lighthouse-mobile-checkout-success.png) | ![screenshot](documentation/lighthouse/lighthouse-desktop-checkout-success.png) |  |
+| Profile | ![screenshot](documentation/lighthouse/lighthouse-mobile-profile.png) | ![screenshot](documentation/lighthouse/lighthouse-desktop-profile.png) |  |
+| About | ![screenshot](documentation/lighthouse/lighthouse-mobile-about.png) | ![screenshot](documentation/lighthouse/lighthouse-desktop-about.png) |  |
+| Contact | ![screenshot](documentation/lighthouse/lighthouse-mobile-contact.png) | ![screenshot](documentation/lighthouse/lighthouse-desktop-contact.png) |  |
+| Faq | ![screenshot](documentation/lighthouse/lighthouse-mobile-faq.png) | ![screenshot](documentation/lighthouse/lighthouse-desktop-faq.png) |  |
+| Newsletter | ![screenshot](documentation/lighthouse/lighthouse-mobile-newsletter.png) | ![screenshot](documentation/lighthouse/lighthouse-desktop-newsletter.png) |  |
+| Signup | ![screenshot](documentation/lighthouse/lighthouse-mobile-signup.png) | ![screenshot](documentation/lighthouse/lighthouse-desktop-signup.png) |  |
+| Login | ![screenshot](documentation/lighthouse/lighthouse-mobile-login.png) | ![screenshot](documentation/lighthouse/lighthouse-desktop-login.png) |  |
+| Logout | ![screenshot](documentation/lighthouse/lighthouse-mobile-logout.png) | ![screenshot](documentation/lighthouse/lighthouse-desktop-logout.png) |  |
+| Change password | ![screenshot](documentation/lighthouse/lighthouse-mobile-change-password.png) | ![screenshot](documentation/lighthouse/lighthouse-desktop-change-password.png) |  |
+
 
 ## Defensive Programming
 
@@ -160,7 +184,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click account button | Logged out options appear | ![screenshot](documentation/defensive/defence-logged-out-account-dropdown.png) | Pass |
 | | Try to login without verifying email | Verify page appears | ![screenshot](documentation/defensive/defence-logged-out-login-without-verify.png) | Pass |
 | | Don't provide signup email | Error message appears | ![screenshot](documentation/defensive/defence-account-signup-email.png) | Pass |
-| | Sign in with email that already has an account | Error message appears | ![screenshot](documentation/defensive/defence-account-signup-duplicate-email.png) | Pass |
+| | Sign in with email that already has an account | Warning email sent to email | ![screenshot](documentation/defensive/defence-account-signup-duplicate-email.png) | Pass |
 | | Enter invalid/blank password | Error message appears | ![screenshot](documentation/defensive/defence-account-password-errors.png) | Pass |
 | | Input different passwords | Error message appears | ![screenshot](documentation/defensive/defence-account-password-mismatch.png) | Pass |
 | | Input password similar to username (or the same) | Error message appears | ![screenshot](documentation/defensive/defence-account-password-similar.png) | Pass |
@@ -203,5 +227,98 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Enter invalid/blank name | Error message appears | ![screenshot](documentation/defensive/defence-contact-name.png) | Pass |
 | Profile | | | | |
 | | Click update profiel button | Success message appears | ![screenshot](documentation/defensive/defence-profile-message-updated.png) | Pass |
+
+
+## User Story Testing
+
+### Site User
+
+| User Story | Criteria | Screenshot |
+| --- | --- | --- |
+| As a site user I can easily view products so that I can choose which ones to buy | | |
+| | A clear link to all products will be featured on the home page | ![screenshot](documentation/user-stories/.png) |
+| | A link to courses will be featured in the nav bar | ![screenshot](documentation/user-stories/.png) |
+| As a site user I can see further details of a product so that I can decide if it is the right product for me | | |
+| | When the user clicks on a product they will be directed to a product details page showing further details of the product | ![screenshot](documentation/user-stories/.png) |
+| As a site user I can leave comments on a product so that I can ask the site owner a question or tell others what I thought of it | | |
+| | Feature a comment section on the product detail page for logged in users | ![screenshot](documentation/user-stories/.png) |
+| As a site user I can find information about the site so that I can understand what services the site offers | | |
+| | Have an about page | ![screenshot](documentation/user-stories/.png) |
+| | Have easily accessible information about the site displayed | ![screenshot](documentation/user-stories/.png) |
+| As a site user I would like to contact the site owner so that they can answer any queries I have | | |
+| | Contact us page created | ![screenshot](documentation/user-stories/.png) |
+| | Form present to directly contact the site owner | ![screenshot](documentation/user-stories/.png) |
+| As a site user I can add items to my basket so that they are saved while I continue shopping | | |
+| | Have a basket available for users | ![screenshot](documentation/user-stories/.png) |
+| | Have a button for adding the product to the basket on the product detail page | ![screenshot](documentation/user-stories/.png) |
+| | Have a page for the basket | ![screenshot](documentation/user-stories/.png) |
+| | Have a remove button to remove item from the basket | ![screenshot](documentation/user-stories/.png) |
+| | User can clearly see the total before checkout | ![screenshot](documentation/user-stories/.png) |
+| As a site user I can create an account and login so that I can have a personal account and order items | | |
+| | For logged out users, create account and login links featured in the account drop-down of the navigation bar | ![screenshot](documentation/user-stories/.png) |
+| | For logged in users, a logout link featured in the account drop-down of the navigation bar | ![screenshot](documentation/user-stories/.png) |
+| As a site user I can securely enter my credit card details so that I can securely purchase a product | | |
+| | Use Stripe for secure checkout | ![screenshot](documentation/user-stories/.png) |
+| | Have a checkout page | ![screenshot](documentation/user-stories/.png) |
+| As a site user I can view my order confirmation so I can make sure that I have not made any mistakes | | |
+| | Order confirmation page displayed after order is processed | ![screenshot](documentation/user-stories/.png) |
+| As a site user I would like to receive an order confirmation email of what I’ve ordered so that I can have a record of the order | | |
+| | Users receive an email confirming their order when it has been processed | ![screenshot](documentation/user-stories/.png) |
+| As a site user I can receive email confirmation after registering so that I can know my account was successfully created | | |
+| | Email confirmation sent after account is created with verification link | ![screenshot](documentation/user-stories/.png) |
+| As a site user I can search for products throughout the site so that I can find a specific product easily | | |
+| | Have a search bar featured on every page | ![screenshot](documentation/user-stories/.png) |
+| | Have a page that shows returned search results | ![screenshot](documentation/user-stories/.png) |
+| As a site user I can view specific tiers of courses so that I can easily find courses suitable to my skill level | | |
+| | Courses sorted into different tiers | ![screenshot](documentation/user-stories/.png) |
+| | Course tiers easily accessible via navigation bar dropdown menu | ![screenshot](documentation/user-stories/.png) |
+| | Courses split into tiers on all courses page | ![screenshot](documentation/user-stories/.png) |
+| As a site user I can read frequently asked questions from other users so that I can find potential answers to my questions with ease | | |
+| | FAQ section available for all users | ![screenshot](documentation/user-stories/.png) |
+| As a site user I can easily navigate back to the main site if an error message appears so that I can continue shopping | | |
+| | Custom 404 error page | ![screenshot](documentation/user-stories/.png) |
+| | Custom 500 error page | ![screenshot](documentation/user-stories/.png) |
+| As a site user I can subscribe to a newsletter so that I can stay up to date with new courses | | |
+| | Newsletter page featured | ![screenshot](documentation/user-stories/.png) |
+| | Easy subscribe method | ![screenshot](documentation/user-stories/.png) |
+| | Information about the benefits of signing up to a newsletter | ![screenshot](documentation/user-stories/.png) |
+
+### Returning Site User
+
+| User Story | Criteria | Sreenshot |
+| --- | --- | --- |
+| As a returning site user I can change password so that I can keep my account up to date | | |
+| | For logged in users a change password link will be available from the account dropdown | ![screenshot](documentation/user-stories/.png) |
+| As a site user when logged I can have a user profile so that I can change my details | | | | | |
+| | Form for logged in users to add/change their details | ![screenshot](documentation/user-stories/.png) |
+| As a site user when logged in I can view my order history so that I can see what I have ordered | | | | | |
+| | Order history section available for logged in users | ![screenshot](documentation/user-stories/.png) |
+
+### Site Owner
+
+| User Story | Criteria | Screenshot |
+| --- | --- | --- |
+| As a site owner I can add products to the site so that I can give my customers access to new products | | |
+| | Have an add product form only available to superusers | ![screenshot](documentation/user-stories/.png) |
+| | Enable superusers to upload an image of the product | ![screenshot](documentation/user-stories/.png) |
+| As a site owner I can edit a product so that I can keep the details up to date or adjust the price | | |
+| | When logged in, a superuser can edit any details of a product using an edit product form that is only accessible by superusers | ![screenshot](documentation/user-stories/.png) |
+| | Have an edit product button on the product detail page that is only visible to site owners | ![screenshot](documentation/user-stories/.png) |
+| As a site owner I can delete a product so that I can remove items that are no longer available | | |
+| | Have a delete button on the product detail page that is only visible to superusers | ![screenshot](documentation/user-stories/.png) |
+| | Have a warning box to make sure the superuser definitely wants to delete the product | ![screenshot](documentation/user-stories/.png) |
+| | Make deleting a product only available to superusers | ![screenshot](documentation/user-stories/.png) |
+| As a site owner I can log in to the admin panel so that I can view orders | | |
+| | Admin panel featured | ![screenshot](documentation/user-stories/.png) |
+| | Orders section featured in the admin panel | ![screenshot](documentation/user-stories/.png) |
+| As a site owner I can log in to the admin panel so that I can check messages from site users | | |
+| | Admin panel featured | ![screenshot](documentation/user-stories/.png) |
+| | Contact section featured in admin panel | ![screenshot](documentation/user-stories/.png) |
+| As a site owner I can change the about text so that I can keep users updated with any relevant information | | |
+| | The site owner can update the about text from the admin panel | ![screenshot](documentation/user-stories/.png) |
+| As a site owner I can manage products in the admin panel so that I have full control of them in one place | | |
+| | Superusers able to add products in the admin panel | ![screenshot](documentation/user-stories/.png) |
+| | Superusers able to edit products in the admin panel | ![screenshot](documentation/user-stories/.png) |
+| | Superusers able to delete products in the admin panel | ![screenshot](documentation/user-stories/.png) |
 
 
