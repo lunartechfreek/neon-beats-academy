@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
+<!-- Dynamically add course tier to title -->
 {% block title %}
 {% if selected_tier == 'Beginner' %}
 Beginner DJ Courses
@@ -36,6 +37,7 @@ DJ Courses
                 <h2 class="logo-font">DJ Courses</h2>
                 {% for t in current_tiers %}
                 <a href="{% url 'courses' %}?tier={{ t.tier_name|urlencode }}" class="tier-badge text-decoration-none">
+                    <!-- Dynamically add colour class dependant on course tier -->
                     <span class="p-2 mt-2 badge rounded-0 border border-dark
                         {% if t.tier_name == 'Beginner' %}
                             btn-green
@@ -76,6 +78,7 @@ DJ Courses
                                     alt="{{ course.name }}">
                             </a>
                             {% endif %}
+                            <!-- Dynamically add colour class dependant on course tier -->
                             <div class="card-body pb-0
                                 {% if course.tier.tier_name == 'Beginner' %}
                                     bg-green
@@ -92,6 +95,7 @@ DJ Courses
                                     <h5 class="mb-0 course-link text-black">{{ course.name }}</h5>
                                 </a>
                             </div>
+                            <!-- Dynamically add colour class dependant on course tier -->
                             <div class="card-footer pt-0 border-0 text-left
                                 {% if course.tier.tier_name == 'Beginner' %}
                                     bg-green
@@ -138,6 +142,7 @@ DJ Courses
                         </div>
                     </div>
 
+                    <!-- Set amount of cards to show for each screen size -->
                     {% if forloop.counter|divisibleby:1 %}
                     <div class="col-12 d-sm-none mb-5">
                         <hr>
