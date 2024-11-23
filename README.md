@@ -176,6 +176,33 @@ I chose Roboto Mono to compliment it because it naturally compliments Orbitron d
 - As a site owner I can dynamically create pages for courses so I can avoid the page being too cluttered.
 
 - As a site owner I can make sure the users order is processed even if checkout is interrupted so that the user still receives their order.
+
+## Wireframes
+
+To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
+I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
+
+| Page | Mobile | Tablet | Desktop |
+| --- | --- | --- | --- |
+| Index | ![screenshot](documentation/wireframes/mobile-index.png) | ![screenshot](documentation/wireframes/tablet-index.png) | ![screenshot](documentation/wireframes/desktop-index.png) |
+| Courses | ![screenshot](documentation/wireframes/mobile-courses.png) | ![screenshot](documentation/wireframes/tablet-courses.png) | ![screenshot](documentation/wireframes/desktop-courses.png) |
+| Course Detail | ![screenshot](documentation/wireframes/mobile-course-detail.png) | ![screenshot](documentation/wireframes/tablet-course-detail.png) | ![screenshot](documentation/wireframes/desktop-course-detail.png) |
+| Add Course | ![screenshot](documentation/wireframes/mobile-add-course.png) | ![screenshot](documentation/wireframes/tablet-add-course.png) | ![screenshot](documentation/wireframes/desktop-add-course.png) |
+| Edit Course | ![screenshot](documentation/wireframes/mobile-edit-course.png) | ![screenshot](documentation/wireframes/tablet-edit-course.png) | ![screenshot](documentation/wireframes/desktop-edit-course.png) |
+| Bag | ![screenshot](documentation/wireframes/mobile-bag.png) | ![screenshot](documentation/wireframes/tablet-bag.png) | ![screenshot](documentation/wireframes/desktop-bag.png) |
+| Checkout | ![screenshot](documentation/wireframes/mobile-checkout.png) | ![screenshot](documentation/wireframes/tablet-checkout.png) | ![screenshot](documentation/wireframes/desktop-checkout.png) |
+| Checkout Success | ![screenshot](documentation/wireframes/mobile-checkout-success.png) | ![screenshot](documentation/wireframes/tablet-checkout-success.png) | ![screenshot](documentation/wireframes/desktop-checkout-success.png) |
+| Profile | ![screenshot](documentation/wireframes/mobile-profile.png) | ![screenshot](documentation/wireframes/tablet-profile.png) | ![screenshot](documentation/wireframes/desktop-profile.png) |
+| About | ![screenshot](documentation/wireframes/mobile-about.png) | ![screenshot](documentation/wireframes/tablet-about.png) | ![screenshot](documentation/wireframes/desktop-about.png) |
+| Contact | ![screenshot](documentation/wireframes/mobile-contact-us.png) | ![screenshot](documentation/wireframes/tablet-contact-us.png) | ![screenshot](documentation/wireframes/desktop-contact-us.png) |
+| FAQ | ![screenshot](documentation/wireframes/mobile-faq.png) | ![screenshot](documentation/wireframes/tablet-faq.png) | ![screenshot](documentation/wireframes/desktop-faq.png) |
+| Newsletter | ![screenshot](documentation/wireframes/mobile-newsletter.png) | ![screenshot](documentation/wireframes/tablet-newsletter.png) | ![screenshot](documentation/wireframes/desktop-newsletter.png) |
+| Signup | ![screenshot](documentation/wireframes/mobile-signup.png) | ![screenshot](documentation/wireframes/tablet-signup.png) | ![screenshot](documentation/wireframes/desktop-signup.png) |
+| Login | ![screenshot](documentation/wireframes/mobile-login.png) | ![screenshot](documentation/wireframes/tablet-login.png) | ![screenshot](documentation/wireframes/desktop-login.png) |
+| Logout | ![screenshot](documentation/wireframes/mobile-logout.png) | ![screenshot](documentation/wireframes/tablet-logout.png) | ![screenshot](documentation/wireframes/desktop-logout.png) |
+| Change Password | ![screenshot](documentation/wireframes/mobile-password-change.png) | ![screenshot](documentation/wireframes/tablet-password-change.png) | ![screenshot](documentation/wireframes/desktop-password-change.png) |
+| 404 | ![screenshot](documentation/wireframes/mobile-404.png) | ![screenshot](documentation/wireframes/tablet-404.png) | ![screenshot](documentation/wireframes/desktop-404.png) |
+| 404 | ![screenshot](documentation/wireframes/mobile-404.png) | ![screenshot](documentation/wireframes/tablet-404.png) | ![screenshot](documentation/wireframes/desktop-404.png) |
 ### Existing Features
 
 | Feature | Notes | Screenshot |
