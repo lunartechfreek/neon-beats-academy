@@ -341,13 +341,12 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | [![badge](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) | Icons. |
 | [![badge](https://img.shields.io/badge/ChatGPT-grey?logo=openai&logoColor=75A99C)](https://chat.openai.com) | Help debug, troubleshoot, and explain things. |
 | [![badge](https://img.shields.io/badge/Mermaid-grey?logo=mermaid&logoColor=FF3670)](https://mermaid.live) | Generate an interactive diagram for the data/schema. |
-- [![Fonticon](https://img.shields.io/badge/Fonticon%20-grey)](https://gauger.io/fonticon/) Used to generate favicon.
-- [![Coolors](https://img.shields.io/badge/Coolors%20-grey)](https://coolors.co/ffffff-919396-ff0505-373f47-25292e-020c0e) Used to generate my colour palette.
-- [![Contrast Grid Eight Shapes](https://img.shields.io/badge/Contrast%20Grid%20Eight%20Shapes%20-grey)](https://contrast-grid.eightshapes.com/) Used to generate contrast grid.
-- [![Google Fonts](https://img.shields.io/badge/Google%20Fonts%20-grey)](https://fonts.google.com/) Used for fonts.
-- [Am I Responsive?](https://ui.dev/amiresponsive) used to generate preview imagery of the responsive design used throughout the website.
-- [BrowserStack](https://www.browserstack.com/) used to emmulate different devices and browsers to test my website on.
-- [Chrome DevTools](https://developer.chrome.com/docs/devtools/) used to check my responsive design and to run my lighthouse report.
+| [![Fonticon](https://img.shields.io/badge/Fonticon%20-grey)](https://gauger.io/fonticon/) | Used to generate favicon. |
+| [![Coolors](https://img.shields.io/badge/Coolors%20-grey)](https://coolors.co/ffffff-919396-ff0505-373f47-25292e-020c0e) | Used to generate my colour palette. |
+| [![Contrast Grid Eight Shapes](https://img.shields.io/badge/Contrast%20Grid%20Eight%20Shapes%20-grey)](https://contrast-grid.eightshapes.com/) | Used to generate contrast grid. |
+| [![Google Fonts](https://img.shields.io/badge/Google%20Fonts%20-grey)](https://fonts.google.com/) | Used for fonts. |
+| [![Am I Responsive?](https://img.shields.io/badge/AmI%20Responsive%20-grey)](https://ui.dev/amiresponsive) | used to generate preview imagery of the responsive design used throughout the website. |
+| [![Chrome DevTools](https://img.shields.io/badge/Chrome%Devtools%20-grey)](https://developer.chrome.com/docs/devtools/) | used to check my responsive design and to run my lighthouse report. |
 
 ## Database Design
 
