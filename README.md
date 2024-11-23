@@ -104,6 +104,78 @@ I used [Contrast Grid Eight Shapes](https://contrast-grid.eightshapes.com/) to
 I chose to use Orbitron for all of the headers and titles because I felt that it had a very retro and robotic feel to it which relates to the neon theme I have chosen. 
 
 I chose Roboto Mono to compliment it because it naturally compliments Orbitron due to its quite robotic and box like nature.
+
+## User Stories
+
+### Site User
+
+- As a site user I can easily view products so that I can choose which ones to buy.
+
+- As a site user I can see further details of a product so that I can decide if it is the right product for me.
+
+- As a site user I can find information about the site and so that I can understand what services the site offers.
+
+- As a site user I would like to contact the site owner so that they can answer any queries I have.
+
+- As a site user I can add items to my basket so that they are saved while I continue shopping.
+
+- As a site user I can create an account and login so that I can have a personal account and order items.
+
+- As a site user I can securely enter my credit card details so that I can securely purchase a product.
+
+- As a site user I can view my order confirmation so I can make sure that I have not made any mistakes.
+
+- As a site user I would like to receive an order confirmation email of what I’ve ordered so that I can have a record of the order.
+
+- As a site user I can receive email confirmation after registering so that I can know my account was successfully created.
+
+- As a site user I can receive email confirmation after subscribing so that I know I am successfully signed up to the newsletter.
+
+- As a site user I can view specific tiers of courses so that i can easily find courses suitable to my skill level.
+
+- As a site user i can read frequently asked questions from other users so that i can find potential answers to my questions with ease.
+
+- As a site user I can easily navigate back to the main site if an error message appears so that I can continue shopping.
+
+- As a site user I can subscribe to a newsletter so that i can stay up to date with new courses.
+
+- As a site site user I can leave comments product so that I can ask the site owner a question or tell others what I thought of it. 
+
+- As a site user I can search for products throughout the site so that I can find a specific product easily.
+
+### Returning Site User
+
+- As a returning site user I can change password so that I can keep my account up to date.
+
+- As a site user when logged I can have a user profile so that I can change my details.
+
+- As a site user when logged in I can view my order history so that I can see what I have ordered
+
+- As a returning site user when logged in I can edit my name and email address on the profile page so that I can keep my account up to date.
+
+### Guest Site User
+
+- As a guest user I would like to browse products without needing to register so that I can shop freely before deciding to create an account.
+
+### Site Owner
+
+- As a site owner I can add products to the site so that I can give my customers access to new products.
+
+- As a site owner I can edit a product so that I can keep the details up to date or adjust the price.
+
+- As a site owner I can delete a product so that I can remove items that are no longer available.
+
+- As a site owner I can log in to the admin panel so that I can view orders.
+
+- As a site owner I can log in to the admin panel so that I can check messages from site users.
+
+- As a site owner I can change the about text so that I can keep users updated with any relevant information.
+
+- As a site owner I can manage products in the admin panel so that i have full control of them in one place. 
+
+- As a site owner I can dynamically create pages for courses so I can avoid the page being too cluttered.
+
+- As a site owner I can make sure the users order is processed even if checkout is interrupted so that the user still receives their order.
 ### Existing Features
 
 | Feature | Notes | Screenshot |
