@@ -203,6 +203,9 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Change Password | ![screenshot](documentation/wireframes/mobile-password-change.png) | ![screenshot](documentation/wireframes/tablet-password-change.png) | ![screenshot](documentation/wireframes/desktop-password-change.png) |
 | 404 | ![screenshot](documentation/wireframes/mobile-404.png) | ![screenshot](documentation/wireframes/tablet-404.png) | ![screenshot](documentation/wireframes/desktop-404.png) |
 | 404 | ![screenshot](documentation/wireframes/mobile-404.png) | ![screenshot](documentation/wireframes/tablet-404.png) | ![screenshot](documentation/wireframes/desktop-404.png) |
+
+## Features
+
 ### Existing Features
 
 | Feature | Notes | Screenshot |
