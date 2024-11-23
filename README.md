@@ -349,4 +349,133 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 - [BrowserStack](https://www.browserstack.com/) used to emmulate different devices and browsers to test my website on.
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/) used to check my responsive design and to run my lighthouse report.
 
+## Database Design
+
+### Data Model
+
+Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models. Understanding the relationships between different tables can save time later in the project.
+
+I have used `Mermaid` to generate an interactive ERD of my project.
+
+```mermaid
+erDiagram
+    UserProfile {
+        string user
+        string default_phone_number
+        string default_street_address1
+        string default_street_address2
+        string default_town_or_city
+        string default_county
+        string default_postcode
+        string default_country
+    }
+
+    UserProfile ||--o| User : "1-to-1"
+
+    Order {
+        string order_number
+        string user_profile
+        string full_name
+        string email
+        string phone_number
+        string country
+        string postcode
+        string town_or_city
+        string street_address1
+        string street_address2
+        string county
+        datetime date
+        decimal order_total
+        decimal grand_total
+    }
+
+    Order ||--o| UserProfile : "Many-to-1"
+
+    OrderLineItem {
+        string order
+        string course
+        decimal lineitem_total
+    }
+
+    Order ||--o| OrderLineItem : "1-to-Many"
+    Course ||--o| OrderLineItem : "1-to-Many"
+
+    Course {
+        string tier
+        string sku
+        string name
+        string description
+        int difficulty
+        decimal price
+        string image
+    }
+
+    Course ||--o| CourseTier : "Many-to-1"
+
+    CourseTier {
+        string tier_name
+        string description
+    }
+
+    About {
+        string about_text
+        string about_image
+        datetime updated_on
+    }
+
+    ContactUs {
+        string name
+        string email
+        string message
+        bool read
+    }
+
+    FAQ {
+        string question
+        string answer
+        int importance
+        datetime created_on
+        datetime updated_on
+    }
+
+    Newsletter {
+        string email
+        datetime date_subscribed
+    }
+
+    NewsletterInfo {
+        string newsletter_info
+        datetime updated_on
+    }
+
+```
+
+source: [Mermaid](https://mermaid.live/edit#pako:eNqVVctu2zAQ_BWBZ9swbTkKdAtSFAjQJ9pcCgMCLa4cIhKpkks4buJ_Lyk_KlmU4-ok7y53dmaW1ivJFQeSEtAfBFtrVi1l5J5HA_qbVoUoIXrdh_xjUAu5jqzL9oIcCmZLzOonJSGTtlpdKHI_ATBjnGswhl5ZNxusQ7WRmdJZLnA7WJQrKy-ka2XQq3H5vD402C1lX6q3t_FYvTWhKI2WhI5RjemSHGu_au4yfUGVjw9p5tXO6j1CL1nYsswkq_oZqJgoe9GL7nQItg8NKXNR9vc8fs_bc7s4Q0BRQfPSCkMuKlYeNESFrOwn3WZL3k7uupa0jDt66f37zOQ2ZOEnIeEBoRqyMsRFm8DQpWskXKP3R-vinpbLT-iH8_X3DciVBzpH-jRQBFiYZ9uLBXePg8m1qFEo-S8nJEZcFIXI3WXa9rWotcj7rVxqDWfCdInuf_0UhzsX8KxVEWaaXcfiNMDdSlkM9GI-niG84ECqxaaz0rb2rzzrId0riSzHRxNA-49rX7kb1kFeKVVGGhg_w_t49z2A9NuC6Zp5ZCXNpr0o3mNR1Uojk3mIaO4w20SvU-ELbEwJiEEDzxh3_iYyY1fexBXwwZYPslAhdU8FmXAV141LRqQC7Qbi7pva9FwSfALnE_G7yZl-9mu5c3XMovqxlTlJUVsYkX23w1eYpAUrjYvWTJL0lbyQ9HYyp4t4enubzKZzOqXxiGxJSimdxDFNkvkNndFFcrPYjcgfpVwHOpkmi2k8i-fzJE5onMRNu19Nco-plV0_HbB2fwHBzowm)
+
+I have used `pygraphviz` and `django-extensions` to auto-generate an ERD.
+
+The steps taken were as follows:
+- In the terminal: `sudo apt update`
+- then: `sudo apt-get install python3-dev graphviz libgraphviz-dev pkg-config`
+- then type `Y` to proceed
+- then: `pip3 install django-extensions pygraphviz`
+- in my `settings.py` file, I added the following to my `INSTALLED_APPS`:
+```python
+INSTALLED_APPS = [
+    ...
+    'django_extensions',
+    ...
+]
+```
+- back in the terminal: `python3 manage.py graph_models -a -o erd.png`
+- drag the new `erd.png` file into my `documentation/` folder
+- removed `'django_extensions',` from my `INSTALLED_APPS`
+- finally, in the terminal: `pip3 uninstall django-extensions pygraphviz -y`
+
+![screenshot](documentation/erd.png)
+
+source: [medium.com](https://medium.com/@yathomasi1/1-using-django-extensions-to-visualize-the-database-diagram-in-django-application-c5fa7e710e16)
+
+## Agile Development Process
+
 
