@@ -503,4 +503,14 @@ I've decomposed my Epics into User Stories for prioritizing and implementing the
 - **Could Have**: has small impact if left out (*the rest ~20% of stories*)
 - **Won't Have**: not a priority for this iteration - future features
 
+## Ecommerce Business Model
+
+This site sells goods to individual customers, and therefore follows a **Business to Customer** model. It is of the simplest **B2C** forms, as it focuses on individual transactions, and doesn't need anything such as monthly/annual subscriptions.
+
+It is still in its early development stages, although it already has a newsletter, and links for social media marketing.
+
+Social media can potentially build a community of users around the business, and boost site visitor numbers, especially when using larger platforms such a Facebook.
+
+A newsletter list can be used by the business to send regular messages to site users. For example, what items are on special offer, new courses in stock, updates to business hours, notifications of events, and much more!
+
 
