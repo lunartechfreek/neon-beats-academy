@@ -66,12 +66,12 @@
 | Image Feedback Statements | Feedback statements are used to provide the user with a statement telling them which image they are going to be uploading before the click submit. This is so they can check that they selected the right one |  |
 |  | Add image feedback statement | ![screenshot](documentation/features/feedback-add-image.png) |
 |  | Edit image feedback statement | ![screenshot](documentation/features/feedback-edit-image.png) |
-| Subscribe Feedback Statement | Feedback statement is used to provide the user with information about why the field was invalid. | ![screenshot](documentation/features/feedback-newsletter-duplicate.png) |
-| Subscribe Email | Email sent to user when they subscribe to our newsletter. | ![screenshot](documentation/features/feedback-subscribe-email.png) |
-| Newsletter Information | Information about the newsletter pursuading the user to subscribe. | ![screenshot](documentation/features/feedback-newsletter-info.png) |
+| Subscribe Feedback Statement | Feedback statement is used to provide the user with information about why the field was invalid. | ![screenshot](documentation/features/feedback-subscribe-email.png) |
+| Subscribe Email | Email sent to user when they subscribe to our newsletter. | ![screenshot](documentation/features/subscribe-email.png) |
+| Newsletter Information | Information about the newsletter pursuading the user to subscribe. | ![screenshot](documentation/features/newsletter-info.png) |
+| Subscribe Section | Email field for user to fill out with subscribe button | ![screenshot](documentation/features/subscribe-field.png) |
 | FAQ Accordian | Frequently asked questions displayed in accordian with dropdown answers on click. Questions are ordered by importance as set by the superuser in the admin panel where they are added. If questions are of duplicate importance they are then ordered by the `created_on` field.  | ![screenshot](documentation/features/faq-accordian.png) |
-| FAQ Contact Us Button | Button featured for the user incase their question has not been answered. The button links to the contact us page so that they can message us directly. | ![screenshot](documentation/features/feedback-newsletter-info.png) |
-| Subscribe Section | Email field for user to fill out with subscribe button | ![screenshot](documentation/features/feedback-subscribe-field.png) |
+| FAQ Contact Us Button | Button featured for the user incase their question has not been answered. The button links to the contact us page so that they can message us directly. | ![screenshot](documentation/features/faq-contact-button.png) |
 |  | Error: Course add form invalid | ![screenshot](documentation/features/message-error-add.png) |
 |  | Success: Item added to bag and preview displayed | ![screenshot](documentation/features/message-bag-add.png) |
 |  | Success: Item successfully removed from bag | ![screenshot](documentation/features/message-bag-remove.png) |
