@@ -15,6 +15,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+        content="Join NeonBeats Academy to learn DJing online with expert mentors. 
+        Explore beginner to advanced digital DJ courses and kickstart your DJ career!">
+    <meta name="keywords"
+        content="DJ courses, online DJ school, DJ career, learn to DJ, digital DJ lessons, DJ tutorials, 
+        DJ classes with mentorship, DJ classes, DJ mentor, EDM, dance music, best online DJ courses for beginners, 
+        affordable DJ classes with mentor support, learn how to DJ with Serato or Rekordbox, 
+        advanced DJ techniques for professionals, online DJ classes with hands-on mentorship, 
+        creative DJing lessons, How to start a career as a DJ, Learn digital DJing from experts online, 
+        creative DJing lessons with personalized guidance, Master beatmatching and mixing online, 
+        Online DJ courses for electronic music enthusiasts">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
@@ -98,9 +109,9 @@
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                <a href="{% url 'add_course' %}" class="dropdown-item">Add a Course</a>
-                                {% endif %}
+                            {% if request.user.is_superuser %}
+                            <a href="{% url 'add_course' %}" class="dropdown-item">Add a Course</a>
+                            {% endif %}
                             <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                             <a href="{% url 'account_change_password' %}" class="dropdown-item">Change Password</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
