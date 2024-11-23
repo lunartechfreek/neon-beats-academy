@@ -546,4 +546,65 @@ Further links for future implementation:
 - [Managing your sitemaps and using sitemaps reports](https://support.google.com/webmasters/answer/7451001)
 - [Testing the robots.txt file](https://support.google.com/webmasters/answer/6062598)
 
+### Social Media Marketing
+
+Creating a strong social base (with participation) and linking that to the business site can help drive sales. Using more popular providers with a wider user base, such as Facebook, typically maximizes site views.
+
+I've created a mockup Facebook business account using the [Balsamiq template](https://code-institute-org.github.io/5P-Assessments-Handbook/files/Facebook_Mockups.zip) provided by Code Institute.
+
+![screenshot](documentation/mockup-facebook.png)
+
+### Newsletter Marketing
+
+I have incorporated a newsletter sign-up form on my application, to allow users to supply their email address if they are interested in learning more. 
+
+⚠️ OPTION 1: RECOMMENDED ⚠️
+
+**Custom Django Model Newsletter**
+
+
+    ```python
+    def subscribe(request):
+    """
+    Handle the subscription form and display the latest newsletter information.
+    """
+    # Handle the subscription form submission
+    if request.method == 'POST':
+        form = NewsletterForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            # Check if the email is already subscribed
+            if Newsletter.objects.filter(email=email).exists():
+                messages.error(
+                    request, "You are already subscribed to the newsletter!")
+            else:
+                form.save()
+                messages.success(
+                    request, "Thank you for subscribing to our newsletter!")
+                _send_subscribe_email(request, email)
+    else:
+        form = NewsletterForm()
+
+    newsletter_info = NewsletterInfo.objects.order_by('-updated_on').first()
+
+    # Fallback if no NewsletterInfo entry exists
+    if not newsletter_info:
+        newsletter_info = NewsletterInfo(
+            newsletter_info="No newsletter information available.",
+            updated_on="Unknown"
+        )
+
+    context = {
+        'form': form,
+        'newsletter_info': newsletter_info,
+    }
+
+    return render(request, 'newsletter/subscribe.html', context)
+    ```
+
+## Testing
+
+> [!NOTE]
+> For all testing, please refer to the [TESTING.md](TESTING.md) file.
+
 
