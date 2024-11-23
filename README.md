@@ -1,3 +1,109 @@
+# [NeonBeats Academy](https://neon-beats-academy-74fa20163bce.herokuapp.com)
+
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/t/lunartechfreek/neon-beats-academy)](https://github.com/lunartechfreek/neon-beats-academy/commits/main)
+[![GitHub last commit](https://img.shields.io/github/last-commit/lunartechfreek/neon-beats-academy)](https://github.com/lunartechfreek/neon-beats-academy/commits/main)
+[![GitHub repo size](https://img.shields.io/github/repo-size/lunartechfreek/neon-beats-academy)](https://github.com/lunartechfreek/neon-beats-academy)
+
+![screenshot](documentation/mockup.png)
+
+Source: [amiresponsive](https://ui.dev/amiresponsive?url=https://neon-beats-academy-74fa20163bce.herokuapp.com)
+
+NeonBeats is a website made for educational purposes for my fifth project portfolio in software development that I am studying with the Code Institute. The website is an e-commerce store aimed at users who are looking into learning how to DJ and want to buy a course. While designing this website I took into account the real world demands that users would have for a real e-commerce website. To adhere to these demands I created a dynamic store that creates pages for when a new course is added, lets store owners add, edit and delete courses, and also control other page content such as about, newsletter, and FAQ’s. 
+
+The website features a bag, fully functional checkout system, newsletter and allows users to save their details through the use of user profile. The website gives live feedback messages and statements to guide users and make their shopping experience a simple and pleasant one. Finally the site sends real emails to users for when they purchase a course, signup to our newsletter, and make an account. The website is fully responsive no matter what device it is used on. 
+
+I have applied the technologies I have learnt so far and used HTML5, CSS3, Javascript, and Django to create the website. Other technologies used are listed in the technologies used section further down the page.
+
+## UX
+
+### The 5 Planes of UX
+
+#### 1. Strategy Plane
+##### Purpose
+- Provide a seamless and intuitive e-commerce experience for customers to browse, filter, and purchase products.
+- Empower site owners to manage the store's course selection and customer orders efficiently.
+
+##### Primary User Needs
+- Guest users need to browse courses and checkout with ease.
+- Registered customers need a streamlined shopping experience with account and order history features.
+- Site owners need robust tools for course and order management.
+
+##### Business Goals
+- Drive sales by providing a user-friendly shopping experience.
+- Build customer loyalty through personalized and efficient account features.
+- Maintain an organized and up-to-date course selection.
+
+#### 2. Scope Plane
+##### Features
+- A full list of [Features](#features) can be viewed in detail below.
+
+##### Content Requirements
+- Course details, including name, price, description, tier, and images.
+- Clear prompts and instructions for browsing, filtering, and purchasing.
+- Order details, confirmation pages, and email notifications.
+- Secure payment processing using Stripe.
+- Payment success emails sent to users.
+- 404 page for lost users.
+- 500 page for errors.
+
+#### 3. Structure Plane
+##### Information Architecture
+- **Navigation Menu**:
+  - Links to Home, Courses, Bag, Newsletter, About, Faq, Contact Us and Account sections.
+- **Hierarchy**:
+  - Prominent course categories and filters for easy navigation.
+  - Cart and checkout options displayed prominently for convenience.
+
+##### User Flow
+1. Guest user browses the store → filters and sorts courses by tier, price, or name.
+2. Guest user adds items to the cart → proceeds to checkout.
+3. Guest user creates an account or logs in during checkout → completes purchase.
+4. Returning customers log in → view past orders and track purchase history.
+5. Site owners manage courses → add, update, or delete courses and tier.
+6. Users signup to the newsletter → potentially receive advanced notice of upcoming sales.
+
+#### 4. Skeleton Plane
+##### Wireframe Suggestions
+- A full list of [Wireframes](#wireframes) can be viewed in detail below.
+
+#### 5. Surface Plane
+##### Visual Design Elements
+- **[Colours](#colour-scheme)**: see below.
+- **[Typography](#typography)**: see below.
+
+### Colour Scheme
+
+I used [coolors.co](https://coolors.co/fafafa-ff02ff-0aeaf1-8dff0a-ffe91a-28003d-020202) to generate my color palette.
+
+- `#FAFAFA` - Seasalt
+- `#FF02FE` - Fuchsia
+- `#OAEAF1` - Fluorescent Cyan
+- `#8DEFOA` - Chartreuse
+- `#FFE91A` - Canary
+- `#28003D` - Russian Violet
+- `#020202` - Black
+
+![screenshot](documentation/coolors.png)
+
+I wanted to go for a neon theme due to the name of the site so I chose Russian Violet. I also felt that this aligned with the theme of DJing and nightclubs. To resemble this best as possible I made my main back ground dark and had all the other elements a selection of neon colours to try to resemble bright neon lights against a dark club backdrop. 
+
+I used colour in other ways such as my main logo text. I added a colour gradient to it and then added another gradient to the hover effect. Now when you hover over it the colours of NeonBeats slightly flicker giving the effect of strobe lights in a nightclub. Another way I used colour was in my course tiers. Each course tier had its own card colour, and also had its own picture them. For example beginners courses had a green card and their pictures all had a blue tone to them. 
+
+### Contrast Grid
+
+I used [Contrast Grid Eight Shapes](https://contrast-grid.eightshapes.com/) to check all of my colours for accessibility against each other.
+
+![screenshot](documentation/contrast-grid.png)
+
+### Typography
+
+- [Orbitron](https://fonts.google.com/specimen/Roboto+Mono) was used for the primary headers and titles.
+- [Roboto Mono](https://fonts.google.com/specimen/Orbitron) was used for all other secondary text.
+- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
+
+I chose to use Orbitron for all of the headers and titles because I felt that it had a very retro and robotic feel to it which relates to the neon theme I have chosen. 
+
+I chose Roboto Mono to compliment it because it naturally compliments Orbitron due to its quite robotic and box like nature.
 ### Existing Features
 
 | Feature | Notes | Screenshot |
