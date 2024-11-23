@@ -46,11 +46,10 @@ def subscribe(request):
                 form.save()
                 messages.success(
                     request, "Thank you for subscribing to our newsletter!")
-                _send_subscribe_email(email)  # Pass the email to the function
+                _send_subscribe_email(email)
     else:
         form = NewsletterForm()
 
-    # Fetch the latest newsletter information
     newsletter_info = NewsletterInfo.objects.order_by('-updated_on').first()
 
     # Fallback if no NewsletterInfo entry exists
