@@ -46,7 +46,7 @@ def subscribe(request):
                 form.save()
                 messages.success(
                     request, "Thank you for subscribing to our newsletter!")
-                _send_subscribe_email(email)
+                _send_subscribe_email(request, email)
     else:
         form = NewsletterForm()
 
