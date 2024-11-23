@@ -288,7 +288,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 |  | Success: Order confirmed | ![screenshot](documentation/features/message-order-success.png) |
 |  | Success: Course successfully added | ![screenshot](documentation/features/message-success-add.png) |
 |  | Alert: Informing the superuser they are editing a course | ![screenshot](documentation/features/message-editing.png) |
-| Sign Up | There is a sign up page for users to create an account. | ![screenshot](documentation/features/sign-up.png) |
+| Sign Up | There is a sign up page for users to create an account. | ![screenshot](documentation/features/signup.png) |
 | Login | There is a login page for users to login. | ![screenshot](documentation/features/login.png) |
 | Logout | There is a logout page confirming that the user defiantly wants to logout. | ![screenshot](documentation/features/logout.png) |
 | Change Password | There is a change password page for users that want to change their password. | ![screenshot](documentation/features/change-password.png) |
@@ -302,14 +302,18 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Marketing | Social media presence is available in the footer using external links, as well as a Facebook Marketplace wireframe in the README for future integrations. | ![screenshot](documentation/features/footer.png) |
 | Heroku Deployment | The site is deployed to Heroku, making it accessible online for users. | ![screenshot](documentation/features/heroku.png) |
 
-newsletter
-faq
-duplicate bag button
 
+### Future Features
 
-| SEO | SEO optimization with a sitemap.xml, robots.txt, and appropriate meta tags to improve search engine visibility. | ![screenshot](documentation/features/seo.png) |
+- **Returning Site User: Edit Name and Email on Profile Page**: Give returning users the ability to to edit their name and email on the profile page.
 
-| 404 | The 404 error page will indicate when a user has navigated to a page that doesn't exist, replacing the default Heroku 404 page with one that ties into the site's look and feel. | ![screenshot](documentation/features/404.png) |
+- **Site User: Product search**: Give users the ability to search for courses as the site grows and more are added.
+
+- **Site Owner: Extra Courses Pages**: As the site grows I would add pagination to dynamically render pages for the courses.
+
+- **Site Owner: Add Webhooks to Checkout**: Add webhooks to make sure a users order is still processed even if an error occurs during the checkout process.
+
+- **Site User: Leave comments about a Course**: Give users the option to comment on each course to give feedback to other users.
 
 
 
