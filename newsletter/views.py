@@ -7,7 +7,7 @@ from .models import Newsletter, NewsletterInfo
 from .forms import NewsletterForm
 
 
-def _send_subscribe_email(email):
+def _send_subscribe_email(request, email):
     """Send the user a subscribe email."""
     try:
         subject = render_to_string(
@@ -24,9 +24,9 @@ def _send_subscribe_email(email):
             settings.DEFAULT_FROM_EMAIL,
             [email]
         )
-    except Exception as e:
-        # Log the error or print for debugging
-        print(f"Error sending subscribe email: {e}")
+    except Exception:
+        messages.error(request, "There was an issue sending the confirmation \
+        email. Please try again later.")
 
 
 def subscribe(request):
