@@ -250,90 +250,109 @@ Defensive programming was manually tested with the below user acceptance testing
 
 | User Story | Criteria | Screenshot |
 | --- | --- | --- |
-| As a site user I can easily view products so that I can choose which ones to buy | | |
-| | A clear link to all products will be featured on the home page | ![screenshot](documentation/user-stories/.png) |
-| | A link to courses will be featured in the nav bar | ![screenshot](documentation/user-stories/.png) |
-| As a site user I can see further details of a product so that I can decide if it is the right product for me | | |
-| | When the user clicks on a product they will be directed to a product details page showing further details of the product | ![screenshot](documentation/user-stories/.png) |
-| As a site user I can leave comments on a product so that I can ask the site owner a question or tell others what I thought of it | | |
-| | Feature a comment section on the product detail page for logged in users | ![screenshot](documentation/user-stories/.png) |
+| As a site user I can easily view courses so that I can choose which ones to buy. | | |
+| | A link to courses will be featured in the nav bar. | ![screenshot](documentation/user-stories/user-nav-bar.png) |
+| | A clear link to all courses will be featured on the home page. | ![screenshot](documentation/user-stories/user-home.png) |
+| As a site user I can see further details of a course so that I can decide if it is the right course for me | | |
+| | When the user clicks on a course they will be directed to a course details page showing further details of the course | ![screenshot](documentation/user-stories/user-course-detail.png) |
 | As a site user I can find information about the site so that I can understand what services the site offers | | |
-| | Have an about page | ![screenshot](documentation/user-stories/.png) |
-| | Have easily accessible information about the site displayed | ![screenshot](documentation/user-stories/.png) |
+| | Have an about page | ![screenshot](documentation/user-stories/user-about.png) |
+| | Have easily accessible information about the site displayed |  |
+| | | ![screenshot](documentation/user-stories/user-about-info.png) |
+| | | ![screenshot](documentation/user-stories/user-newsletter-info.png) |
 | As a site user I would like to contact the site owner so that they can answer any queries I have | | |
-| | Contact us page created | ![screenshot](documentation/user-stories/.png) |
-| | Form present to directly contact the site owner | ![screenshot](documentation/user-stories/.png) |
+| | Contact us page created | ![screenshot](documentation/user-stories/user-contact.png) |
+| | Form present to directly contact the site owner | ![screenshot](documentation/user-stories/user-contact-form.png) |
 | As a site user I can add items to my basket so that they are saved while I continue shopping | | |
-| | Have a basket available for users | ![screenshot](documentation/user-stories/.png) |
-| | Have a button for adding the product to the basket on the product detail page | ![screenshot](documentation/user-stories/.png) |
-| | Have a page for the basket | ![screenshot](documentation/user-stories/.png) |
-| | Have a remove button to remove item from the basket | ![screenshot](documentation/user-stories/.png) |
-| | User can clearly see the total before checkout | ![screenshot](documentation/user-stories/.png) |
+| | Have a basket available for users | ![screenshot](documentation/user-stories/user-bag.png) |
+| | Have a button for adding the course to the basket on the course detail page | ![screenshot](documentation/user-stories/user-course-detail-buttons.png) |
+| | Have a page for the basket | ![screenshot](documentation/user-stories/user-bag.png) |
+| | Have a remove button to remove item from the basket | ![screenshot](documentation/user-stories/user-bag-remove.png) |
+| | User can clearly see the total before checkout | ![screenshot](documentation/user-stories/user-bag-total.png) |
 | As a site user I can create an account and login so that I can have a personal account and order items | | |
-| | For logged out users, create account and login links featured in the account drop-down of the navigation bar | ![screenshot](documentation/user-stories/.png) |
-| | For logged in users, a logout link featured in the account drop-down of the navigation bar | ![screenshot](documentation/user-stories/.png) |
-| As a site user I can securely enter my credit card details so that I can securely purchase a product | | |
-| | Use Stripe for secure checkout | ![screenshot](documentation/user-stories/.png) |
-| | Have a checkout page | ![screenshot](documentation/user-stories/.png) |
+| | For logged out users, create account and login links featured in the account drop-down of the navigation bar | ![screenshot](documentation/user-stories/user-logged-out-account-menu.png) |
+| | For logged in users, a logout link featured in the account drop-down of the navigation bar | ![screenshot](documentation/user-stories/user-logged-in-account-menu.png) |
+| As a site user I can securely enter my credit card details so that I can securely purchase a course | | |
+| | Use Stripe for secure checkout | ![screenshot](documentation/user-stories/user-card-field.png) |
+| | Have a checkout page | ![screenshot](documentation/user-stories/user-checkout.png) |
 | As a site user I can view my order confirmation so I can make sure that I have not made any mistakes | | |
-| | Order confirmation page displayed after order is processed | ![screenshot](documentation/user-stories/.png) |
+| | Order confirmation page displayed after order is processed | ![screenshot](documentation/user-stories/user-checkout-success.png) |
 | As a site user I would like to receive an order confirmation email of what I’ve ordered so that I can have a record of the order | | |
-| | Users receive an email confirming their order when it has been processed | ![screenshot](documentation/user-stories/.png) |
+| | Users receive an email confirming their order when it has been processed | ![screenshot](documentation/user-stories/user-order-confirmation-email.png) |
 | As a site user I can receive email confirmation after registering so that I can know my account was successfully created | | |
-| | Email confirmation sent after account is created with verification link | ![screenshot](documentation/user-stories/.png) |
-| As a site user I can search for products throughout the site so that I can find a specific product easily | | |
-| | Have a search bar featured on every page | ![screenshot](documentation/user-stories/.png) |
-| | Have a page that shows returned search results | ![screenshot](documentation/user-stories/.png) |
+| | Email confirmation sent after account is created with verification link | ![screenshot](documentation/user-stories/user-signup-email.png) |
+| As a site user I can receive email confirmation after subscribing so that I know I am successfully signed up to the newsletter | | |
+| | Email confirmation after subscribing | ![screenshot](documentation/user-stories/user-subscribe-email.png) |
 | As a site user I can view specific tiers of courses so that I can easily find courses suitable to my skill level | | |
-| | Courses sorted into different tiers | ![screenshot](documentation/user-stories/.png) |
-| | Course tiers easily accessible via navigation bar dropdown menu | ![screenshot](documentation/user-stories/.png) |
-| | Courses split into tiers on all courses page | ![screenshot](documentation/user-stories/.png) |
+| | Courses sorted into different tiers | ![screenshot](documentation/user-stories/user-tier-buttons.png) |
+| | Course tiers easily accessible via navigation bar dropdown menu | ![screenshot](documentation/user-stories/user-tier-dropdown.png) |
+| | Courses split into tiers via colour coding on all courses page | ![screenshot](documentation/user-stories/user-course-cards.png) |
 | As a site user I can read frequently asked questions from other users so that I can find potential answers to my questions with ease | | |
-| | FAQ section available for all users | ![screenshot](documentation/user-stories/.png) |
+| | FAQ section available for all users | ![screenshot](documentation/user-stories/user-faq-accordian.png) |
 | As a site user I can easily navigate back to the main site if an error message appears so that I can continue shopping | | |
-| | Custom 404 error page | ![screenshot](documentation/user-stories/.png) |
-| | Custom 500 error page | ![screenshot](documentation/user-stories/.png) |
+| | Custom 404 error page | ![screenshot](documentation/user-stories/user-404-page.png) |
+| | Custom 500 error page | ![screenshot](documentation/user-stories/user-500-page.png) |
 | As a site user I can subscribe to a newsletter so that I can stay up to date with new courses | | |
-| | Newsletter page featured | ![screenshot](documentation/user-stories/.png) |
-| | Easy subscribe method | ![screenshot](documentation/user-stories/.png) |
-| | Information about the benefits of signing up to a newsletter | ![screenshot](documentation/user-stories/.png) |
+| | Newsletter page featured | ![screenshot](documentation/user-stories/user-newsletter-page.png) |
+| | Easy subscribe method | ![screenshot](documentation/user-stories/user-newsletter-subscribe.png) |
+| | Information about the benefits of signing up to a newsletter | ![screenshot](documentation/user-stories/user-newsletter-info.png) |
+| As a site user I can leave comments on a course so that I can ask the site owner a question or tell others what I thought of it | | |
+| | Feature a comment section on the course detail page for logged in users | N/A Future Development
+ |
+| As a site user I can search for courses throughout the site so that I can find a specific course easily | | |
+| | Have a search bar featured on every page | N/A Future Development |
+| | Have a page that shows returned search results | N/A Future Development |
+
+### Guest Site User
+
+| User Story | Criteria | Sreenshot |
+| --- | --- | --- |
+| As a guest user | I would like to browse products without needing to register | so that I can shop freely before deciding to create an account | | |
+| | Logged out users can still view courses | ![screenshot](documentation/user-stories/user-logged-out-courses.png) |
 
 ### Returning Site User
 
 | User Story | Criteria | Sreenshot |
 | --- | --- | --- |
 | As a returning site user I can change password so that I can keep my account up to date | | |
-| | For logged in users a change password link will be available from the account dropdown | ![screenshot](documentation/user-stories/.png) |
-| As a site user when logged I can have a user profile so that I can change my details | | | | | |
-| | Form for logged in users to add/change their details | ![screenshot](documentation/user-stories/.png) |
-| As a site user when logged in I can view my order history so that I can see what I have ordered | | | | | |
-| | Order history section available for logged in users | ![screenshot](documentation/user-stories/.png) |
+| | For logged in users a change password link will be available from the account dropdown | ![screenshot](documentation/user-stories/user-change-password.png) |
+| As a site user when logged in I can have a user profile so that I can change my details | | |
+| | Form for logged in users to add/change their details | ![screenshot](documentation/user-stories/user-profile-form.png) |
+| As a site user when logged in I can view my order history so that I can see what I have ordered | | |
+| | Order history section available for logged in users | ![screenshot](documentation/user-stories/user-order-history.png) |
+| As a returning site user when logged in I can edit my name and email address on the profile page so that I can keep my account up to date | | |
+| | Name field added to profile page | N/A Future Development |
+| | Email field added to profile page | N/A Future Development |
 
 ### Site Owner
 
 | User Story | Criteria | Screenshot |
 | --- | --- | --- |
-| As a site owner I can add products to the site so that I can give my customers access to new products | | |
-| | Have an add product form only available to superusers | ![screenshot](documentation/user-stories/.png) |
-| | Enable superusers to upload an image of the product | ![screenshot](documentation/user-stories/.png) |
-| As a site owner I can edit a product so that I can keep the details up to date or adjust the price | | |
-| | When logged in, a superuser can edit any details of a product using an edit product form that is only accessible by superusers | ![screenshot](documentation/user-stories/.png) |
-| | Have an edit product button on the product detail page that is only visible to site owners | ![screenshot](documentation/user-stories/.png) |
-| As a site owner I can delete a product so that I can remove items that are no longer available | | |
-| | Have a delete button on the product detail page that is only visible to superusers | ![screenshot](documentation/user-stories/.png) |
-| | Have a warning box to make sure the superuser definitely wants to delete the product | ![screenshot](documentation/user-stories/.png) |
-| | Make deleting a product only available to superusers | ![screenshot](documentation/user-stories/.png) |
+| As a site owner I can add courses to the site so that I can give my customers access to new courses | | |
+| | Have an add course form only available to superusers | ![screenshot](documentation/user-stories/user-add-course-form.png) |
+| | Enable superusers to upload an image of the course | ![screenshot](documentation/user-stories/user-add-course-image.png) |
+| As a site owner I can edit a course so that I can keep the details up to date or adjust the price | | |
+| | When logged in, a superuser can edit any details of a course using an edit course form that is only accessible by superusers | ![screenshot](documentation/user-stories/user-edit-course-form.png) |
+| | Have an edit course button on the course detail page that is only visible to site owners | ![screenshot](documentation/user-stories/user-edit-delete-btns.png) |
+| As a site owner I can delete a course so that I can remove items that are no longer available | | |
+| | Have a delete button on the course detail page that is only visible to superusers | ![screenshot](documentation/user-stories/user-edit-delete-btns.png) |
+| | Have a warning box to make sure the superuser definitely wants to delete the course | ![screenshot](documentation/user-stories/user-delete-modal.png) |
+| | Make deleting a course only available to superusers | ![screenshot](documentation/user-stories/user-logged-in-non-super-courses-buttons.png) |
 | As a site owner I can log in to the admin panel so that I can view orders | | |
-| | Admin panel featured | ![screenshot](documentation/user-stories/.png) |
-| | Orders section featured in the admin panel | ![screenshot](documentation/user-stories/.png) |
+| | Admin panel featured | ![screenshot](documentation/user-stories/user-superuser-admin-panel.png) |
+| | Orders section featured in the admin panel | ![screenshot](documentation/user-stories/user-admin-orders.png) |
 | As a site owner I can log in to the admin panel so that I can check messages from site users | | |
-| | Admin panel featured | ![screenshot](documentation/user-stories/.png) |
-| | Contact section featured in admin panel | ![screenshot](documentation/user-stories/.png) |
+| | Admin panel featured | ![screenshot](documentation/user-stories/user-superuser-admin-panel.png) |
+| | Contact section featured in admin panel | ![screenshot](documentation/user-stories/user-admin-contact.png) |
 | As a site owner I can change the about text so that I can keep users updated with any relevant information | | |
-| | The site owner can update the about text from the admin panel | ![screenshot](documentation/user-stories/.png) |
-| As a site owner I can manage products in the admin panel so that I have full control of them in one place | | |
-| | Superusers able to add products in the admin panel | ![screenshot](documentation/user-stories/.png) |
-| | Superusers able to edit products in the admin panel | ![screenshot](documentation/user-stories/.png) |
-| | Superusers able to delete products in the admin panel | ![screenshot](documentation/user-stories/.png) |
+| | The site owner can update the about text from the admin panel | ![screenshot](documentation/user-stories/user-admin-about-update.png) |
+| As a site owner I can manage courses in the admin panel so that I have full control of them in one place | | |
+| | Superusers able to add courses in the admin panel | ![screenshot](documentation/user-stories/user-admin-course-add.png) |
+| | Superusers able to edit courses in the admin panel | ![screenshot](documentation/user-stories/user-admin-course-edit.png) |
+| | Superusers able to delete courses in the admin panel | ![screenshot](documentation/user-stories/user-admin-course-delete.png) |
+| As a site owner I can dynamically create pages for courses so I can avoid the page being too cluttered | | |
+| | Pagination used to create pages when courses exceed certain number on courses page | N/A Future Development |
+| As a site owner I can make sure the users order is processed even if checkout is interrupted so that the user still receives their order | | |
+| | Webhooks implemented to capture order even if it is interrupted before fully processed | N/A Future Development |
 
 
