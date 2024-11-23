@@ -848,4 +848,74 @@ By forking the GitHub Repository, you make a copy of the original repository on 
 
 There are no remaining major differences between the local version when compared to the deployed version online.
 
+## Credits
+
+### Content
+
+| Source | Notes |
+| --- | --- |
+| [Markdown Builder](https://markdown.2bn.dev) | Help generating Markdown files |
+| [Boutique Ado](https://codeinstitute.net) | Code Institute walkthrough project inspiration |
+| [Bootstrap](https://getbootstrap.com) | Various components / responsive front-end framework |
+| [Cloudinary](https://cloudinary.com) | Cloud storage for static/media files |
+| [Whitenoise](https://whitenoise.readthedocs.io) | Static file service |
+| [Stripe](https://docs.stripe.com/payments/elements) | Online payment services |
+| [Gmail API](https://developers.google.com/gmail/api/guides) | Sending payment confirmation emails |
+| [Python Tutor](https://pythontutor.com) | Additional Python help |
+| [ChatGPT](https://chatgpt.com) | Help with code logic and explanations, content and complete course image |
+| [TinyPNG](https://tinypng.com/) | Used for images |
+| [Coolors](https://coolors.co/fafafa-ff02ff-0aeaf1-8dff0a-ffe91a-28003d-020202 ) | Used for palette |
+| [ContrastGridEightShapes](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23FAFAFA%0D%0A%23FF02FF%0D%0A%230AEAF1%0D%0A%238DFF0A%0D%0A%23FFE91A%0D%0A%2328003D%0D%0A%23020202&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp ) | Used for contrast grid |
+
+
+### Media
+
+- Images
+
+- Banners
+    - [About](https://www.wallpaperflare.com/riddim-dubstep-dj-dark-people-music-wallpaper-cozaq/download/2880x1800)
+    - [Add Course](https://www.wallpaperflare.com/riddim-dubstep-dj-crowds-arms-wallpaper-cvvdz/download/2880x1800 )
+    - [Bag](https://www.wallpaperflare.com/riddim-dubstep-dj-crowds-music-wallpaper-cvjje)
+    - [Contact](https://www.wallpaperflare.com/riddim-dubstep-dj-crowds-music-wallpaper-cvovo/download/2880x1800)
+    - [Edit](https://pixabay.com)
+    - [Courses](https://www.wallpaperflare.com/red-corded-headphones-and-gray-dj-controller-headset-music-wallpaper-tghtc/download/2880x1800)
+    - [Edit](https://www.wallpaperflare.com/dj-edm-marshmello-wallpaper-goxib/download/2880x1800)
+    - [404](https://www.wallpaperflare.com/gray-and-black-dj-controller-photography-music-vinyl-record-wallpaper-ptepc/download/2880x1800)
+    - [500](https://www.wallpaperflare.com/black-vinyl-turntable-turntables-dj-music-technology-record-wallpaper-pbsja/download/2880x1800)
+    - [FAQ](https://www.wallpaperflare.com/selective-focus-photo-of-dj-controller-mixer-device-audio-wallpaper-zjstx )
+    - [Home](https://www.wallpaperflare.com/riddim-dubstep-dj-dark-crowds-wallpaper-cvzxy/download)
+    - [Newsletter](https://www.wallpaperflare.com/headphones-on-dj-turntable-pioneer-cdj2000-equipment-mixer-wallpaper-wnznq/download/2880x1800)
+    - [Fallback](https://www.wallpaperflare.com/black-vinyl-record-turntables-music-technology-arts-culture-and-entertainment-wallpaper-hveub/download/2880x1800)
+    - [Profile](https://www.ibizarocks.com/stories/new-artists-ibiza-2023-2/)
+    - [Success](https://www.wallpaperflare.com/dj-headphones-gadgets-tech-technology-wallpaper-uvjoe)
+
+- Logo
+    - [Logo](https://pixabay.com)
+
+- Courses
+    - [Intro](https://www.wallpaperflare.com/black-pioneer-dj-turntable-turntables-mixing-consoles-music-wallpaper-pujpd/download/2880x1800)
+    - [101](https://www.wallpaperflare.com/dj-turntable-purple-music-hand-party-arts-culture-and-entertainment-wallpaper-hxiie/download/2880x1800)
+    - [Advanced](https://www.wallpaperflare.com/men-s-black-fitted-cap-music-heart-house-avicii-people-real-people-wallpaper-iaqd/download/2880x1800)
+    - [Skills](https://www.wallpaperflare.com/rukes-photography-crowds-lights-dj-wallpaper-cobyg/download/2880x1800)
+    - [4 Deck](https://www.wallpaperflare.com/man-performing-dj-music-with-crowd-during-nighttime-man-standing-on-stage-in-front-of-people-and-turntable-wallpaper-ztbng/download/2880x1800)
+    - [RekordBox](https://www.wallpaperflare.com/riddim-dubstep-dj-crowds-people-wallpaper-coyfw/download/2880x1800)
+    - [Scratching](https://www.wallpaperflare.com/riddim-dubstep-dj-crowds-people-wallpaper-coyda/download/2880x1800)
+    - [Complete](https://chatgpt.com)
+
+| Source | Notes |
+| --- | --- |
+| [Gauger.io](https://gauger.io/fonticon/) | Generating the favicon |
+| [Wallpaper Flare](https://www.wallpaperflare.com/) | Compressing images < 5MB |
+| [Font Awesome](https://fontawesome.com) | Icons used throughout the site |
+| [TinyPNG](https://tinypng.com) | Compressing images < 5MB |
+| [CompressPNG](https://compresspng.com) | Compressing images > 5MB |
+| [CloudConvert](https://cloudconvert.com/webp-converter) | Converting images to `.webp` |
+
+### Acknowledgements
+
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://www.github.com/TravelTimN) for the support throughout the development of this project.
+- I would like to thank the [Code Institute](https://codeinstitute.net) Tutor Team for their assistance with troubleshooting and debugging some project issues.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and impostor syndrome.
+- I would like to thank my partner, for believing in me, and allowing me to make this transition into software development.
+- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
 
