@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/accounts/login/</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/bag/</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/courses/?tier=Beginner</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/courses/?tier=Advanced</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/courses/?tier=Creative</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/courses/?tier=Complete</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/courses/</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/information/about/</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/information/contact_us/</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/information/faq/</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/newsletter/subscribe/</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/courses/17/</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/courses/20/</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/courses/16/</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/courses/22/</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/courses/21/</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/courses/24/</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/courses/23/</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://neon-beats-academy-74fa20163bce.herokuapp.com/courses/25/</loc>
+  <lastmod>2024-11-23T11:14:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
