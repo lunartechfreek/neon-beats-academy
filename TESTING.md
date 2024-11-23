@@ -356,3 +356,60 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Webhooks implemented to capture order even if it is interrupted before fully processed | N/A Future Development |
 
 
+## Bugs
+
+**Fixed Bugs**
+
+- Real emails not sending and returning error.
+
+    ![screenshot](documentation/bugs/email.png)
+
+    - To fix this, I had to specify the python version to 3.9.18. The version I was using was not a trusted and reliable version, and this version fixed the bug.
+
+- Page loading halfway down and not displaying banner image correctly.
+
+    ![screenshot](documentation/bugs/page-load.png)
+
+    - To fix this, I removed auto focus from the phone number field in the `profile/views.py` file. 
+
+- Font Awesome icons not displaying on safari.
+
+    ![screenshot](documentation/bugs/font-awesome-bug-1.png)
+    ![screenshot](documentation/bugs/font-awesome-bug-2.png)
+
+    - To fix this, I changed the Font Awesome version to the older version of 5.14.0
+
+- On the edit course form the summernote field was pre-populating the field with raw html.
+
+    ![screenshot](documentation/bugs/summernote-bug.png)
+
+    - To fix this, I added the summernote widget to the add/edit forms. This also benefits the user because now they have a more appealing, and more functional way to write the course description.
+
+- On the edit/add course pages, the summernote widget was far to wide on mobile and would not let me target it using CSS.
+
+    ![screenshot](documentation/bugs/summernote-display-bug.png)
+
+    - To fix this, I added code into my `settings.py` file to directly configure summernote there.
+
+## Unfixed Bugs
+
+- Summernote showing errors on W3C validator because it is rendering it's own `html` that I can't edit or change.
+
+    ![screenshot](documentation/validation/w3c-add-course-3.png)
+
+    - Attempted fix: Try to override the code it renders. Hopefully in the future I can find a way to fix this or if not find an alternative to summernote.
+
+- Allauth rendering elements that are not adhering to W3C standards.
+
+    ![screenshot](documentation/validation/w3c-signup.png)
+
+    - Attempted fix: Try to target the form rendered and render it myself but this was not working. Hopefully in the future I can find a way to fix this.
+
+- Cloudinary rendering images with `http` instead of `https` and dramatically decreasing my lighthouse best practices score.
+
+    ![screenshot](documentation/lighthouse/error-best-practices-cloud.png)
+
+    - Attempted fix: Try to clean the code that Cloudinary is rendering to replace `http` with `https`. In future I will change to AWS if Cloudinary do not fix this issue. 
+
+> [!NOTE]  
+> There are no remaining bugs that I am aware of.
