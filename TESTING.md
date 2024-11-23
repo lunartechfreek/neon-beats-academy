@@ -355,7 +355,6 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a site owner I can make sure the users order is processed even if checkout is interrupted so that the user still receives their order | | |
 | | Webhooks implemented to capture order even if it is interrupted before fully processed | N/A Future Development |
 
-
 ## Bugs
 
 **Fixed Bugs**
