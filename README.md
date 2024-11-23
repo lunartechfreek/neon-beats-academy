@@ -33,6 +33,7 @@
 |  | Edit Course Image Field | ![screenshot](documentation/features/edit-course-image.png) |
 | Course Details | The course details are displayed on a dynamically created page using the id. It displays all of the information related to the course that was defined in the add/edit course form. It displays course details such as name, image, price, difficuly and what tier the course is in which is a clickable link. | ![screenshot](documentation/features/course-detail.png) |
 | Course Detail Buttons | Buttons for the user to keep shopping and be redirected back to the courses page, or  add the course to the bag. | ![screenshot](documentation/features/course-detail-buttons.png) |
+| Disabled Add To Bag Button | Because the site only sells digital products, it would only cause confusion. To avoid this the add to bag button is clearly disabled when the item is already in the bag and the text changes to 'ALREDY IN BAG'. Also the cursor changed from pointer to `not-allowed` on hover to even further emphasize to the user that they can not add this item to their bag again. | ![screenshot](documentation/features/course-disabled-button.png) |
 | Edit/Delete Buttons | On the course detail and courses page, there are edit and delete buttons that are only displayed to superusers. Each has a hover class to change colour when hovered over. | ![screenshot](documentation/features/edit-delete-btns.png) |
 | Delete Modal | When a superuser chooses to delete an course, a modal appears asking them if to confirm. This was done to make sure the superuser definatly wants to delete it and it wasn’t just clicked by mistake. | ![screenshot](documentation/features/delete-modal.png) |
 | Course Cards | On the all courses and the course search page I displayed the courses on cards in bright colours to stand out against the dark background. The image and course names are fully clickable as a link to the course detail page. When the image is hovered over it zooms in slightly to show its clickable. The course name and tier links have hover classes applied to them to expand and show they are clickable links. | ![screenshot](documentation/features/course-cards.png) |
@@ -53,6 +54,7 @@
 |  | Alert Message | ![screenshot](documentation/features/previous-order-alert.png) |
 | Shopping Bag | The bag page features a list of your items with the image and price, and the option to remove the item. It also features an order total and two buttons to keep shopping or checkout. | ![screenshot](documentation/features/bag.png) |
 | Checkout Form | The checkout form fields are name, email, phone number followed by address details. The number and address details are pre-populated if the user is logged in and has saved their information to the database. A checkbox is also featured to give the user the option to save their information for next time. | ![screenshot](documentation/features/checkout-form.png) |
+| Order Confirmation Email | When the user has completed their order an email is sent to them with details of their order. | ![screenshot](documentation/features/subscribe-email.png) |
 | Card Payment Field | The card payment field provides live feedback to users if they are incorrectly entering information |  |
 |  | Card Field Blank | ![screenshot](documentation/features/card-blank.png) |
 |  | Card Field Invalid | ![screenshot](documentation/features/card-invalid.png) |
@@ -64,7 +66,12 @@
 | Image Feedback Statements | Feedback statements are used to provide the user with a statement telling them which image they are going to be uploading before the click submit. This is so they can check that they selected the right one |  |
 |  | Add image feedback statement | ![screenshot](documentation/features/feedback-add-image.png) |
 |  | Edit image feedback statement | ![screenshot](documentation/features/feedback-edit-image.png) |
-| Feedback Messages | Messages are displayed to the user throughtout the site to give feedback to them. The messages consist of success, error and alerts. Some examples are given below. |  |
+| Subscribe Feedback Statement | Feedback statement is used to provide the user with information about why the field was invalid. | ![screenshot](documentation/features/feedback-newsletter-duplicate.png) |
+| Subscribe Email | Email sent to user when they subscribe to our newsletter. | ![screenshot](documentation/features/feedback-subscribe-email.png) |
+| Newsletter Information | Information about the newsletter pursuading the user to subscribe. | ![screenshot](documentation/features/feedback-newsletter-info.png) |
+| FAQ Accordian | Frequently asked questions displayed in accordian with dropdown answers on click. Questions are ordered by importance as set by the superuser in the admin panel where they are added. If questions are of duplicate importance they are then ordered by the `created_on` field.  | ![screenshot](documentation/features/faq-accordian.png) |
+| FAQ Contact Us Button | Button featured for the user incase their question has not been answered. The button links to the contact us page so that they can message us directly. | ![screenshot](documentation/features/feedback-newsletter-info.png) |
+| Subscribe Section | Email field for user to fill out with subscribe button | ![screenshot](documentation/features/feedback-subscribe-field.png) |
 |  | Error: Course add form invalid | ![screenshot](documentation/features/message-error-add.png) |
 |  | Success: Item added to bag and preview displayed | ![screenshot](documentation/features/message-bag-add.png) |
 |  | Success: Item successfully removed from bag | ![screenshot](documentation/features/message-bag-remove.png) |
@@ -79,7 +86,12 @@
 | Change Password | There is a change password page for users that want to change their password. | ![screenshot](documentation/features/change-password.png) |
 | 404 Error Page | There is a 404 error page incase users enter a wrong URL. There is a button on this page to easily navigate users back to the site. | ![screenshot](documentation/features/404-page.png) |
 | 500 Error Page | There is a 500 error page and there is a button on this page to easily navigate users back to the site. | ![screenshot](documentation/features/500-page.png) |
-| Marketing | Social media presence is available in the footer using external links, as well as a Facebook Marketplace wireframe in the README for future integrations. | ![screenshot](documentation/features/marketing.png) |
+| SEO | SEO optimization with a sitemap.xml, robots.txt, and other features such as: |  |
+|  | Appropriate meta tags to improve search engine visibility. | ![screenshot](documentation/features/seo-meta.png) |
+|  | About `h2` text | ![screenshot](documentation/features/seo-about.png) |
+|  | Courses `h2` text | ![screenshot](documentation/features/seo-courses.png) |
+|  | Index Page Title | ![screenshot](documentation/features/seo-title.png) |
+| Marketing | Social media presence is available in the footer using external links, as well as a Facebook Marketplace wireframe in the README for future integrations. | ![screenshot](documentation/features/footer.png) |
 | Heroku Deployment | The site is deployed to Heroku, making it accessible online for users. | ![screenshot](documentation/features/heroku.png) |
 
 newsletter
