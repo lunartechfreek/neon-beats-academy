@@ -108,22 +108,32 @@ def checkout(request):
     return render(request, template, context)
 
 
-def _send_confirmation_email(order):
-    """Send the user a confirmation email"""
-    cust_email = order.email
-    subject = render_to_string(
-        'checkout/confirmation_emails/confirmation_email_subject.txt',
-        {'order': order})
-    body = render_to_string(
-        'checkout/confirmation_emails/confirmation_email_body.txt',
-        {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+def _send_confirmation_email(request, order):
+    """Send the user a confirmation email."""
+    try:
+        cust_email = order.email
+        subject = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_subject.txt',
+            {'order': order}
+        ).strip()
 
-    send_mail(
-        subject,
-        body,
-        settings.DEFAULT_FROM_EMAIL,
-        [cust_email]
-    )
+        body = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_body.txt',
+            {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL}
+        )
+
+        send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [cust_email]
+        )
+    except Exception:
+        messages.error(
+            request,
+            "There was an issue sending the confirmation email. Please \
+            contact support if you need assistance."
+        )
 
 
 def checkout_success(request, order_number):
@@ -154,7 +164,7 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-    _send_confirmation_email(order)
+    _send_confirmation_email(request, order)
 
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
