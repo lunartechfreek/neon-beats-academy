@@ -1,0 +1,5 @@
+```txt
+User-agent: *
+Disallow:
+Sitemap: https://neon-beats-academy-74fa20163bce.herokuapp.com/sitemap.xml
+```
