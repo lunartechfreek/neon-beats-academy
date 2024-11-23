@@ -13,29 +13,29 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | bag | bag.html | ![screenshot](documentation/validation/w3c-bag.png) | Passed with no errors |
 | checkout | checkout.html | ![screenshot](documentation/validation/w3c-checkout.png) | Passed with no errors |
 | checkout | checkout_success.html | ![screenshot](documentation/validation/w3c-checkout-success.png) | Passed with no errors |
-| courses | add_course.html | ![screenshot](documentation/validation/w3c-add-course-1.png) | My own code passed, but the code rendered by the summernote widget did not. |
-|  |  | ![screenshot](documentation/validation/w3c-add-course-2.png) | |
-|  |  | ![screenshot](documentation/validation/w3c-add-course-3.png) | |
-|  |  | ![screenshot](documentation/validation/w3c-add-course-4.png) | |
-| courses | course_detail.html | ![screenshot](documentation/validation/w3c-course-detail-1.png) | My own code passed, but the code rendered by summernote did not. |
-|  |  | ![screenshot](documentation/validation/w3c-course-detail-2.png) | |
+| courses | add_course.html | ![screenshot](documentation/validation/w3c-add-course-1.png) | My own code passed with no errors, but the code rendered by the summernote widget did not. (See bugs section in [README.md](README.md) ) |
+|  |  | ![screenshot](documentation/validation/w3c-add-course-2.png) | Summernote Errors |
+|  |  | ![screenshot](documentation/validation/w3c-add-course-3.png) | Summernote Errors |
+|  |  | ![screenshot](documentation/validation/w3c-add-course-4.png) | Summernote Errors |
+| courses | course_detail.html | ![screenshot](documentation/validation/w3c-course-detail-1.png) | My own code passed with no errors, but the code rendered by summernote did not. (See bugs section in [README.md](README.md) ) |
+|  |  | ![screenshot](documentation/validation/w3c-course-detail-2.png) | Summernote Errors |
 | courses | courses.html | ![screenshot](documentation/validation/w3c-courses.png) | Passed with no errors |
-| courses | edit_course.html | ![screenshot](documentation/validation/w3c-edit-course-1.png) | My own code passed, but the code rendered by the summernote widget did not. |
-|  |  | ![screenshot](documentation/validation/w3c-edit-course-2.png) | |
-|  |  | ![screenshot](documentation/validation/w3c-edit-course-3.png) | |
+| courses | edit_course.html | ![screenshot](documentation/validation/w3c-edit-course-1.png) | My own code passed with no errors, but the code rendered by the summernote widget did not. (See bugs section in [README.md](README.md) ) |
+|  |  | ![screenshot](documentation/validation/w3c-edit-course-2.png) | Summernote Errors |
+|  |  | ![screenshot](documentation/validation/w3c-edit-course-3.png) | Summernote Errors |
 | home | index.html | ![screenshot](documentation/validation/w3c-index.png) | Passed with no errors |
-| information | about.html | ![screenshot](documentation/validation/w3c-about-1.png) | My own code passed, but the code rendered by summernote did not. |
-|  |  | ![screenshot](documentation/validation/w3c-about-2.png) | |
+| information | about.html | ![screenshot](documentation/validation/w3c-about-1.png) | My own code passed with no errors, but the code rendered by summernote did not. (See bugs section in [README.md](README.md) ) |
+|  |  | ![screenshot](documentation/validation/w3c-about-2.png) | Summernote Errors |
 | information | contact_us.html | ![screenshot](documentation/validation/w3c-contact-us.png) | Passed with no errors |
 | information | faq.html | ![screenshot](documentation/validation/w3c-faq.png) | Passed with no errors |
 | newsletter | subscribe.html | ![screenshot](documentation/validation/w3c-newsletter.png) | Passed with no errors |
 | profiles | profile.html | ![screenshot](documentation/validation/w3c-profile.png) | Passed with no errors |
 | templates | 404.html | ![screenshot](documentation/validation/w3c-404.png) | Passed with no errors |
 | templates | 500.html | ![screenshot](documentation/validation/w3c-500.png) | Passed with no errors |
-| Allauth | signup.html | ![screenshot](documentation/validation/w3c-signup.png) | My own code passed, but the code rendered by allauth did not. This is a known bug on the signup page. |
+| Allauth | signup.html | ![screenshot](documentation/validation/w3c-signup.png) | My own code passed, but the code rendered by allauth did not. This is a known bug on the signup page. (See bugs section in [README.md](README.md) ) |
 | Allauth | login.html | ![screenshot](documentation/validation/w3c-login.png) | Passed with no errors |
 | Allauth | logout.html | ![screenshot](documentation/validation/w3c-logout.png) | Passed with no errors |
-| Allauth | password_change.html | ![screenshot](documentation/validation/w3c-password-change.png) | Passed with no errors |
+| Allauth | password_change.html | ![screenshot](documentation/validation/w3c-password-change.png) | Passed with no errors. Had one info warning regarding trailing slash on an input. This input was not my own code and was rendered by Allauth. |
 
 
 ### CSS
