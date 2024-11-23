@@ -137,6 +137,20 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
+### Lighthouse Recurring Issues
+
+I found a few recurring issues when running my lighthouses tests that were reducing the scores. More details of all of these issues can be found in the [Bugs](#bugs) section. These issues were:
+
+| Lighthouse Section | Issue | Screenshot |
+| --- | --- | --- |
+| Performance | | |
+| | Stripe implementing alot of unused Javascript | ![screenshot](documentation/lighthouse/error-perfomance-js.png) |
+| | Stripe applying render blocking resources | ![screenshot](documentation/lighthouse/error-performance-render-blocking-resources.png) |
+| Best Practices | | |
+| | Cloudinary rendering image url as http instead of https. | ![screenshot](documentation/lighthouse/error-best-practices-cloud.png) |
+
+### Lighthouse Scores
+
 | Page | Mobile | Desktop | Notes |
 | --- | --- | --- | --- |
 | Home | ![screenshot](documentation/lighthouse/lighthouse-mobile-home.png) | ![screenshot](documentation/lighthouse/lighthouse-desktop-home.png) |  |
@@ -172,7 +186,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click account button | Superuser options appear | ![screenshot](documentation/defensive/defence-logged-in-account-dropdown.png) | Pass |
 | | Head to course detail page | Edit/delete buttons present | ![screenshot](documentation/defensive/defence-logged-in-course-detail-buttons.png) | Pass |
 | | Head to courses page | Edit/delete buttons present | ![screenshot](documentation/defensive/defence-logged-in-courses-buttons.png) | Pass |
-| | Click product management | Add course page access | ![screenshot](documentation/defensive/defence-logged-in-course-add.png) | Pass |
+| | Click course management | Add course page access | ![screenshot](documentation/defensive/defence-logged-in-course-add.png) | Pass |
 | | Click edit course button | Edit course page access | ![screenshot](documentation/defensive/defence-logged-in-course-edit.png) | Pass |
 | Logged In | | | | |
 | | Click account button | Logged in options appear | ![screenshot](documentation/defensive/defence-logged-in-non-super-account-dropdown.png) | Pass |
