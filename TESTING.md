@@ -219,6 +219,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | Newsletter | | | | |
 | | Enter invalid email | Error message appears | ![screenshot](documentation/defensive/defence-newsletter-email-valid.png) | Pass |
 | | Enter blank email | Error message appears | ![screenshot](documentation/defensive/defence-newsletter-email-blank.png) | Pass |
+| | Enter email address that is already subscribed | Error message appears | ![screenshot](documentation/defensive/defence-newsletter-email-duplicate.png) | Pass |
 | | Click subscribe button | Success message appears | ![screenshot](documentation/defensive/defence-newsletter-message-subscribe.png) | Pass |
 | Contact | | | | |
 | | Click send message | Success message appears | ![screenshot](documentation/defensive/defence-contact-message-success.png) | Pass |
